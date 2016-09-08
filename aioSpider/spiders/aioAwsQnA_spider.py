@@ -30,14 +30,19 @@ class aioAwsQnASpider (scrapy.Spider):
         qItems['question'] = " ".join(tempList)
 
         # CHOICES & ANSWERS - Scraping        
-        # Create a two pair(answerID & text) from the remaining to get the answers text
+        # Create a two pair(Choice ID & Choice Text) from the remaining to get the answers text
         # Run a join to ensure any long answer text is not broken and unnecessary spaces are removed
         qItems['answers'] = qaData.re(r'<p>(.*).<br><font')		
-        tempChoices = qaData
+
         tempList = []
-        for i in range(1,len(tempChoices),1):
-            tempChoices[i] = tempChoices[i].css("::text").extract()
-            tempList.append("".join(tempChoices[i]))
+        for i in range(1,len(qaData),1):
+            qaData[i] = qaData[i].css("::text").extract()
+            # Create a list with ["choiceID", "ChoiceText"] by join the text and leaving out the first element
+			# Store only if we match anything by checking if the list is empty or not
+            if qaData[i]:
+                choiceID = qaData[i][0]
+                choiceText = "".join(qaData[i][1:])
+                tempList.append( [ choiceID , choiceText ] )
         qItems['options'] = tempList
 
         # COMMENTS - Scraping
