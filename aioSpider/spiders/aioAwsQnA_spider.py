@@ -38,7 +38,7 @@ class aioAwsQnASpider (scrapy.Spider):
         for i in range(1,len(qaData),1):
             qaData[i] = qaData[i].css("::text").extract()
             # Create a list with ["choiceID", "ChoiceText"] by join the text and leaving out the first element
-			# Store only if we match anything by checking if the list is empty or not
+            # Store only if we match anything by checking if the list is empty or not
             if qaData[i]:
                 choiceID = qaData[i][0]
                 choiceText = "".join(qaData[i][1:])

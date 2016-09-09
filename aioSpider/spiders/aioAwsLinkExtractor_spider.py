@@ -1,18 +1,20 @@
 import scrapy
 
 class aioAwsUrlItem(scrapy.Item):
-    urlData = scrapy.Field()
+    urlsToScrape = scrapy.Field()
 
 class aioAwsLinkExtractorSpider (scrapy.Spider):
     name = "aioAwsLinkExtractor"
     allowed_domains = ["aiotestking.com"]
-    start_urls = ['http://www.aiotestking.com/amazon/category/exam-aws-saa-aws-certified-solutions-architect-associate/page/%d' %(n) for n in range(2, 42)]
+    start_urls = ['http://www.aiotestking.com/amazon/category/exam-aws-saa-aws-certified-solutions-architect-associate/page/%d' %(n) for n in range(2, 43)]
 
     def parse(self, response):
-        item = aioAwsUrlItem()
-		
-		# Extract the URLs to the post titles from the HTML Content
+        awsSaaUrlCollection = aioAwsUrlItem()
+        
+        # Extract the URLs to the post titles from the HTML Content
         urls = response.css("h2.title > a::attr(href)").extract()
+        
+        # Loops through the URLs and create a dictionary object with an ID and Url Text and push the item to scrapy to write
         for url in urls:
-            item['urlData'] = url
-            yield item
+            awsSaaUrlCollection['urlsToScrape'] = url
+            yield awsSaaUrlCollection
