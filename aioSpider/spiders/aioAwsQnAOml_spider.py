@@ -8,48 +8,86 @@ class aioAwsQnAOmlSpider (scrapy.Spider):
     # Pass Scrapy Spider a list of URLs to crawl via .txt file
     # http://stackoverflow.com/questions/17307718/pass-scrapy-spider-a-list-of-urls-to-crawl-via-txt-file
     # Pass through strip to remove any trailing newline characters
-    start_urls = [ "http://www.aiotestking.com/amazon/which-of-the-following-options-would-you-consider-for-configuring-the-web-server-infrastructure/",
-                   "http://www.aiotestking.com/amazon/which-metric-should-i-be-checking-to-ensure-that-your-db-instance-has-enough-free-storage-space/"
-                 ]
+    def __init__(self, filename=None):
+        if filename:
+            self.outputFilename = filename
+            with open(filename, 'r') as f:
+                self.start_urls = [url.strip() for url in f.readlines()]
 
     def writeToFile(self, problem):
-        with open('aabbcc', 'a') as f:
+        with open('%s.xml' % self.outputFilename, 'a') as f:
             f.write(etree.tostring(problem, pretty_print=True))
         return
 
-    def parse(self, response):
-        
-        # QUESTION - Scraping
-        qaData = response.css("#content > p")
-
+    def buildOml(self,qaDataDict):
         # Build the custom XML
         problem = etree.Element('problem')
         p =  etree.SubElement(problem, "p")
-        p.text =  " ".join(qaData[0].css('::text').extract())
-		
-        multiplechoiceresponse =  etree.SubElement(problem, "multiplechoiceresponse")
-        choicegroup =  etree.SubElement(multiplechoiceresponse, "choicegroup")
-        # Lets set the attributes for the choicegroup tag
-        choicegroup.set("type", "MultipleChoice")
-        choicegroup.set("shuffle", "True")
+        p.text = qaDataDict['p'].encode('utf-8')
+        
+        if qaDataDict['questionType'] == "choiceresponse":
+            choiceresponse = etree.SubElement(problem, "choiceresponse")
+            checkboxgroup = etree.SubElement(choiceresponse, "checkboxgroup")
+            choiceresponse.set("shuffle", "True")
 
+            # Lets build the choices with answer text
+            for item in qaDataDict['choice']:
+                if item[0]==True:
+                    choice =  etree.SubElement(choiceresponse, "choice")
+                    choice.set("correct", "True")
+                    choice.text = item[1]
+                if item[0]==False:
+                    choice =  etree.SubElement(choiceresponse, "choice")
+                    choice.set("correct", "False")
+                    choice.text = item[1]
+
+        elif qaDataDict['questionType'] == "multiplechoiceresponse":
+            multiplechoiceresponse =  etree.SubElement(problem, "multiplechoiceresponse")
+            choicegroup =  etree.SubElement(multiplechoiceresponse, "choicegroup")
+            # Lets set the attributes for the choicegroup tag
+            choicegroup.set("type", "MultipleChoice")
+            choicegroup.set("shuffle", "True")		
+
+            # Lets build the choices with answer text
+            for item in qaDataDict['choice']:
+                if item[0]==True:
+                    choice =  etree.SubElement(choicegroup, "choice")
+                    choice.set("correct", "True")
+                    choice.text = item[1]
+                if item[0]==False:
+                    choice =  etree.SubElement(choicegroup, "choice")
+                    choice.set("correct", "False")
+                    choice.text = item[1]
+
+        self.writeToFile(problem)
+        return 
+
+    def parse(self, response):
+        
+        qaDataDict = {}
+        # QUESTION - Scraping
+        qaData = response.css("#content > p")
+        qaDataDict['p'] = " ".join(qaData[0].css('::text').extract())
+
+		# Questions can be of two types "choiceresponse" or "multiplechoiceresponse"
+        multiResponse = qaData.css("font").extract()
+        if multiResponse > 1:
+            # Set the type of question, so we can group them while building the OML
+            qaDataDict['questionType'] = "choiceresponse"
+        elif multiResponse < 1 and multiResponse != 0:
+            qaDataDict['questionType'] = "multiplechoiceresponse"
+
+        tmpList = []
         for i in range(1,len(qaData),1):
             chkAns = qaData[i].css("font::text").extract()
             # Check if this is wrong choice
             if not chkAns:
-                choice =  etree.SubElement(choicegroup, "choice")
-                choice.set("correct", "False")
                 chkAns = qaData[i].css("::text").extract()
-                # We wil leave out the first match as that has Option ID (say A or B or C or D) 
-                # Strip to remove any leading or trailing white spaces
-                choice.text = ''.join(chkAns[1:]).strip()
+                tmpList.append([False,''.join(chkAns[1:]).strip()])
             elif chkAns:
-                choice =  etree.SubElement(choicegroup, "choice")
-                choice.set("correct", "True")
-                choice.text = ''.join(chkAns).strip()
+                chkAns = qaData[i].css("::text").extract()
+                tmpList.append([True,''.join(chkAns[1:]).strip()])
+        qaDataDict['choice'] = tmpList
 
-
-        # print etree.tostring(problem, pretty_print=True)
-        self.writeToFile(problem)
-        # Return the JSON to be writtent to file
+        self.buildOml(qaDataDict)
         return
