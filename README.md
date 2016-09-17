@@ -60,7 +60,7 @@ If you open the `awsSaaQnACommentsA.json` file, one of the elements should look 
   }
 ]
 ```
-If you are using the OML Spider, you will be seeing something like this,
+If you are using the OML Spider, you will be seeing something like this in `example.xml`,
 ```xml
 <problem>
   <p>In the Amazon cloudwatch, which metric should I be checking to ensure that your DB Instance has enough free storage space?</p>
