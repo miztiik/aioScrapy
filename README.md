@@ -38,6 +38,7 @@ split -l 50 allAwsSaaUrlCollections.csv allAwsSaaUrlCollection
 scrapy crawl aioAwsQnASpider -a filename=allAwsSaaUrlCollectionaa -t json -o awsSaaQnACommentsA.json
 ```
 ### Output
+If you open the `awsSaaQnACommentsA.json` file, one of the elements should look like this;
 ```json
 [
   {
