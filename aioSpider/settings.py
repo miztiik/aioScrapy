@@ -67,7 +67,6 @@ ROBOTSTXT_OBEY = False
 #ITEM_PIPELINES = {
 #    'aioSpider.pipelines.SomePipeline': 300,
 #}
-ITEM_PIPELINES = {'aioSpider.pipelines.AiospiderPipeline': 300,}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See http://doc.scrapy.org/en/latest/topics/autothrottle.html
