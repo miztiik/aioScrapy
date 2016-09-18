@@ -7,6 +7,7 @@ class aioAwsLinkExtractorSpider (scrapy.Spider):
     name = "aioAwsLinkExtractor"
     allowed_domains = ["aiotestking.com"]
     start_urls = ['http://www.aiotestking.com/amazon/category/exam-aws-saa-aws-certified-solutions-architect-associate/page/%d' %(n) for n in range(2, 43)]
+    start_urls.append('http://www.aiotestking.com/amazon/category/exam-aws-saa-aws-certified-solutions-architect-associate/')
 
     def parse(self, response):
         awsSaaUrlCollection = aioAwsUrlItem()

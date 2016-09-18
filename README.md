@@ -28,9 +28,28 @@ pip install scrapy
 ```sh
 scrapy crawl aioAwsLinkExtractor -t csv -o allAwsSaaUrlCollections.csv
 ```
-### Split the URLs file
+
+## Create the directories for Input & Outputs
+mkdir -p ./awsSaaContent/awsSaaUrlInput
+mkdir -p ./awsSaaContent/awsSaaXMLOutput
+
+## Split the URLs file
+Before splitting the file, we need to the first line; since we saved our output as csv, Scrapy adds the item name as the Column Header. In our case it is `urlsToScrape`.
+
 ```sh
-split -l 50 allAwsSaaUrlCollections.csv allAwsSaaUrlCollection
+sed -i '1d' "allAwsSaaUrlCollections.csv"
+```
+_or, In case sed isn't there_
+```sh
+tail -n +2 "allAwsSaaUrlCollections.csv" > "allAwsSaaUrlCollections.csv.tmp" && mv -f "allAwsSaaUrlCollections.csv.tmp" "allAwsSaaUrlCollections.csv"
+```
+
+The following command splits the big file into small files, Each containing {`-l 30`} 30 lines and the new files have numeric suffixes {`-d`}.
+The `additional-suffix` ensure the files have proper extensions after the split
+
+```sh
+split -l 30 -d --additional-suffix=.txt  allAwsSaaUrlCollections.csv ./awsSaaContent/awsSaaUrlInput/urlList
+mv allAwsSaaUrlCollections.csv ./awsSaaContent/awsSaaUrlInput/
 ```
 
 ## Scrapy the URLs
@@ -72,4 +91,10 @@ If you are using the OML Spider, you will be seeing something like this in `exam
     <choice correct="False">FreeDBStorageSpace</choice>
   </choiceresponse>
 </problem>
+```
+
+### Automating the spider using some bash
+Scrapy output is sent to `crawlerOutput.xml` and all the files are moved to their own directory `awsSaaUrlOutput` placed under `awsSaaUrlInput`
+```sh
+./crawlerAssist.sh
 ```

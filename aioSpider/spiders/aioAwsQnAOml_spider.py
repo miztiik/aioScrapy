@@ -14,16 +14,42 @@ class aioAwsQnAOmlSpider (scrapy.Spider):
             with open(filename, 'r') as f:
                 self.start_urls = [url.strip() for url in f.readlines()]
 
-    def writeToFile(self, problem):
-        with open('%s.xml' % self.outputFilename, 'a') as f:
-            f.write(etree.tostring(problem, pretty_print=True))
+    def parse(self, response):
+        
+        qaDataDict = {}
+        # QUESTION - Scraping
+        qaData = response.css("#content > p")
+        qaDataDict['p'] = " ".join(qaData[0].css('::text').extract())
+
+        # Questions can be of two types "choiceresponse" or "multiplechoiceresponse"
+        multiResponse = qaData.css("font").extract()
+        if len(multiResponse) > 1:
+            # Set the type of question, so we can group them while building the OML
+            qaDataDict['questionType'] = "choiceresponse"
+        elif len(multiResponse) == 1 and len(multiResponse) != 0:
+            qaDataDict['questionType'] = "multiplechoiceresponse"
+
+        tmpList = []
+        for i in range(1,len(qaData),1):
+            chkAns = qaData[i].css("font::text").extract()
+            # Check if this is wrong choice
+            if not chkAns:
+                chkAns = qaData[i].css("::text").extract()
+                tmpList.append([False,''.join(chkAns[1:]).strip()])
+            elif chkAns:
+                chkAns = qaData[i].css("::text").extract()
+                tmpList.append([True,''.join(chkAns[1:]).strip()])
+        qaDataDict['choice'] = tmpList
+
+        self.buildOml(qaDataDict)
         return
 
+    # Custion method to build the XML with attributes and text scrapped
     def buildOml(self,qaDataDict):
         # Build the custom XML
         problem = etree.Element('problem')
         p =  etree.SubElement(problem, "p")
-        p.text = qaDataDict['p'].encode('utf-8')
+        p.text = qaDataDict['p']
         
         if qaDataDict['questionType'] == "choiceresponse":
             choiceresponse = etree.SubElement(problem, "choiceresponse")
@@ -60,34 +86,12 @@ class aioAwsQnAOmlSpider (scrapy.Spider):
                     choice.text = item[1]
 
         self.writeToFile(problem)
-        return 
-
-    def parse(self, response):
-        
-        qaDataDict = {}
-        # QUESTION - Scraping
-        qaData = response.css("#content > p")
-        qaDataDict['p'] = " ".join(qaData[0].css('::text').extract())
-
-		# Questions can be of two types "choiceresponse" or "multiplechoiceresponse"
-        multiResponse = qaData.css("font").extract()
-        if multiResponse > 1:
-            # Set the type of question, so we can group them while building the OML
-            qaDataDict['questionType'] = "choiceresponse"
-        elif multiResponse < 1 and multiResponse != 0:
-            qaDataDict['questionType'] = "multiplechoiceresponse"
-
-        tmpList = []
-        for i in range(1,len(qaData),1):
-            chkAns = qaData[i].css("font::text").extract()
-            # Check if this is wrong choice
-            if not chkAns:
-                chkAns = qaData[i].css("::text").extract()
-                tmpList.append([False,''.join(chkAns[1:]).strip()])
-            elif chkAns:
-                chkAns = qaData[i].css("::text").extract()
-                tmpList.append([True,''.join(chkAns[1:]).strip()])
-        qaDataDict['choice'] = tmpList
-
-        self.buildOml(qaDataDict)
         return
+
+    # Method to write the XML to file, 
+    # The outputFilename(Global) is initialized in the beginning and matching with the urlList filename
+    def writeToFile(self, problem):
+        with open('%s.xml' % self.outputFilename, 'a') as f:
+            f.write(etree.tostring(problem, encoding='utf-8', pretty_print=True))
+        return
+
