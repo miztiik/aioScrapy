@@ -1,0 +1,133 @@
+<problem>
+  <p>By default what are ENIs that are automatically created and attached to instances using the EC2 console set to do when the attached instance terminates?</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="False">Remain as is</choice>
+      <choice correct="True">Terminate</choice>
+      <choice correct="False">Hibernate</choice>
+      <choice correct="False">Pause</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>You can use _____ and _____ to help secure the instances in your VPC.</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="False">security groups and multi-factor authentication</choice>
+      <choice correct="False">security groups and 2-Factor authentication</choice>
+      <choice correct="False">security groups and biometric authentication</choice>
+      <choice correct="True">security groups and network ACLs</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>It is advised that you watch the Amazon CloudWatch “_____” metric (available via the AWS Management Console or Amazon Cloud Watch APIs) carefully and recreate the Read Replica should it fall behind due to replication errors.</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="False">Write Lag</choice>
+      <choice correct="False">Read Replica</choice>
+      <choice correct="True">Replica Lag</choice>
+      <choice correct="False">Single Replica</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>Is decreasing the storage size of a DB Instance permitted?</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="False">Depends on the RDMS used</choice>
+      <choice correct="True">Yes</choice>
+      <choice correct="False"></choice>
+      <choice correct="False">No</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>If I want my instance to run on a single-tenant hardware, which value do I have to set the instance’s tenancy attribute to?</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="True">dedicated</choice>
+      <choice correct="False">isolated</choice>
+      <choice correct="False">one</choice>
+      <choice correct="False">reserved</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>What does Amazon RDS stand for?</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="False">Regional Data Server.</choice>
+      <choice correct="True">Relational Database Service.</choice>
+      <choice correct="False">Nothing.</choice>
+      <choice correct="False">Regional Database Service.</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>In the context of MySQL, version numbers are organized as MySQL version = X.Y.Z. What does X denote here?</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="False">release level</choice>
+      <choice correct="False">minor version</choice>
+      <choice correct="False">version number</choice>
+      <choice correct="True">major version</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>When creation of an EBS snapshot is initiated, but not completed, the EBS volume:</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="False">Can be used while the snapshot is in progress.</choice>
+      <choice correct="False">Cannot be detached or attached to an EC2 instance until the snapshot completes</choice>
+      <choice correct="True">Can be used in read-only mode while the snapshot is in progress.</choice>
+      <choice correct="False">Cannot be used until the snapshot completes.</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>A company has a workflow that sends video files from their on-premise system to AWS for transcoding. They use EC2 worker instances that pull transcoding jobs from SQS. Why is SQS an appropriate service for this scenario?</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="False">SQS guarantees the order of the messages.</choice>
+      <choice correct="False">SQS synchronously provides transcoding output.</choice>
+      <choice correct="True">SQS checks the health of the worker instances.</choice>
+      <choice correct="False">SQS helps to facilitate horizontal scaling of encoding tasks.</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>Fill in the blanks: _____ is a durable, block-level storage volume that you can attach to a single, running Amazon EC2 instance.</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="False">Amazon S3</choice>
+      <choice correct="True">Amazon EBS</choice>
+      <choice correct="False">None of these</choice>
+      <choice correct="False">All of these</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>Select the correct set of steps for exposing the snapshot only to specific AWS accounts</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="False">Select public for all the accounts and check mark those accounts with whom you want to expose the snapshots and click save.</choice>
+      <choice correct="False">SelectPrivate, enter the IDs of those AWS accounts, and clickSave.</choice>
+      <choice correct="True">SelectPublic, enter the IDs of those AWS accounts, and clickSave.</choice>
+      <choice correct="False">SelectPublic, mark the IDs of those AWS accounts as private, and clickSave.</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>Can the string value of ‘Key’ be prefixed with laws?</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="True">No</choice>
+      <choice correct="False">Only for EC2 not S3</choice>
+      <choice correct="False"></choice>
+      <choice correct="False">Yes</choice>
+      <choice correct="False">Only for S3 not EC</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>

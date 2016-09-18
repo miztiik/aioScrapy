@@ -1,0 +1,326 @@
+<problem>
+  <p>By default, when an EBS volume is attached to a Windows instance, it may show up as any drive letter on the instance. You can change the settings of the _____ Service to set the drive letters of the EBS volumes per your specifications.</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="False">EBSConfig Service</choice>
+      <choice correct="False">AMIConfig Service</choice>
+      <choice correct="True">Ec2Config Service</choice>
+      <choice correct="False">Ec2-AMIConfig Service</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>What is Oracle SQL Developer?</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="False">An AWS developer who is an expert in Amazon RDS using both the Oracle and SQL Server DB engines</choice>
+      <choice correct="True">A graphical Java tool distributed without cost by Oracle.</choice>
+      <choice correct="False">It is a variant of the SQL Server Management Studio designed by Microsoft to support Oracle DBMS functionalities</choice>
+      <choice correct="False">A different DBMS released by Microsoft free of cost</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>While performing the volume status checks, if the status is insufficient-data, what does it mean?</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="True">the checks may still be in progress on the volume</choice>
+      <choice correct="False">the check has passed</choice>
+      <choice correct="False">the check has failed</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>For each DB Instance class, what is the maximum size of associated storage capacity?</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="False">5GB</choice>
+      <choice correct="True">1TB</choice>
+      <choice correct="False">2TB</choice>
+      <choice correct="False">500GB</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>You must increase storage size in increments of at least __________ %</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="False">40</choice>
+      <choice correct="False">30</choice>
+      <choice correct="True">10</choice>
+      <choice correct="False">20</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>Using Amazon IAM, can I give permission based on organizational groups?</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="False">Yes but only in certain cases</choice>
+      <choice correct="False">No</choice>
+      <choice correct="True">Yes always</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>To view information about an Amazon EBS volume, open the Amazon EC2 console at https://console.aws.amazon.com/ec2/, click __________ in the Navigation pane.</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="False">EBS</choice>
+      <choice correct="False">Describe</choice>
+      <choice correct="False">Details</choice>
+      <choice correct="True">Volumes</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>While creating the snapshots using the API, which Action should I be using?</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="False">MakeSnapShot</choice>
+      <choice correct="False">FreshSnapshot</choice>
+      <choice correct="False">DeploySnapshot</choice>
+      <choice correct="True">CreateSnapshot</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>SQL Server __________ store logins and passwords in the master database.</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="False">can be configured to but by default does not</choice>
+      <choice correct="False">doesn’t</choice>
+      <choice correct="True">does</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>What is an isolated database environment running in the cloud (Amazon RDS) called?</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="True">DB Instance</choice>
+      <choice correct="False">DB Server</choice>
+      <choice correct="False">DB Unit</choice>
+      <choice correct="False">DB Volume</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>IAM’s Policy Evaluation Logic always starts with a default ____________ for every request, except for those that use the AWS account’s root security credentials b</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="False">Permit</choice>
+      <choice correct="True">Deny</choice>
+      <choice correct="False">Cancel</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>What happens to the I/O operations while you take a database snapshot?</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="True">I/O operations to the database are suspended for a few minutes while the backup is in progress.</choice>
+      <choice correct="False">I/O operations to the database are sent to a Replica (if available) for a few minutes while the backup is in progress.</choice>
+      <choice correct="False">I/O operations will be functioning normally</choice>
+      <choice correct="False">I/O operations to the database are suspended for an hour while the backup is in progress</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>Does Amazon RDS allow direct host access via Telnet, Secure Shell (SSH), or Windows Remote Desktop Connection?</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="False">Yes</choice>
+      <choice correct="True">No</choice>
+      <choice correct="False">Depends on if it is in VPC or not</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>Read Replicas require a transactional storage engine and are only supported for the _________ storage engine</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="False">OracleISAM</choice>
+      <choice correct="False">MSSQLDB</choice>
+      <choice correct="True">InnoDB</choice>
+      <choice correct="False">MyISAM</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>Are Reserved Instances available for Multi-AZ Deployments?</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="False">Only for Cluster Compute instances</choice>
+      <choice correct="True">Yes for all instance types</choice>
+      <choice correct="False">Only for M3 instance types</choice>
+      <choice correct="False">No</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>What is the minimum charge for the data transferred between Amazon RDS and Amazon EC2 Instances in the same Availability Zone?</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="False">USD 0.10 per GB</choice>
+      <choice correct="True">No charge. It is free.</choice>
+      <choice correct="False">USD 0.02 per GB</choice>
+      <choice correct="False">USD 0.01 per GB</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>When running my DB Instance as a Multi-AZ deployment, can I use the standby for read or write operations?</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="False">Yes</choice>
+      <choice correct="False">Only with MSSQL based RDS</choice>
+      <choice correct="False">Only for Oracle RDS instances</choice>
+      <choice correct="True">No</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>You deployed your company website using Elastic Beanstalk and you enabled log file rotation to S3. An Elastic Map Reduce job is periodically analyzing the logs on S3 to build a usage dashboard that you share with your CIO. You recently improved overall performance of the website using Cloud Front for dynamic content delivery and your website as the origin. After this architectural change, the usage dashboard shows that the traffic on your website dropped by an order of magnitude. How do you fix your usage dashboard’?</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="False">Enable Cloud Front to deliver access logs to S3 and use them as input of the Elastic Map Reduce job.</choice>
+      <choice correct="False">Turn on Cloud Trail and use trail log tiles on S3 as input of the Elastic Map Reduce job</choice>
+      <choice correct="False">Change your log collection process to use Cloud Watch ELB metrics as input of the Elastic Map Reduce job</choice>
+      <choice correct="True">Use Elastic Beanstalk “Rebuild Environment” option to update log delivery to the Elastic Map Reduce job.</choice>
+      <choice correct="False">Use Elastic Beanstalk ‘Restart App server(s)” option to update log delivery to the Elastic Map Reduce job.</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>In the ‘Detailed’ monitoring data available for your Amazon EBS volumes, Provisioned IOPS volumes automatically send _____ minute metrics to Amazon CloudWatch.</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="False">3</choice>
+      <choice correct="True">1</choice>
+      <choice correct="False">5</choice>
+      <choice correct="False">2</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>When should I choose Provisioned IOPS over Standard RDS storage?</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="True">If you have batch-oriented workloads</choice>
+      <choice correct="False">If you use production online transaction processing (OLTP) workloads.</choice>
+      <choice correct="False">If you have workloads that are not sensitive to consistent performance</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>While signing in REST/ Query requests, for additional security, you should transmit your requests using Secure Sockets Layer (SSL) by using _________</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="False">HTTP</choice>
+      <choice correct="False">Internet Protocol Security(IPsec)</choice>
+      <choice correct="False">TLS (Transport Layer Security)</choice>
+      <choice correct="True">HTTPS</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>IAM provides several policy templates you can use to automatically assign permissions to the groups you create. The _____ policy template gives the Admins group permission to access all account resources, except your AWS account information</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="False">Read Only Access</choice>
+      <choice correct="False">Power User Access</choice>
+      <choice correct="False">AWS Cloud Formation Read Only Access</choice>
+      <choice correct="True">Administrator Access</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>What does Amazon S3 stand for?</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="False">Simple Storage Solution.</choice>
+      <choice correct="False">Storage Storage Storage (triple redundancy Storage).</choice>
+      <choice correct="False">Storage Server Solution.</choice>
+      <choice correct="True">Simple Storage Service.</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>You are running a successful multitier web application on AWS and your marketing department has asked you to add a reporting tier to the application. The reporting tier will aggregate and publish status reports every 30 minutes from user-generated information that is being stored in your web application s database. You are currently running a Multi-AZ RDS MySQL instance for the database tier. You also have implemented Elasticache as a database caching layer between the application tier and database tier. Please select the answer that will allow you to successfully implement the reporting tier with as little impact as possible to your database.</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="True">Continually send transaction logs from your master database to an S3 bucket and generate the reports off the S3 bucket using S3 byte range requests.</choice>
+      <choice correct="False">Generate the reports by querying the synchronously replicated standby RDS MySQL instance maintained through Multi-AZ.</choice>
+      <choice correct="False">Launch a RDS Read Replica connected to your Multi AZ master database and generate reports by querying the Read Replica.</choice>
+      <choice correct="False">Generate the reports by querying the ElasliCache database caching tier.</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>Your firm has uploaded a large amount of aerial image data to S3 In the past, in your on-premises environment, you used a dedicated group of servers to oaten process this data and used Rabbit MQ – An open source messaging system to get job information to the servers. Once processed the data would go to tape and be shipped offsite. Your manager told you to stay with the current design, and leverage AWS archival storage and messaging services to minimize cost. Which is correct?</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="False">Use SQS for passing job messages use Cloud Watch alarms to terminate EC2 worker instances when they become idle. Once data is processed, change the storage class of the S3 objects to Reduced Redundancy Storage.</choice>
+      <choice correct="False">Setup Auto-Scaled workers triggered by queue depth that use spot instances to process messages in SOS Once data is processed,</choice>
+      <choice correct="False">Change the storage class of the S3 objects to Reduced Redundancy Storage. Setup Auto-Scaled workers triggered by queue depth that use spot instances to process messages in SQS Once data is processed, change the storage class of the S3 objects to Glacier.</choice>
+      <choice correct="True">Use SNS to pass job messages use Cloud Watch alarms to terminate spot worker instances when they become idle. Once data is processed, change the storage class of the S3 object to Glacier.</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>A web-startup runs its very successful social news application on Amazon EC2 with an Elastic Load Balancer, an Auto-Scaling group of Java/Tomcat application-servers, and DynamoDB as data store. The main webapplication best runs on m2 x large instances since it is highly memory- bound Each new deployment requires semi-automated creation and testing of a new AMI for the application servers which takes quite a while ana is therefore only done once per week. Recently, a new chat feature has been implemented in nodejs and wails to be integrated in the architecture. First tests show that the new component is CPU bound Because the company has some experience with using Chef, they decided to streamline the deployment process and use AWS Ops Works as an application life cycle tool to simplify management of the application and reduce the deployment cycles. What configuration in AWS Ops Works is necessary to integrate the new chat module in the most cost-efficient and flexible way?</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="False">Create one AWS Ops Works stack, create one AWS Ops Works layer, create one custom recipe</choice>
+      <choice correct="False">Create one AWS Ops Works stack create two AWS Ops Works layers create one custom recipe</choice>
+      <choice correct="False"></choice>
+      <choice correct="True">Create two AWS Ops Works stacks create two AWS Ops Works layers create one custom recipe</choice>
+      <choice correct="False">Create two AWS Ops Works stacks create two AWS Ops Works layers create two custom recipe</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>Before I delete an EBS volume, what can I do if I want to recreate the volume later?</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="False">Create a copy of the EBS volume (not a snapshot)</choice>
+      <choice correct="True">Store a snapshot of the volume</choice>
+      <choice correct="False">Download the content to an EC2 instance</choice>
+      <choice correct="False">Back up the data in to a physical disk</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>Select the most correct answer: The device name /dev/sda1 (within Amazon EC2) is _____</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="False">Possible for EBS volumes</choice>
+      <choice correct="True">Reserved for the root device</choice>
+      <choice correct="False">Recommended for EBS volumes</choice>
+      <choice correct="False">Recommended for instance store volumes</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>A web company is looking to implement an intrusion detection and prevention system into their deployed VPC. This platform should have the ability to scale to thousands of instances running inside of the VPC. How should they architect their solution to achieve these goals?</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="False">Configure an instance with monitoring software and the elastic network interface (ENI) set to promiscuous mode packet sniffing to see an traffic across the VPC.</choice>
+      <choice correct="False">Create a second VPC and route all traffic from the primary application VPC through the second VPC where the scalable virtualized IDS/IPS platform resides.</choice>
+      <choice correct="True">Configure servers running in the VPC using the host-based ‘route’ commands to send all traffic through the platform to a scalable virtualized IDS/IPS.</choice>
+      <choice correct="False">Configure each host with an agent that collects all network traffic and sends that traffic to the IDS/IPS platform for inspection.</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>You must assign each server to at least _____ security group</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="True">3</choice>
+      <choice correct="False">2</choice>
+      <choice correct="False">4</choice>
+      <choice correct="False">1</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>

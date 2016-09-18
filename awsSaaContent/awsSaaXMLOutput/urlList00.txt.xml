@@ -1,0 +1,328 @@
+<problem>
+  <p>Which procedure for backing up a relational database on EC2 that is using a set of RAlDed EBS volumes for storage minimizes the time during which the database cannot be written to and results in a consistent backup?</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="True">1. Detach EBS volumes, 2. Start EBS snapshot of volumes, 3. Re-attach EBS volumes</choice>
+      <choice correct="False">1. Stop the EC2 Instance. 2. Snapshot the EBS volumes</choice>
+      <choice correct="False">1. Suspend disk I/O, 2. Create an image of the EC2 Instance, 3. Resume disk I/O</choice>
+      <choice correct="False">1. Suspend disk I/O, 2. Start EBS snapshot of volumes, 3. Resume disk I/O</choice>
+      <choice correct="False">1. Suspend disk I/O, 2. Start EBS snapshot of volumes, 3. Wait for snapshots to complete, 4. Resume disk I/O</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>The Trusted Advisor service provides insight regarding which four categories of an AWS account?</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="False">Security, fault tolerance, high availability, and connectivity</choice>
+      <choice correct="False">Security, access control, high availability, and performance</choice>
+      <choice correct="True">Performance, cost optimization, security, and fault tolerance</choice>
+      <choice correct="False">Performance, cost optimization, access control, and connectivity</choice>
+      <choice correct="False"></choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>Per the AWS Acceptable Use Policy, penetration testing of EC2 instances:</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="False">May be performed by AWS, and will be performed by AWS upon customer request.</choice>
+      <choice correct="False">May be performed by AWS, and is periodically performed by AWS.</choice>
+      <choice correct="False">Are expressly prohibited under all circumstances.</choice>
+      <choice correct="True">May be performed by the customer on their own instances with prior authorization from AWS.</choice>
+      <choice correct="False">May be performed by the customer on their own instances, only if performed from EC2 instances</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>What are characteristics of Amazon S3? Choose 2 answers</p>
+  <choiceresponse shuffle="True">
+    <checkboxgroup/>
+    <choice correct="True">S3 allows you to store objects of virtually unlimited size.</choice>
+    <choice correct="False">S3 offers Provisioned IOPS.</choice>
+    <choice correct="False">S3 allows you to store unlimited amounts of data.</choice>
+    <choice correct="False">S3 should be used to host a relational database.</choice>
+    <choice correct="True">Objects are directly accessible via a URL.</choice>
+  </choiceresponse>
+</problem>
+<problem>
+  <p>A customer needs to capture all client connection information from their load balancer every five minutes. The company wants to use this data for analyzing traffic patterns and troubleshooting their applications. Which of the following options meets the customer requirements?</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="True">Enable AWS CloudTrail for the load balancer.</choice>
+      <choice correct="False">Enable access logs on the load balancer.</choice>
+      <choice correct="False">Install the Amazon CloudWatch Logs agent on the load balancer.</choice>
+      <choice correct="False">Enable Amazon CloudWatch metrics on the load balancer.</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>You are working with a customer who has 10 TB of archival data that they want to migrate to Amazon Glacier. The customer has a 1-Mbps connection to the Internet. Which service or feature provides the fastest method of getting the data into Amazon Glacier?</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="True">Amazon Glacier multipart upload</choice>
+      <choice correct="False">AWS Storage Gateway</choice>
+      <choice correct="False">VM Import/Export</choice>
+      <choice correct="False">AWS Import/Export</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>How can you secure data at rest on an EBS volume?</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="False">Attach the volume to an instance using EC2’s SSL interface.</choice>
+      <choice correct="False">Write the data randomly instead of sequentially.</choice>
+      <choice correct="True">Encrypt the volume using the S3 server-side encryption service.</choice>
+      <choice correct="False">Create an IAM policy that restricts read and write access to the volume.</choice>
+      <choice correct="False">Use an encrypted file system on top of the EBS volume.</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>A company is storing data on Amazon Simple Storage Service (S3). The company’s security policy mandates that data is encrypted at rest. Which of the following methods can achieve this? Choose 3 answers</p>
+  <choiceresponse shuffle="True">
+    <checkboxgroup/>
+    <choice correct="True">Use Amazon S3 server-side encryption with AWS Key Management Service managed keys.</choice>
+    <choice correct="True">Use Amazon S3 server-side encryption with customer-provided keys.</choice>
+    <choice correct="False">Use Amazon S3 server-side encryption with EC2 key pair.</choice>
+    <choice correct="False">Use Amazon S3 bucket policies to restrict access to the data at rest.</choice>
+    <choice correct="True">Encrypt the data on the client-side before ingesting to Amazon S3 using their own master key.</choice>
+    <choice correct="False">Use SSL to encrypt the data while in transit to Amazon S3.</choice>
+  </choiceresponse>
+</problem>
+<problem>
+  <p>You need to configure an Amazon S3 bucket to serve static assets for your public-facing web application. Which methods ensure that all objects uploaded to the bucket are set to public read? Choose 2 answers</p>
+  <choiceresponse shuffle="True">
+    <checkboxgroup/>
+    <choice correct="True">Set permissions on the object to public read during upload.</choice>
+    <choice correct="False">Configure the bucket ACL to set all objects to public read.</choice>
+    <choice correct="True">Configure the bucket policy to set all objects to public read.</choice>
+    <choice correct="False">Use AWS Identity and Access Management roles to set the bucket to public read.</choice>
+    <choice correct="False">Amazon S3 objects default to public read, so no action is needed.</choice>
+  </choiceresponse>
+</problem>
+<problem>
+  <p>If you want to launch Amazon Elastic Compute Cloud (EC2) instances and assign each instance a predetermined private IP address you should:</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="False">Launch the instance from a private Amazon Machine Image (AMI).</choice>
+      <choice correct="False">Assign a group of sequential Elastic IP address to the instances.</choice>
+      <choice correct="True">Launch the instances in the Amazon Virtual Private Cloud (VPC).</choice>
+      <choice correct="False">Launch the instances in a Placement Group.</choice>
+      <choice correct="False">Use standard EC2 instances since each instance gets a private Domain Name Service (DNS) already.</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>A company needs to monitor the read and write IOPs metrics for their AWS MySQL RDS instance and send real-time alerts to their operations team. Which AWS services can accomplish this? Choose 2 answers</p>
+  <choiceresponse shuffle="True">
+    <checkboxgroup/>
+    <choice correct="False">Amazon Simple Email Service</choice>
+    <choice correct="True">Amazon CloudWatch</choice>
+    <choice correct="False">Amazon Simple Queue Service</choice>
+    <choice correct="True">Amazon Route 53</choice>
+    <choice correct="False">Amazon Simple Notification Service</choice>
+  </choiceresponse>
+</problem>
+<problem>
+  <p>A company needs to deploy virtual desktops to its customers in a virtual private cloud, leveraging existing security controls. Which set of AWS services and features will meet the company’s requirements?</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="False">Virtual Private Network connection. AWS Directory Services, and ClassicLink</choice>
+      <choice correct="False">Virtual Private Network connection. AWS Directory Services, and Amazon Workspaces</choice>
+      <choice correct="True">AWS Directory Service, Amazon Workspaces, and AWS Identity and Access Management</choice>
+      <choice correct="False">Amazon Elastic Compute Cloud, and AWS Identity and Access Management</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>You are deploying an application to collect votes for a very popular television show. Millions of users will submit votes using mobile devices. The votes must be collected into a durable, scalable, and highly available data store for real-time public tabulation. Which service should you use?</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="True">Amazon DynamoDB</choice>
+      <choice correct="False">Amazon Redshift</choice>
+      <choice correct="False">Amazon Kinesis</choice>
+      <choice correct="False">Amazon Simple Queue Service</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>Which set of Amazon S3 features helps to prevent and recover from accidental data loss?</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="False">Object lifecycle and service access logging</choice>
+      <choice correct="True">Object versioning and Multi-factor authentication</choice>
+      <choice correct="False">Access controls and server-side encryption</choice>
+      <choice correct="False">Website hosting and Amazon S3 policies</choice>
+      <choice correct="False"></choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>You are deploying an application to track GPS coordinates of delivery trucks in the United States. Coordinates are transmitted from each delivery truck once every three seconds. You need to design an architecture that will enable real-time processing of these coordinates from multiple consumers. Which service should you use to implement data ingestion?</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="True">Amazon Kinesis</choice>
+      <choice correct="False">AWS Data Pipeline</choice>
+      <choice correct="False">Amazon AppStream</choice>
+      <choice correct="False">Amazon Simple Queue Service</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>Which of the following notification endpoints or clients are supported by Amazon Simple Notification Service? Choose 2 answers</p>
+  <choiceresponse shuffle="True">
+    <checkboxgroup/>
+    <choice correct="True">Email</choice>
+    <choice correct="False">CloudFront distribution</choice>
+    <choice correct="False">File Transfer Protocol</choice>
+    <choice correct="True">Short Message Service</choice>
+    <choice correct="False">Simple Network Management Protocol</choice>
+  </choiceresponse>
+</problem>
+<problem>
+  <p>A photo-sharing service stores pictures in Amazon Simple Storage Service (S3) and allows application sign-in using an OpenID Connect-compatible identity provider. Which AWS Security Token Service approach to temporary access should you use for the Amazon S3 operations?</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="False">SAML-based Identity Federation</choice>
+      <choice correct="False">Cross-Account Access</choice>
+      <choice correct="True">AWS Identity and Access Management roles</choice>
+      <choice correct="False">Web Identity Federation</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>A company is preparing to give AWS Management Console access to developers Company policy mandates identity federation and role-based access control. Roles are currently assigned using groups in the corporate Active Directory. What combination of the following will give developers access to the AWS console? (Select 2) Choose 2 answers</p>
+  <choiceresponse shuffle="True">
+    <checkboxgroup/>
+    <choice correct="True">AWS Directory Service AD Connector</choice>
+    <choice correct="False">AWS Directory Service Simple AD</choice>
+    <choice correct="True">AWS Identity and Access Management groups</choice>
+    <choice correct="False">AWS identity and Access Management roles</choice>
+    <choice correct="False">AWS identity and Access Management users</choice>
+  </choiceresponse>
+</problem>
+<problem>
+  <p>Which of the following services natively encrypts data at rest within an AWS region? Choose 2 answers</p>
+  <choiceresponse shuffle="True">
+    <checkboxgroup/>
+    <choice correct="True">AWS Storage Gateway</choice>
+    <choice correct="False">Amazon DynamoDB</choice>
+    <choice correct="False">Amazon CloudFront</choice>
+    <choice correct="True">Amazon Glacier</choice>
+    <choice correct="False">Amazon Simple Queue Service</choice>
+  </choiceresponse>
+</problem>
+<problem>
+  <p>You have an application running on an Amazon Elastic Compute Cloud instance, that uploads 5 GB video objects to Amazon Simple Storage Service (S3). Video uploads are taking longer than expected, resulting in poor application performance. Which method will help improve performance of your application?</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="False">Enable enhanced networking</choice>
+      <choice correct="False">Use Amazon S3 multipart upload</choice>
+      <choice correct="False">Leveraging Amazon CloudFront, use the HTTP POST method to reduce latency.</choice>
+      <choice correct="True">Use Amazon Elastic Block Store Provisioned IOPs and use an Amazon EBS-optimized instance</choice>
+      <choice correct="False"></choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>A customer wants to track access to their Amazon Simple Storage Service (S3) buckets and also use this information for their internal security and access audits. Which of the following will meet the Customer requirement?</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="False">Enable AWS CloudTrail to audit all Amazon S3 bucket access.</choice>
+      <choice correct="True">Enable server access logging for all required Amazon S3 buckets.</choice>
+      <choice correct="False">Enable the Requester Pays option to track access via AWS Billing</choice>
+      <choice correct="False">Enable Amazon S3 event notifications for Put and Post.</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>A company is building software on AWS that requires access to various AWS services. Which configuration should be used to ensure mat AWS credentials (i.e., Access Key ID/Secret Access Key combination) are not compromised?</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="True">Enable Multi-Factor Authentication for your AWS root account.</choice>
+      <choice correct="False">Assign an IAM role to the Amazon EC2 instance.</choice>
+      <choice correct="False">Store the AWS Access Key ID/Secret Access Key combination in software comments.</choice>
+      <choice correct="False">Assign an IAM user to the Amazon EC2 Instance.</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>You need to pass a custom script to new Amazon Linux instances created in your Auto Scaling group. Which feature allows you to accomplish this?</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="False">User data</choice>
+      <choice correct="True">EC2Config service</choice>
+      <choice correct="False">IAM roles</choice>
+      <choice correct="False">AWS Config</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>Which of the following are true regarding encrypted Amazon Elastic Block Store (EBS) volumes? Choose 2 answers</p>
+  <choiceresponse shuffle="True">
+    <checkboxgroup/>
+    <choice correct="True">Supported on all Amazon EBS volume types</choice>
+    <choice correct="True">Snapshots are automatically encrypted</choice>
+    <choice correct="False">Available to all instance types</choice>
+    <choice correct="False">Existing volumes can be encrypted</choice>
+    <choice correct="False">shared volumes can be encrypted</choice>
+  </choiceresponse>
+</problem>
+<problem>
+  <p>A company is deploying a new two-tier web application in AWS. The company has limited staff and requires high availability, and the application requires complex queries and table joins. Which configuration provides the solution for the company’s requirements?</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="False">MySQL Installed on two Amazon EC2 Instances in a single Availability Zone</choice>
+      <choice correct="False">Amazon RDS for MySQL with Multi-AZ</choice>
+      <choice correct="False">Amazon ElastiCache</choice>
+      <choice correct="True">Amazon DynamoDB</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>A t2.medium EC2 instance type must be launched with what type of Amazon Machine Image (AMI)?</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="True">An Instance store Hardware Virtual Machine AMI</choice>
+      <choice correct="False">An Instance store Paravirtual AMI</choice>
+      <choice correct="False">An Amazon EBS-backed Hardware Virtual Machine AMI</choice>
+      <choice correct="False">An Amazon EBS-backed Paravirtual AMI</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>Which of the following approaches provides the lowest cost for Amazon Elastic Block Store snapshots while giving you the ability to fully restore data?</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="True">Maintain two snapshots: the original snapshot and the latest incremental snapshot.</choice>
+      <choice correct="False">Maintain a volume snapshot; subsequent snapshots will overwrite one another</choice>
+      <choice correct="False">Maintain a single snapshot the latest snapshot is both Incremental and complete.</choice>
+      <choice correct="False">Maintain the most current snapshot, archive the original and incremental to Amazon Glacier.</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>An existing application stores sensitive information on a non-boot Amazon EBS data volume attached to an Amazon Elastic Compute Cloud instance. Which of the following approaches would protect the sensitive data on an Amazon EBS volume?</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="False">Upload your customer keys to AWS CloudHSM. Associate the Amazon EBS volume with AWS CloudHSM. Remount the Amazon EBS volume.</choice>
+      <choice correct="False">Create and mount a new, encrypted Amazon EBS volume. Move the data to the new volume. Delete the old Amazon EBS volume.</choice>
+      <choice correct="False">Unmount the EBS volume. Toggle the encryption attribute to True. Re-mount the Amazon EBS volume.</choice>
+      <choice correct="True">Snapshot the current Amazon EBS volume. Restore the snapshot to a new, encrypted Amazon EBS volume. Mount the Amazon EBS volume</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>You manually launch a NAT AMI in a public subnet. The network is properly configured. Security groups and network access control lists are property configured. Instances in a private subnet can access the NAT. The</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="False">required to allow access from the private instances?</choice>
+      <choice correct="False">Enable Source/Destination Check on the private Instances.</choice>
+      <choice correct="True">Enable Source/Destination Check on the NAT instance.</choice>
+      <choice correct="False">Disable Source/Destination Check on the private instances.</choice>
+      <choice correct="False">Disable Source/Destination Check on the NAT instance.</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>

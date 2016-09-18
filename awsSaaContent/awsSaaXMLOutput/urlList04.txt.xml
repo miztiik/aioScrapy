@@ -1,0 +1,324 @@
+<problem>
+  <p>To serve Web traffic for a popular product your chief financial officer and IT director have purchased 10 ml large heavy utilization Reserved Instances (RIs) evenly spread across two availability zones: Route 53 is used to deliver the traffic to an Elastic Load Balancer (ELB). After several months, the product grows even more popular and you need additional capacity As a result, your company purchases two C3.2xlarge medium utilization Ris You register the two c3 2xlarge instances with your ELB and quickly find that the ml large instances are at 100% of capacity and the c3 2xlarge instances have significant capacity that’s unused Which option is the most cost effective and uses EC2 capacity most effectively?</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="False">Use a separate ELB for each instance type and distribute load to ELBs with Route 53 weighted round robin</choice>
+      <choice correct="False">Configure Autoscaning group and Launch Configuration with ELB to add up to 10 more on-demand mi large instances when triggered by Cloudwatch shut off c3 2xiarge instances</choice>
+      <choice correct="False"></choice>
+      <choice correct="False">Route traffic to EC2 ml large and c3 2xlarge instances directly using Route 53 latency based routing and health checks shut off ELB</choice>
+      <choice correct="True">Configure ELB with two c3 2xiarge Instances and use on-demand Autoscailng group for up to two additional c3.2xlarge instances Shut on mi .large instances.</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>A company is building a voting system for a popular TV show, viewers win watch the performances then visit the show’s website to vote for their favorite performer. It is expected that in a short period of time after the show has finished the site will receive millions of visitors. The visitors will first login to the site using their Amazon.com credentials and then submit their vote. After the voting is completed the page will display the vote totals. The company needs to build the site such that can handle the rapid influx of traffic while maintaining good performance but also wants to keep costs to a minimum. Which of the design patterns below should they use?</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="False">Use CloudFront and an Elastic Load balancer in front of an auto-scaled set of web servers, the web servers will first can the Login With Amazon service to authenticate the user then process the users vote and store the result into a multi-AZ Relational Database Service instance.</choice>
+      <choice correct="False">Use CloudFront and the static website hosting feature of S3 with the Javascript SDK to call the Login With Amazon service to authenticate the user, use IAM Roles to gain permissions to a DynamoDB table to store the users vote.</choice>
+      <choice correct="False">Use CloudFront and an Elastic Load Balancer in front of an auto-scaled set of web servers, the web servers will first call the Login with Amazon service to authenticate the user, the web servers will process the users vote and store the result into a DynamoDB table using IAM Roles for EC2 instances to gain permissions to the DynamoDB table.</choice>
+      <choice correct="True">Use CloudFront and an Elastic Load Balancer in front of an auto-scaled set of web servers, the web servers will first call the Login. With Amazon service to authenticate the user, the web servers win process the users vote and store the result into an SQS queue using IAM Roles for EC2 Instances to gain permissions to the SQS queue. A set of application servers will then retrieve the items from the queue and store the result into a DynamoDB table.</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>A read only news reporting site with a combined web and application tier and a database tier that receives large and unpredictable traffic demands must be able to respond to these traffic fluctuations automatically. What AWS services should be used meet these requirements?</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="False">Stateless instances for the web and application tier synchronized using Elasticache Memcached in an autoscaimg group monitored with CloudWatch. And RDSwith read replicas</choice>
+      <choice correct="True">Stateful instances for me web and application tier in an autoscaling group monitored with CloudWatch and RDS with read replicas</choice>
+      <choice correct="False">Stateful instances for the web and application tier in an autoscaling group monitored with CloudWatch. And multi-AZ RDS</choice>
+      <choice correct="False">Stateless instances for the web and application tier synchronized using ElastiCache Memcached in an autoscaling group monitored with CloudWatch and multi-AZ RDS</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>Your team has a tomcat-based Java application you need to deploy into development, test and production environments. After some research, you opt to use Elastic Beanstalk due to its tight integration with your developer tools and RDS due to its ease of management. Your QA team lead points out that you need to roll a sanitized set of production data into your environment on a nightly basis. Similarly, other software teams in your org want access to that same restored data via their EC2 instances in your VPC .The optimal setup for persistence and security that meets the above requirements would be the following.</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="True">Create your RDS instance as part of your Elastic Beanstalk definition and alter its security group to allow access to it from hosts in your application subnets.</choice>
+      <choice correct="False">Create your RDS instance separately and add its IP address to your application’s DB connection strings in your code Alter its security group to allow access to it from hosts within your VPC’s IP address block.</choice>
+      <choice correct="False">Create your RDS instance separately and pass its DNS name to your app’s DB connection string as an environment variable. Create a security group for client machines and add it as a valid source for DB traffic to the security group of the RDS instance itself.</choice>
+      <choice correct="False">Create your RDS instance separately and pass its DNS name to your’s DB connection string as an environment variable Alter its security group to allow access to It from hosts In your application subnets.</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>A large real-estate brokerage is exploring the option o( adding a cost-effective location based alert to their existing mobile application The application backend infrastructure currently runs on AWS Users who opt in to this service will receive alerts on their mobile device regarding real-estate otters in proximity to their location. For the alerts to be relevant delivery time needs to be in the low minute count the existing mobile app has 5 million users across the us Which one of the following architectural suggestions would you make to the customer?</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="True">The mobile application will submit its location to a web service endpoint utilizing Elastic Load Balancing and EC2 instances: DynamoDB will be used to store and retrieve relevant otters EC2 instances will communicate with mobile earners/device providers to push alerts back to mobile application.</choice>
+      <choice correct="False"></choice>
+      <choice correct="False">Use AWS DirectConnect or VPN to establish connectivity with mobile carriers EC2 instances will receive the mobile applications ‘ location through carrier connection: ROS will be used to store and relevant relevant offers EC2 instances will communicate with mobile carriers to push alerts back to the mobile application</choice>
+      <choice correct="False">The mobile application will send device location using SQS. EC2 instances will retrieve the relevant others from DynamoDB AWS Mobile Push will be used to send offers to the mobile application</choice>
+      <choice correct="False">The mobile application will send device location using AWS Mobile Push EC2 instances will retrieve the relevant offers from DynamoDB EC2 instances will communicate with mobile carriers/device providers to push alerts back to the mobile application.</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>Amazon SWF is designed to help users…</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="False">… Design graphical user interface interactions</choice>
+      <choice correct="False">… Manage user identification and authorization</choice>
+      <choice correct="False">… Store Web content</choice>
+      <choice correct="True">… Coordinate synchronous and asynchronous tasks which are distributed and fault tolerant.</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>Your customer is willing to consolidate their log streams (access logs application logs security logs etc.) in one single system. Once consolidated, the customer wants to analyze these logs in real time based on heuristics. From time to time, the customer needs to validate heuristics, which requires going back to data samples extracted from the last 12 hours? What is the best approach to meet your customer’s requirements?</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="False">Send all the log events to Amazon SQS. Setup an Auto Scaling group of EC2 servers to consume the logs and apply the heuristics.</choice>
+      <choice correct="False">Send all the log events to Amazon Kinesis develop a client process to apply heuristics on the logs Configure Amazon Cloud Trail to receive custom logs, use EMR to apply heuristics the logs</choice>
+      <choice correct="True">Setup an Auto Scaling group of EC2 syslogd servers, store the logs on S3 use EMR to apply heuristics on the logs</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>A company is running a batch analysis every hour on their main transactional DB. running on an RDS MySQL instance to populate their central Data Warehouse running on Redshift During the execution of the batch their transactional applications are very slow When the batch completes they need to update the top management dashboard with the new data The dashboard is produced by another system running on-premises that is currently started when a manually-sent email notifies that an update is required The on-premises system cannot be modified because is managed by another team. How would you optimize this scenario to solve performance issues and automate the process as much as possible?</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="False">Replace RDS with Redshift for the batch analysis and SNS to notify the on-premises system to update the dashboard</choice>
+      <choice correct="False">Replace ROS with Redsnift for the oaten analysis and SQS to send a message to the on-premises system to update the dashboard</choice>
+      <choice correct="False">Create an RDS Read Replica for the batch analysis and SNS to notify me on-premises system to update the dashboard</choice>
+      <choice correct="True">Create an RDS Read Replica for the batch analysis and SQS to send a message to the on-premises system to update the dashboard.</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>When you view the block device mapping for your instance, you can see only the EBS volumes, not the instance store volumes.</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="False">Depends on the instance type</choice>
+      <choice correct="False">FALSE</choice>
+      <choice correct="False">Depends on whether you use API call</choice>
+      <choice correct="True">TRUE</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>Can I control if and when MySQL based RDS Instance is upgraded to new supported versions?</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="False">No</choice>
+      <choice correct="False">Only in VPC</choice>
+      <choice correct="False"></choice>
+      <choice correct="True">Yes</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>You are running a news website in the eu-west-1 region that updates every 15 minutes. The website has a world-wide audience it uses an Auto Scaling group behind an Elastic Load Balancer and an Amazon RDS database Static content resides on Amazon S3, and is distributed through Amazon CloudFront. Your Auto Scaling group is set to trigger a scale up event at 60% CPU utilization, you use an Amazon RDS extra large DB instance with 10.000 Provisioned IOPS its CPU utilization is around 80%. While freeable memory is in the 2 GB range. Web analytics reports show that the average load time of your web pages is around 1 5 to 2 seconds, but your SEO consultant wants to bring down the average load time to under 0.5 seconds. How would you improve page load times for your users? (Choose 3 answers)</p>
+  <choiceresponse shuffle="True">
+    <checkboxgroup/>
+    <choice correct="True">Lower the scale up trigger of your Auto Scaling group to 30% so it scales more aggressively.</choice>
+    <choice correct="True">Add an Amazon ElastiCache caching layer to your application for storing sessions and frequent DB queries</choice>
+    <choice correct="False">Configure Amazon CloudFront dynamic content support to enable caching of re-usable content from your site</choice>
+    <choice correct="True">Switch Amazon RDS database to the high memory extra large Instance type</choice>
+    <choice correct="False">Set up a second installation in another region, and use the Amazon Route 53 latency-based routing feature to select the right region.</choice>
+  </choiceresponse>
+</problem>
+<problem>
+  <p>What are the initial settings of an user created security group?</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="False">Allow all inbound traffic and Allow no outbound traffic</choice>
+      <choice correct="False">Allow no inbound traffic and Allow no outbound traffic</choice>
+      <choice correct="True">Allow no inbound traffic and Allow all outbound traffic</choice>
+      <choice correct="False">Allow all inbound traffic and Allow all outbound traffic</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>Will my standby RDS instance be in the same Region as my primary?</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="False">Only for Oracle RDS types</choice>
+      <choice correct="True">Yes</choice>
+      <choice correct="False"></choice>
+      <choice correct="False">Only if configured at launch</choice>
+      <choice correct="False">No</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>If I modify a DB Instance or the DB parameter group associated with the instance, should I reboot the instance for the changes to take effect?</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="False">No</choice>
+      <choice correct="True">Yes</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>What will be the status of the snapshot until the snapshot is complete.</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="False">running</choice>
+      <choice correct="False">working</choice>
+      <choice correct="False">progressing</choice>
+      <choice correct="True">pending</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>Can we attach an EBS volume to more than one EC2 instance at the same time?</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="True">No</choice>
+      <choice correct="False">Yes.</choice>
+      <choice correct="False">Only EC2-optimized EBS volumes.</choice>
+      <choice correct="False">Only in read mode.</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>By default, EBS volumes that are created and attached to an instance at launch are deleted when that instance is terminated. You can modify this behavior by changing the value of the flag_____ to false when you launch the instance</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="True">DeleteOnTermination</choice>
+      <choice correct="False">RemoveOnDeletion</choice>
+      <choice correct="False">RemoveOnTermination</choice>
+      <choice correct="False">TerminateOnDeletion</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>True or False: Automated backups are enabled by default for a new DB Instance.</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="True">TRUE</choice>
+      <choice correct="False">FALSE</choice>
+      <choice correct="False"></choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>True or False: When using IAM to control access to your RDS resources, the key names that can be used are case sensitive. For example, aws:CurrentTime is NOT equivalent to AWS:currenttime.</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="True">TRUE</choice>
+      <choice correct="False">FALSE</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>You are implementing a URL whitelisting system for a company that wants to restrict outbound HTTP’S connections to specific domains from their EC2-hosted applications you deploy a single EC2 instance running proxy software and configure It to accept traffic from all subnets and EC2 instances in the VPC. You configure the proxy to only pass through traffic to domains that you define in its whitelist configuration You have a nightly maintenance window or 10 minutes where ail instances fetch new software updates. Each update Is about 200MB In size and there are 500 instances In the VPC that routinely fetch updates After a few days you notice that some machines are failing to successfully download some, but not all of their updates within the maintenance window The download URLs used for these updates are correctly listed in the proxy’s whitelist configuration and you are able to access them manually using a web browser on the instances What might be happening? (Choose 2 answers)</p>
+  <choiceresponse shuffle="True">
+    <checkboxgroup/>
+    <choice correct="False">You are running the proxy on an undersized EC2 instance type so network throughput is not sufficient for all instances to download their updates in time.</choice>
+    <choice correct="True">You have not allocated enough storage to the EC2 instance running me proxy so the network buffer is filling up. causing some requests to fall</choice>
+    <choice correct="True">You are running the proxy in a public subnet but have not allocated enough EIPs lo support the needed network throughput through the Internet Gateway (IGW)</choice>
+    <choice correct="False">You are running the proxy on a affilelentiy-sized EC2 instance in a private subnet and its network throughput is being throttled by a NAT running on an undersized EO£ instance</choice>
+    <choice correct="False">The route table for the subnets containing the affected EC2 instances is not configured to direct network traffic for the software update locations to the proxy.</choice>
+  </choiceresponse>
+</problem>
+<problem>
+  <p>What does Amazon Elastic Beanstalk provide?</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="False">A scalable storage appliance on top of Amazon Web Services.</choice>
+      <choice correct="True">An application container on top of Amazon Web Services.</choice>
+      <choice correct="False">A service by this name doesn’t exist.</choice>
+      <choice correct="False">A scalable cluster of EC2 instances.</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>Amazon RDS automated backups and DB Snapshots are currently supported for only the __________ storage engine</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="True">InnoDB</choice>
+      <choice correct="False">MyISAM</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>What does the AWS Storage Gateway provide?</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="True">It allows to integrate on-premises IT environments with Cloud Storage.</choice>
+      <choice correct="False">A direct encrypted connection to Amazon S3.</choice>
+      <choice correct="False">It’s a backup solution that provides an on-premises Cloud storage.</choice>
+      <choice correct="False">It provides an encrypted SSL endpoint for backups in the Cloud.</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>How many relational database engines does RDS currently support?</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="True">Three: MySQL, Oracle and Microsoft SQL Server.</choice>
+      <choice correct="False">Just two: MySQL and Oracle.</choice>
+      <choice correct="False">Five: MySQL, PostgreSQL, MongoDB, Cassandra and SQLite.</choice>
+      <choice correct="False">Just one: MySQL.</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>You are looking to migrate your Development (Dev) and Test environments to AWS. You have decided to use separate AWS accounts to host each environment. You plan to link each accounts bill to a Master AWS account using Consolidated Billing. To make sure you Keep within budget you would like to implement a way for administrators in the Master account to have access to stop, delete and/or terminate resources in both the Dev and Test accounts. Identify which option will allow you to achieve this goal.</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="True">Create IAM users in the Master account with full Admin permissions. Create cross-account roles in the Dev and Test accounts that grant the Master account access to the resources in the account by inheriting permissions from the Master account.</choice>
+      <choice correct="False">Create IAM users and a cross-account role in the Master account that grants full Admin permissions to the Dev and Test accounts.</choice>
+      <choice correct="False">Create IAM users in the Master account Create cross-account roles in the Dev and Test accounts that have full Admin permissions and grant the Master account access.</choice>
+      <choice correct="False">Link the accounts using Consolidated Billing. This will give IAM users in the Master account access to resources in the Dev and Test accounts</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>What does Amazon EC2 provide?</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="True">Virtual servers in the Cloud.</choice>
+      <choice correct="False">A platform to run code (Java, PHP, Python), paying on an hourly basis.</choice>
+      <choice correct="False">Computer Clusters in the Cloud.</choice>
+      <choice correct="False">Physical servers, remotely managed by the customer.</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>While creating the snapshots using the command line tools, which command should I be using?</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="False">ec2-deploy-snapshot</choice>
+      <choice correct="False">ec2-fresh-snapshot</choice>
+      <choice correct="True">ec2-create-snapshot</choice>
+      <choice correct="False">ec2-new-snapshot</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>Typically, you want your application to check whether a request generated an error before you spend any time processing results. The easiest way to find out if an error occurred is to look for an __________ node in the response from the Amazon RDS API.</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="False">Incorrect</choice>
+      <choice correct="True">Error</choice>
+      <choice correct="False">FALSE</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>Fill in the blanks: The base URI for all requests for instance metadata is ___________</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="False">http://254.169.169.254/latest/</choice>
+      <choice correct="False">http://169.169.254.254/latest/</choice>
+      <choice correct="False">http://127.0.0.1/latest/</choice>
+      <choice correct="True">http://169.254.169.254/latest/</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>You are developing a new mobile application and are considering storing user preferences in AWS.2w This would provide a more uniform cross-device experience to users using multiple mobile devices to access the application. The preference data for each user is estimated to be 50KB in size Additionally 5 million customers are expected to use the application on a regular basis. The solution needs to be cost-effective, highly available, scalable and secure, how would you design a solution to meet the above requirements?</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="False">Setup an RDS MySQL instance in 2 availability zones to store the user preference data. Deploy a public facing application on a server in front of the database to manage security and access credentials</choice>
+      <choice correct="True">Setup a DynamoDB table with an item for each user having the necessary attributes to hold the user preferences. The mobile application will query the user preferences directly from the DynamoDB table. Utilize STS. Web Identity Federation, and DynamoDB Fine Grained Access Control to authenticate and authorize access.</choice>
+      <choice correct="False">Setup an RDS MySQL instance with multiple read replicas in 2 availability zones to store the user preference data .The mobile application will query the user preferences from the read replicas. Leverage the MySQL user management and access privilege system to manage security and access credentials.</choice>
+      <choice correct="False">Store the user preference data in S3 Setup a DynamoDB table with an item for each user and an item attribute pointing to the user’ S3 object. The mobile application will retrieve the S3 URL from DynamoDB and then access the S3 object directly utilize STS, Web identity Federation, and S3 ACLs to authenticate and authorize access.</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
