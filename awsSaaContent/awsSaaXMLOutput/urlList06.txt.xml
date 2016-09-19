@@ -1,57 +1,171 @@
 <problem>
-  <p>Can you create IAM security credentials for existing users?</p>
+  <p>What will be the status of the snapshot until the snapshot is complete.</p>
   <multiplechoiceresponse>
     <choicegroup type="MultipleChoice" shuffle="True">
-      <choice correct="True">Yes, existing users can have security credentials associated with their account.</choice>
-      <choice correct="False">No, IAM requires that all users who have credentials set up are not existing users</choice>
-      <choice correct="False">No, security credentials are created within GROUPS, and then users are associated to GROUPS at a later time.</choice>
-      <choice correct="False">Yes, but only IAM credentials, not ordinary security credentials.</choice>
+      <choice correct="False">running</choice>
+      <choice correct="False">working</choice>
+      <choice correct="False">progressing</choice>
+      <choice correct="True">pending</choice>
     </choicegroup>
   </multiplechoiceresponse>
 </problem>
 <problem>
-  <p>An administrator is using Amazon CloudFormation to deploy a three tier web application that consists of a web tier and application tier that will utilize Amazon DynamoDB for storage when creating the CloudFormation template which of the following would allow the application instance access to the DynamoDB tables without exposing API credentials?</p>
+  <p>True or False: Automated backups are enabled by default for a new DB Instance.</p>
   <multiplechoiceresponse>
     <choicegroup type="MultipleChoice" shuffle="True">
-      <choice correct="False">Create an Identity and Access Management Role that has the required permissions to read and write from the required DynamoDB table and associate the Role to the application instances by referencing an instance profile.</choice>
-      <choice correct="False">Use me Parameter section in the Cloud Formation template to nave the user input Access and Secret Keys from an already created IAM user that has me permissions required to read and write from the required DynamoDB table.</choice>
-      <choice correct="True">Create an Identity and Access Management Role that has the required permissions to read and write from the required DynamoDB table and reference the Role in the instance profile property of the application instance.</choice>
-      <choice correct="False">Create an identity and Access Management user in the CioudFormation template that has permissions to read and write from the required DynamoDB table, use the GetAtt function to retrieve the Access and secret keys and pass them to the application instance through user-data.</choice>
+      <choice correct="True">TRUE</choice>
+      <choice correct="False">FALSE</choice>
     </choicegroup>
   </multiplechoiceresponse>
 </problem>
 <problem>
-  <p>You currently operate a web application In the AWS US-East region The application runs on an auto-scaled layer of EC2 instances and an RDS Multi-AZ database Your IT security compliance officer has tasked you to develop a reliable and durable logging solution to track changes made to your EC2.IAM And RDS resources. The solution must ensure the integrity and confidentiality of your log dat a. Which of these solutions would you recommend?</p>
+  <p>While creating the snapshots using the command line tools, which command should I be using?</p>
   <multiplechoiceresponse>
     <choicegroup type="MultipleChoice" shuffle="True">
-      <choice correct="True">Create a new CloudTrail trail with one new S3 bucket to store the logs and with the global services option selected Use IAM roles S3 bucket policies and Multi Factor Authentication (MFA) Delete on the S3 bucket that stores your logs.</choice>
-      <choice correct="False">Create a new cloudTrail with one new S3 bucket to store the logs Configure SNS to send log file delivery notifications to your management system Use IAM roles and S3 bucket policies on the S3 bucket mat stores your logs.</choice>
-      <choice correct="False">Create a new CloudTrail trail with an existing S3 bucket to store the logs and with the global services option selected Use S3 ACLs and Multi Factor Authentication (MFA) Delete on the S3 bucket that stores your logs.</choice>
-      <choice correct="False">Create three new CloudTrail trails with three new S3 buckets to store the logs one for the AWS Management console, one for AWS SDKs and one for command line tools Use IAM roles and S3 bucket policies on the S3 buckets that store your logs.</choice>
+      <choice correct="False">ec2-deploy-snapshot</choice>
+      <choice correct="False">ec2-fresh-snapshot</choice>
+      <choice correct="True">ec2-create-snapshot</choice>
+      <choice correct="False">ec2-new-snapshot</choice>
     </choicegroup>
   </multiplechoiceresponse>
 </problem>
 <problem>
-  <p>You are designing a connectivity solution between on-premises infrastructure and Amazon VPC Your server’s on-premises will De communicating with your VPC instances You will De establishing IPSec tunnels over the internet You will be using VPN gateways and terminating the IPsec tunnels on AWS-supported customer gateways. Which of the following objectives would you achieve by implementing an IPSec tunnel as outlined above? (Choose 4 answers)</p>
-  <choiceresponse shuffle="True">
-    <checkboxgroup/>
-    <choice correct="False">End-to-end protection of data in transit</choice>
-    <choice correct="False">End-to-end Identity authentication</choice>
-    <choice correct="True">Data encryption across the Internet</choice>
-    <choice correct="True">Protection of data in transit over the Internet</choice>
-    <choice correct="True">Peer identity authentication between VPN gateway and customer gateway</choice>
-    <choice correct="True">Data integrity protection across the Internet</choice>
-  </choiceresponse>
+  <p>Typically, you want your application to check whether a request generated an error before you spend any time processing results. The easiest way to find out if an error occurred is to look for an __________ node in the response from the Amazon RDS API.</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="False">Incorrect</choice>
+      <choice correct="True">Error</choice>
+      <choice correct="False">FALSE</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
 </problem>
 <problem>
-  <p>You are designing an SSUTLS solution that requires HTTPS clients to be authenticated by the Web server using client certificate authentication. The solution must be resilient. Which of the following options would you consider for configuring the web server infrastructure? (Choose 2 answers)</p>
-  <choiceresponse shuffle="True">
-    <checkboxgroup/>
-    <choice correct="True">Configure ELB with TCP listeners on TCP/4d3. And place the Web servers behind it.</choice>
-    <choice correct="True">Configure your Web servers with EIPS Place the Web servers in a Route53 Record Set and configure health checks against all Web servers.</choice>
-    <choice correct="False">Configure ELB with HTTPS listeners, and place the Web servers behind it.</choice>
-    <choice correct="False">Configure your web servers as the origins for a CloudFront distribution. Use custom SSL certificates on your CloudFront distribution.</choice>
-  </choiceresponse>
+  <p>Can we attach an EBS volume to more than one EC2 instance at the same time?</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="True">No</choice>
+      <choice correct="False">Yes.</choice>
+      <choice correct="False">Only EC2-optimized EBS volumes.</choice>
+      <choice correct="False">Only in read mode.</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>What are the two permission types used by AWS?</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="False">Resource-based and Product-based</choice>
+      <choice correct="False">Product-based and Service-based</choice>
+      <choice correct="False">Service-based</choice>
+      <choice correct="True">User-based and Resource-based</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>Amazon RDS automated backups and DB Snapshots are currently supported for only the __________ storage engine</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="True">InnoDB</choice>
+      <choice correct="False">MyISAM</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>Disabling automated backups ______ disable the point-in-time recovery.</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="False">if configured to can</choice>
+      <choice correct="False">will never</choice>
+      <choice correct="True">will</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>Out of the stripping options available for the EBS volumes, which one has the following disadvantage : ‘Doubles the amount of I/O required from the instance to EBS compared to RAID 0, because you’re mirroring all writes to a pair of volumes, limiting how much you can stripe.’ ?</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="False">Raid 0</choice>
+      <choice correct="True">RAID 1+0 (RAID 10)</choice>
+      <choice correct="False">Raid 1</choice>
+      <choice correct="False">Raid</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>What does a “Domain” refer to in Amazon SWF?</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="False">A security group in which only tasks inside can communicate with each other</choice>
+      <choice correct="False">A special type of worker</choice>
+      <choice correct="True">A collection of related Workflows</choice>
+      <choice correct="False">The DNS record for the Amazon SWF service</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>EBS Snapshots occur _____</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="True">Asynchronously</choice>
+      <choice correct="False">Synchronously</choice>
+      <choice correct="False">Weekly</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>Fill in the blanks: The base URI for all requests for instance metadata is ___________</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="False">http://254.169.169.254/latest/</choice>
+      <choice correct="False">http://169.169.254.254/latest/</choice>
+      <choice correct="False">http://127.0.0.1/latest/</choice>
+      <choice correct="True">http://169.254.169.254/latest/</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>How many relational database engines does RDS currently support?</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="True">Three: MySQL, Oracle and Microsoft SQL Server.</choice>
+      <choice correct="False">Just two: MySQL and Oracle.</choice>
+      <choice correct="False">Five: MySQL, PostgreSQL, MongoDB, Cassandra and SQLite.</choice>
+      <choice correct="False">Just one: MySQL.</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>How can I change the security group membership for interfaces owned by other AWS, such as Elastic Load Balancing?</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="True">By using the service specific console or API\CLI commands</choice>
+      <choice correct="False">None of these</choice>
+      <choice correct="False">Using Amazon EC2 API/CLI</choice>
+      <choice correct="False">using all these methods</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>Can Amazon S3 uploads resume on failure or do they need to restart?</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="False">Restart from beginning</choice>
+      <choice correct="False">You can resume them, if you flag the “resume on failure” option before uploading.</choice>
+      <choice correct="True">Resume on failure</choice>
+      <choice correct="False">Depends on the file size</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>Which of the following cannot be used in Amazon EC2 to control who has access to specific Amazon EC2 instances?</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="False">Security Groups</choice>
+      <choice correct="True">IAM System</choice>
+      <choice correct="False">SSH keys</choice>
+      <choice correct="False">Windows passwords</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
 </problem>
 <problem>
   <p>What is the maximum write throughput I can provision for a single Dynamic DB table?</p>
@@ -65,25 +179,13 @@
   </multiplechoiceresponse>
 </problem>
 <problem>
-  <p>You are designing a photo sharing mobile app the application will store all pictures in a single Amazon S3 bucket. Users will upload pictures from their mobile device directly to Amazon S3 and will be able to view and download their own pictures directly from Amazon S3. You want to configure security to handle potentially millions of users in the most secure manner possible. What should your server-side application do when a new user registers on the photo-sharing mobile application?</p>
+  <p>Is creating a Read Replica of another Read Replica supported?</p>
   <multiplechoiceresponse>
     <choicegroup type="MultipleChoice" shuffle="True">
-      <choice correct="False">Create a set of long-term credentials using AWS Security Token Service with appropriate permissions Store these credentials in the mobile app and use them to access Amazon S3.</choice>
-      <choice correct="True">Record the user’s Information in Amazon RDS and create a role in IAM with appropriate permissions. When the user uses their mobile app create temporary credentials using the AWS Security Token Service ‘AssumeRole’ function Store these credentials in the mobile app’s memory and use them to access Amazon S3 Generate new credentials the next time the user runs the mobile app.</choice>
-      <choice correct="False">Record the user’s Information In Amazon DynamoDB. When the user uses their mobile app create temporary credentials using AWS Security Token Service with appropriate permissions Store these credentials in the mobile app’s memory and use them to access Amazon S3 Generate new credentials the next time the user runs the mobile app.</choice>
-      <choice correct="False">Create IAM user. Assign appropriate permissions to the IAM user Generate an access key and secret key for the IAM user, store them in the mobile app and use these credentials to access Amazon S3.</choice>
-      <choice correct="False"></choice>
-      <choice correct="False">Create an IAM user. Update the bucket policy with appropriate permissions for the IAM user Generate an access Key and secret Key for the IAM user, store them In the mobile app and use these credentials to access Amazon S3.</choice>
-    </choicegroup>
-  </multiplechoiceresponse>
-</problem>
-<problem>
-  <p>Can a ‘user’ be associated with multiple AWS accounts?</p>
-  <multiplechoiceresponse>
-    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="False">Only in certain regions</choice>
+      <choice correct="False">Only with MSSQL based RDS</choice>
+      <choice correct="False">Only for Oracle RDS types</choice>
       <choice correct="True">No</choice>
-      <choice correct="False">Yes</choice>
-      <choice correct="False"></choice>
     </choicegroup>
   </multiplechoiceresponse>
 </problem>
@@ -99,25 +201,11 @@
   </multiplechoiceresponse>
 </problem>
 <problem>
-  <p>Can I move a Reserved Instance from one Region to another?</p>
+  <p>Can a ‘user’ be associated with multiple AWS accounts?</p>
   <multiplechoiceresponse>
     <choicegroup type="MultipleChoice" shuffle="True">
       <choice correct="True">No</choice>
-      <choice correct="False">Only if they are moving into GovCloud</choice>
       <choice correct="False">Yes</choice>
-      <choice correct="False">Only if they are moving to US East from another region</choice>
-    </choicegroup>
-  </multiplechoiceresponse>
-</problem>
-<problem>
-  <p>An enterprise wants to use a third-party SaaS application. The SaaS application needs to have access to issue several API commands to discover Amazon EC2 resources running within the enterprise’s account The enterprise has internal security policies that require any outside access to their environment must conform to</p>
-  <multiplechoiceresponse>
-    <choicegroup type="MultipleChoice" shuffle="True">
-      <choice correct="False">SaaS vendor cannot be used by any other third party. Which of the following would meet all of theseconditions?</choice>
-      <choice correct="False">From the AWS Management Console, navigate to the Security Credentials page and retrieve the access and secret key for your account.</choice>
-      <choice correct="False">Create an IAM user within the enterprise account assign a user policy to the IAM user that allows only the actions required by the SaaS application create a new access and secret key for the user and provide these credentials to the SaaS provider.</choice>
-      <choice correct="False">Create an IAM role for cross-account access allows the SaaS provider’s account to assume the role and assign it a policy that allows only the actions required by the SaaS application.</choice>
-      <choice correct="True">Create an IAM role for EC2 instances, assign it a policy mat allows only the actions required tor the Saas application to work, provide the role ARM to the SaaS provider to use when launching their application instances.</choice>
     </choicegroup>
   </multiplechoiceresponse>
 </problem>
@@ -131,13 +219,23 @@
   </multiplechoiceresponse>
 </problem>
 <problem>
-  <p>What does specifying the mapping /dev/sdc=none when launching an instance do?</p>
+  <p>What does the AWS Storage Gateway provide?</p>
   <multiplechoiceresponse>
     <choicegroup type="MultipleChoice" shuffle="True">
-      <choice correct="False">Prevents /dev/sdc from creating the instance.</choice>
-      <choice correct="False">Prevents /dev/sdc from deleting the instance.</choice>
-      <choice correct="False">Set the value of /dev/sdc to ‘zero’.</choice>
-      <choice correct="True">Prevents /dev/sdc from attaching to the instance.</choice>
+      <choice correct="True">It allows to integrate on-premises IT environments with Cloud Storage.</choice>
+      <choice correct="False">A direct encrypted connection to Amazon S3.</choice>
+      <choice correct="False">It’s a backup solution that provides an on-premises Cloud storage.</choice>
+      <choice correct="False">It provides an encrypted SSL endpoint for backups in the Cloud.</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>Typically, you want your application to check whether a request generated an error before you spend any time processing results. The easiest way to find out if an error occurred is to look for an _____________ node in the response from the Amazon RDS API.</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="False">Incorrect</choice>
+      <choice correct="True">Error</choice>
+      <choice correct="False">FALSE</choice>
     </choicegroup>
   </multiplechoiceresponse>
 </problem>
@@ -153,13 +251,13 @@
   </multiplechoiceresponse>
 </problem>
 <problem>
-  <p>What is Amazon Glacier?</p>
+  <p>Can I move a Reserved Instance from one Region to another?</p>
   <multiplechoiceresponse>
     <choicegroup type="MultipleChoice" shuffle="True">
-      <choice correct="False">You mean Amazon “Iceberg”: it’s a low-cost storage service.</choice>
-      <choice correct="False">A security tool that allows to “freeze” an EBS volume and perform computer forensics on it.</choice>
-      <choice correct="True">A low-cost storage service that provides secure and durable storage for data archiving and backup.</choice>
-      <choice correct="False">It’s a security tool that allows to “freeze” an EC2 instance and perform computer forensics on it.</choice>
+      <choice correct="True">No</choice>
+      <choice correct="False">Only if they are moving into GovCloud</choice>
+      <choice correct="False">Yes</choice>
+      <choice correct="False">Only if they are moving to US East from another region</choice>
     </choicegroup>
   </multiplechoiceresponse>
 </problem>
@@ -175,65 +273,24 @@
   </multiplechoiceresponse>
 </problem>
 <problem>
-  <p>A/An _____ acts as a firewall that controls the traffic allowed to reach one or more instances.</p>
+  <p>What does specifying the mapping /dev/sdc=none when launching an instance do?</p>
   <multiplechoiceresponse>
     <choicegroup type="MultipleChoice" shuffle="True">
-      <choice correct="True">security group</choice>
-      <choice correct="False">ACL</choice>
-      <choice correct="False">IAM</choice>
-      <choice correct="False">Private IP Addresses</choice>
+      <choice correct="False">Prevents /dev/sdc from creating the instance.</choice>
+      <choice correct="False">Prevents /dev/sdc from deleting the instance.</choice>
+      <choice correct="False">Set the value of /dev/sdc to ‘zero’.</choice>
+      <choice correct="True">Prevents /dev/sdc from attaching to the instance.</choice>
     </choicegroup>
   </multiplechoiceresponse>
 </problem>
 <problem>
-  <p>True or False: When you perform a restore operation to a point in time or from a DB Snapshot, a new DB Instance is created with a new endpoint.</p>
+  <p>What is Amazon Glacier?</p>
   <multiplechoiceresponse>
     <choicegroup type="MultipleChoice" shuffle="True">
-      <choice correct="False">FALSE</choice>
-      <choice correct="True">TRUE</choice>
-    </choicegroup>
-  </multiplechoiceresponse>
-</problem>
-<problem>
-  <p>Your company has recently extended its datacenter into a VPC on AVVS to add burst computing capacity as needed Members of your Network Operations Center need to be able to go to the AWS Management Console and administer Amazon EC2 instances as necessary You don’t want to create new IAM users for each NOC member and make those users sign in again to the AWS Management Console Which option below will meet the needs for your NOC members?</p>
-  <multiplechoiceresponse>
-    <choicegroup type="MultipleChoice" shuffle="True">
-      <choice correct="False">Use OAuth 2 0 to retrieve temporary AWS security credentials to enable your NOC members to sign in to the AVVS Management Console.</choice>
-      <choice correct="False">Use web Identity Federation to retrieve AWS temporary security credentials to enable your NOC members to sign in to the AWS Management Console.</choice>
-      <choice correct="False">Use your on-premises SAML 2 O-compliant identity provider (IDP) to grant the NOC members federated access to the AWS Management Console via the AWS single sign-on (SSO) endpoint.</choice>
-      <choice correct="True">Use your on-premises SAML2.0-compliam identity provider (IDP) to retrieve temporary security credentials to enable NOC members to sign in to the AWS Management Console.</choice>
-    </choicegroup>
-  </multiplechoiceresponse>
-</problem>
-<problem>
-  <p>Will my standby RDS instance be in the same Availability Zone as my primary?</p>
-  <multiplechoiceresponse>
-    <choicegroup type="MultipleChoice" shuffle="True">
-      <choice correct="False">Only for Oracle RDS types</choice>
-      <choice correct="False">Yes</choice>
-      <choice correct="False">Only if configured at launch</choice>
-      <choice correct="True">No</choice>
-    </choicegroup>
-  </multiplechoiceresponse>
-</problem>
-<problem>
-  <p>You are designing an intrusion detection prevention (IDS/IPS) solution for a customer web application in a single VPC. You are considering the options for implementing IOS IPS protection for traffic coming from the Internet. Which of the following options would you consider? (Choose 2 answers)</p>
-  <choiceresponse shuffle="True">
-    <checkboxgroup/>
-    <choice correct="False">Implement IDS/IPS agents on each Instance running In VPC</choice>
-    <choice correct="False">Configure an instance in each subnet to switch its network interface card to promiscuous mode and analyze network traffic.</choice>
-    <choice correct="True">Implement Elastic Load Balancing with SSL listeners In front of the web applications</choice>
-    <choice correct="True">Implement a reverse proxy layer in front of web servers and configure IDS/IPS agents on each reverse proxy server.</choice>
-  </choiceresponse>
-</problem>
-<problem>
-  <p>What does the following command do with respect to the Amazon EC2 security groups? ec2-create-group CreateSecurityGroup</p>
-  <multiplechoiceresponse>
-    <choicegroup type="MultipleChoice" shuffle="True">
-      <choice correct="False">Groups the user created security groups in to a new group for easy access.</choice>
-      <choice correct="True">Creates a new security group for use with your account.</choice>
-      <choice correct="False">Creates a new group inside the security group.</choice>
-      <choice correct="False">Creates a new rule inside the security group.</choice>
+      <choice correct="False">You mean Amazon “Iceberg”: it’s a low-cost storage service.</choice>
+      <choice correct="False">A security tool that allows to “freeze” an EBS volume and perform computer forensics on it.</choice>
+      <choice correct="True">A low-cost storage service that provides secure and durable storage for data archiving and backup.</choice>
+      <choice correct="False">It’s a security tool that allows to “freeze” an EC2 instance and perform computer forensics on it.</choice>
     </choicegroup>
   </multiplechoiceresponse>
 </problem>
@@ -249,76 +306,13 @@
   </multiplechoiceresponse>
 </problem>
 <problem>
-  <p>In the Launch Db Instance Wizard, where can I select the backup and maintenance options?</p>
+  <p>Fill in the blanks: _________ let you categorize your EC2 resources in different ways, for example, by purpose, owner, or environment.</p>
   <multiplechoiceresponse>
     <choicegroup type="MultipleChoice" shuffle="True">
-      <choice correct="False">Under DB INSTANCE DETAILS</choice>
-      <choice correct="False">Under REVIEW</choice>
-      <choice correct="True">Under MANAGEMENT OPTIONS</choice>
-      <choice correct="False">Under ENGINE SELECTION</choice>
-    </choicegroup>
-  </multiplechoiceresponse>
-</problem>
-<problem>
-  <p>While launching an RDS DB instance, on which page I can select the Availability Zone?</p>
-  <multiplechoiceresponse>
-    <choicegroup type="MultipleChoice" shuffle="True">
-      <choice correct="False">REVIEW</choice>
-      <choice correct="False">DB INSTANCE DETAILS</choice>
-      <choice correct="False">MANAGEMENT OPTIONS</choice>
-      <choice correct="True">ADDITIONAL CONFIGURATION</choice>
-    </choicegroup>
-  </multiplechoiceresponse>
-</problem>
-<problem>
-  <p>Provisioned IOPS Costs: you are charged for the IOPS and storage whether or not you use them in a given month.</p>
-  <multiplechoiceresponse>
-    <choicegroup type="MultipleChoice" shuffle="True">
-      <choice correct="False">FALSE</choice>
-      <choice correct="True">TRUE</choice>
-    </choicegroup>
-  </multiplechoiceresponse>
-</problem>
-<problem>
-  <p>What happens to the data on an instance if the instance reboots (intentionally or unintentionally)?</p>
-  <multiplechoiceresponse>
-    <choicegroup type="MultipleChoice" shuffle="True">
-      <choice correct="False">Data will be lost</choice>
-      <choice correct="True">Data persists</choice>
-      <choice correct="False">Data may persist however cannot be sure</choice>
-    </choicegroup>
-  </multiplechoiceresponse>
-</problem>
-<problem>
-  <p>How many types of block devices does Amazon EC2 support A</p>
-  <multiplechoiceresponse>
-    <choicegroup type="MultipleChoice" shuffle="True">
-      <choice correct="True">2</choice>
-      <choice correct="False">3</choice>
-      <choice correct="False">4</choice>
-      <choice correct="False">1</choice>
-    </choicegroup>
-  </multiplechoiceresponse>
-</problem>
-<problem>
-  <p>You are designing a data leak prevention solution for your VPC environment. You want your VPC Instances to be able to access software depots and distributions on the Internet for product updates. The depots and distributions are accessible via third party CONs by their URLs. You want to explicitly deny any other outbound connections from your VPC instances to hosts on the internet. Which of the following options would you consider?</p>
-  <multiplechoiceresponse>
-    <choicegroup type="MultipleChoice" shuffle="True">
-      <choice correct="True">Configure a web proxy server in your VPC and enforce URL-based rules for outbound access Remove default routes.</choice>
-      <choice correct="False">Implement security groups and configure outbound rules to only permit traffic to software depots.</choice>
-      <choice correct="False">Move all your instances into private VPC subnets remove default routes from all routing tables and add specific routes to the software depots and distributions only.</choice>
-      <choice correct="False">Implement network access control lists to all specific destinations, with an Implicit deny as a rule.</choice>
-    </choicegroup>
-  </multiplechoiceresponse>
-</problem>
-<problem>
-  <p>An AWS customer is deploying an application mat is composed of an AutoScaling group of EC2 Instances. The customers security policy requires that every outbound connection from these instances to any other service within the customers Virtual Private Cloud must be authenticated using a unique x 509 certificate that contains the specific instanceid. In addition an x 509 certificates must Designed by the customer’s Key management service in order to be trusted for authentication. Which of the following configurations will support these requirements?</p>
-  <multiplechoiceresponse>
-    <choicegroup type="MultipleChoice" shuffle="True">
-      <choice correct="True">Configure an IAM Role that grants access to an Amazon S3 object containing a signed certificate and configure me Auto Scaling group to launch instances with this role Have the instances bootstrap get the certificate from Amazon S3 upon first boot.</choice>
-      <choice correct="False">Embed a certificate into the Amazon Machine Image that is used by the Auto Scaling group Have the launched instances generate a certificate signature request with the instance’s assigned instance-id to the Key management service for signature.</choice>
-      <choice correct="False">Configure the Auto Scaling group to send an SNS notification of the launch of a new instance to the trusted key management service. Have the Key management service generate a signed certificate and send it directly to the newly launched instance.</choice>
-      <choice correct="False">Configure the launched instances to generate a new certificate upon first boot Have the Key management service poll the AutoScaling group for associated instances and send new instances a certificate signature (hat contains the specific instance-id.</choice>
+      <choice correct="False">wildcards</choice>
+      <choice correct="False">pointers</choice>
+      <choice correct="True">Tags</choice>
+      <choice correct="False">special filters</choice>
     </choicegroup>
   </multiplechoiceresponse>
 </problem>

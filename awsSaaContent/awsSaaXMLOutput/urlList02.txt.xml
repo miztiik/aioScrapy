@@ -1,140 +1,39 @@
 <problem>
-  <p>You have recently joined a startup company building sensors to measure street noise and air quality in urban areas. The company has been running a pilot deployment of around 100 sensors for 3 months Each sensor uploads 1KB of sensor data every minute to a backend hosted on AWS. During the pilot, you measured a peak or 10 IOPS on the database, and you stored an average of 3GB of sensor data per month in the database The current deployment consists of a load-balanced auto scaled Ingestion layer using EC2 instances and a PostgreSQL RDS database with 500GB standard storage. The pilot is considered a success and your CEO has managed to get the attention or some potential investors The business plan requires a deployment of at least 1O0K sensors which needs to be supported by the backend</p>
-  <multiplechoiceresponse>
-    <choicegroup type="MultipleChoice" shuffle="True">
-      <choice correct="False">To secure funding, you have to make sure that the platform meets these requirements and leaves room forfurther scalingWhich setup win meet the requirements?</choice>
-      <choice correct="False">Add an SOS queue to the ingestion layer to buffer writes to the RDS instance</choice>
-      <choice correct="False">Ingest data into a DynamoDB table and move old data to a Redshift cluster</choice>
-      <choice correct="True">Replace the RDS instance with a 6 node Redshift cluster with 96TB of storage</choice>
-      <choice correct="False">Keep the current architecture but upgrade RDS storage to 3TB and 10K provisioned IOPS</choice>
-    </choicegroup>
-  </multiplechoiceresponse>
-</problem>
-<problem>
-  <p>You have been asked to design the storage layer for an application. The application requires disk performance of at least 100,000 IOPS in addition, the storage layer must be able to survive the loss of an individual disk. EC2 instance, or Availability Zone without any data loss. The volume you provide must have a capacity of at least 3 TB.Which of the following designs will meet these objectives’?</p>
-  <multiplechoiceresponse>
-    <choicegroup type="MultipleChoice" shuffle="True">
-      <choice correct="False">Instantiate an 12 8xlarge instance in us-east-1a Create a RAID 0 volume using the four 800GB SSD ephemeral disks provided with the instance Provision 3×1 TB EBS volumes attach them to the instance and configure them as a second RAID 0 volume Configure synchronous, block-level replication from the ephemeralbacked volume to the EBS-backed volume.</choice>
-      <choice correct="False">Instantiate an 12 8xlarge instance in us-east-1a create a raid 0 volume using the four 800GB SSD ephemeral disks provide with the Instance Configure synchronous block-level replication to an Identically configured Instance in us-east-1b.</choice>
-      <choice correct="False">Instantiate a c3 8xlarge Instance In us-east-1 Provision an AWS Storage Gateway and configure it for 3 TB of storage and 100 000 lOPS Attach the volume to the instance.</choice>
-      <choice correct="True">Instantiate a c3 8xlarge instance in us-east-i provision 4x1TB EBS volumes, attach them to the instance, and configure them as a single RAID 5 volume Ensure that EBS snapshots are performed every 15 minutes.</choice>
-      <choice correct="False">Instantiate a c3 8xlarge Instance in us-east-1 Provision 3x1TB EBS volumes attach them to the instance, and configure them as a single RAID 0 volume Ensure that EBS snapshots are performed every 15 minutes.</choice>
-    </choicegroup>
-  </multiplechoiceresponse>
-</problem>
-<problem>
-  <p>Your company plans to host a large donation website on Amazon Web Services (AWS). You anticipate a large and undetermined amount of traffic that will create many database writes. To be certain that you do not drop any writes to a database hosted on AWS. Which service should you use?</p>
-  <multiplechoiceresponse>
-    <choicegroup type="MultipleChoice" shuffle="True">
-      <choice correct="True">Amazon RDS with provisioned IOPS up to the anticipated peak write throughput.</choice>
-      <choice correct="False">Amazon Simple Queue Service (SOS) for capturing the writes and draining the queue to write to the database.</choice>
-      <choice correct="False">Amazon ElastiCache to store the writes until the writes are committed to the database.</choice>
-      <choice correct="False">Amazon DynamoDB with provisioned write throughput up to the anticipated peak write throughput.</choice>
-    </choicegroup>
-  </multiplechoiceresponse>
-</problem>
-<problem>
-  <p>Your company runs a customer facing event registration site This site is built with a 3-tier architecture with web and application tier servers and a MySQL database The application requires 6 web tier servers and 6 application tier servers for normal operation, but can run on a minimum of 65% server capacity and a single MySQL database. When deploying this application in a region with three availability zones (AZs) which architecture provides high availability?</p>
-  <multiplechoiceresponse>
-    <choicegroup type="MultipleChoice" shuffle="True">
-      <choice correct="False">A web tier deployed across 2 AZs with 3 EC2 (Elastic Compute Cloud) instances in each AZ inside an Auto Scaling Group behind an ELB (elastic load balancer), and an application tier deployed across 2 AZs with 3 EC2 instances in each AZ inside an Auto Scaling Group behind an ELB. and one RDS (Relational Database Service) instance deployed with read replicas in the other AZ.</choice>
-      <choice correct="True">A web tier deployed across 3 AZs with 2 EC2 (Elastic Compute Cloud) instances in each A2 inside an Auto Scaling Group behind an ELB (elastic load balancer) and an application tier deployed across 3 AZs with 2 EC2 instances in each AZ inside an Auto Scaling Group behind an ELB and one RDS (Relational Database Service) Instance deployed with read replicas in the two other AZs.</choice>
-      <choice correct="False">d A web tier deployed across 2 AZs with 3 EC2 (Elastic Compute Cloud) instances in each AZ inside an Auto Scaling Group behind an ELB (elastic load balancer) and an application tier deployed across 2 AZs with 3 EC2 instances m each AZ inside an Auto Scaling Group behind an ELS and a Multi-AZ RDS (Relational Database Service) deployment.</choice>
-      <choice correct="False">A web tier deployed across 3 AZs with 2 EC2 (Elastic Compute Cloud) instances in each AZ Inside an Auto Scaling Group behind an ELB (elastic load balancer). And an application tier deployed across 3 AZs with 2 EC2 instances In each AZ inside an Auto Scaling Group behind an ELB. And a Multi-AZ RDS (Relational Database services) deployment.</choice>
-    </choicegroup>
-  </multiplechoiceresponse>
-</problem>
-<problem>
-  <p>Your application is using an ELB in front of an Auto Scaling group of web/application servers deployed across two AZs and a Multi-AZ RDS Instance for data persistence. The database CPU is often above 80% usage and 90% of I/O operations on the database are reads. To improve performance you recently added a single-node Memcached ElastiCache Cluster to cache frequent DB query results. In the next weeks the overall workload is expected to grow by 30%. Do you need to change anything in the architecture to maintain the high availability or the application with the anticipated additional load’* Why?</p>
-  <multiplechoiceresponse>
-    <choicegroup type="MultipleChoice" shuffle="True">
-      <choice correct="False">Yes. you should deploy two Memcached ElastiCache Clusters in different AZs because the ROS Instance will not Be able to handle the load It me cache node fails.</choice>
-      <choice correct="True">No. if the cache node fails the automated ElastiCache node recovery feature will prevent any availability impact.</choice>
-      <choice correct="False">Yes you should deploy the Memcached ElastiCache Cluster with two nodes in the same AZ as the RDS DB master instance to handle the load if one cache node fails.</choice>
-      <choice correct="False">No if the cache node fails you can always get the same data from the DB without having any availability impact.</choice>
-    </choicegroup>
-  </multiplechoiceresponse>
-</problem>
-<problem>
-  <p>You need a persistent and durable storage to trace call activity of an IVR (Interactive Voice Response) system. Call duration is mostly in the 2-3 minutes timeframe. Each traced call can be either active or terminated. An external application needs to know each minute the list of currently active calls, which are usually a few calls/second. Put once per month there is a periodic peak up to 1000 calls/second for a few hours The system is open 24/7 and any downtime should be avoided. Historical data is periodically archived to files. Cost saving is a priority for this project. What database implementation would better fit this scenario, keeping costs as low as possible?</p>
-  <multiplechoiceresponse>
-    <choicegroup type="MultipleChoice" shuffle="True">
-      <choice correct="True">Use RDS Multi-AZ with two tables, one for -Active calls” and one for -Terminated calls”. In this way the “Active calls_ table is always small and effective to access.</choice>
-      <choice correct="False">Use DynamoDB with a “Calls” table and a Global Secondary Index on a “IsActive'” attribute that is present for active calls only In this way the Global Secondary index is sparse and more effective.</choice>
-      <choice correct="False">Use DynamoDB with a ‘Calls” table and a Global secondary index on a ‘State” attribute that can equal to “active” or “terminated” in this way the Global Secondary index can be used for all Items in the table.</choice>
-      <choice correct="False">Use RDS Multi-AZ with a “CALLS” table and an Indexed “STATE* field that can be equal to ‘ACTIVE” or – TERMINATED” In this way the SOL query Is optimized by the use of the Index.</choice>
-    </choicegroup>
-  </multiplechoiceresponse>
-</problem>
-<problem>
   <p>Which of the following are use cases for Amazon DynamoDB? Choose 3 answers</p>
-  <choiceresponse shuffle="True">
-    <checkboxgroup/>
-    <choice correct="False">Storing BLOB data.</choice>
-    <choice correct="False">Managing web sessions.</choice>
-    <choice correct="True">Storing JSON documents.</choice>
-    <choice correct="False">Storing metadata for Amazon S3 objects.</choice>
-    <choice correct="True">Running relational joins and complex updates.</choice>
-    <choice correct="True">Storing large amounts of infrequently accessed data.</choice>
-  </choiceresponse>
-</problem>
-<problem>
-  <p>You would like to create a mirror image of your production environment in another region for disaster recovery purposes. Which of the following AWS resources do not need to be recreated in the second region? (Choose 2 answers)</p>
-  <choiceresponse shuffle="True">
-    <checkboxgroup/>
-    <choice correct="True">Route 53 Record Sets</choice>
-    <choice correct="False">IM1 Roles</choice>
-    <choice correct="True">Elastic IP Addresses (EIP)</choice>
-    <choice correct="False">EC2 Key Pairs</choice>
-    <choice correct="False">Launch configurations</choice>
-    <choice correct="False">Security Groups</choice>
-  </choiceresponse>
-</problem>
-<problem>
-  <p>A company has configured and peered two VPCs: VPC-1 and VPC-2. VPC-1 contains only private subnets, and VPC-2 contains only public subnets. The company uses a single AWS Direct Connect connection and private virtual interface to connect their on-premises network with VPC-1. Which two methods increases the fault tolerance of the connection to VPC-1? Choose 2 answers</p>
-  <choiceresponse shuffle="True">
-    <checkboxgroup/>
-    <choice correct="False">Establish a hardware VPN over the internet between VPC-2 ana the on-premises network.</choice>
-    <choice correct="True">Establish a hardware VPN over the internet between VPC-1 and the on-premises network.</choice>
-    <choice correct="True">Establish a new AWS Direct Connect connection and private virtual interface in the same region as VPC-2.</choice>
-    <choice correct="False">Establish a new AWS Direct Connect connection and private virtual interface in a different AWS region than VPC-1.</choice>
-    <choice correct="False">Establish a new AWS Direct Connect connection and private virtual interface in the same AWS region as VPC-1</choice>
+  <choiceresponse>
+    <checkboxgroup>
+      <choice correct="False">Storing BLOB data.</choice>
+      <choice correct="False">Managing web sessions.</choice>
+      <choice correct="True">Storing JSON documents.</choice>
+      <choice correct="False">Storing metadata for Amazon S3 objects.</choice>
+      <choice correct="True">Running relational joins and complex updates.</choice>
+      <choice correct="True">Storing large amounts of infrequently accessed data.</choice>
+    </checkboxgroup>
   </choiceresponse>
 </problem>
 <problem>
   <p>Which of the following statements are true about Amazon Route 53 resource records? Choose 2 answers</p>
-  <choiceresponse shuffle="True">
-    <checkboxgroup/>
-    <choice correct="True">An Alias record can map one DNS name to another Amazon Route 53 DNS name.</choice>
-    <choice correct="False">A CNAME record can be created for your zone apex.</choice>
-    <choice correct="True">An Amazon Route 53 CNAME record can point to any DNS record hosted anywhere.</choice>
-    <choice correct="False">TTL can be set for an Alias record in Amazon Route 53.</choice>
-    <choice correct="False">An Amazon Route 53 Alias record can point to any DNS record hosted anywhere.</choice>
-  </choiceresponse>
-</problem>
-<problem>
-  <p>A customer implemented AWS Storage Gateway with a gateway-cached volume at their main office. An event takes the link between the main and branch office offline. Which methods will enable the branch office to access their data? Choose 3 answers</p>
-  <choiceresponse shuffle="True">
-    <checkboxgroup/>
-    <choice correct="True">Use a HTTPS GET to the Amazon S3 bucket where the files are located.</choice>
-    <choice correct="False">Restore by implementing a lifecycle policy on the Amazon S3 bucket.</choice>
-    <choice correct="False">Make an Amazon Glacier Restore API call to load the files into another Amazon S3 bucket within four to six hours.</choice>
-    <choice correct="True">Launch a new AWS Storage Gateway instance AMI in Amazon EC2, and restore from a gateway snapshot.</choice>
-    <choice correct="False">Create an Amazon EBS volume from a gateway snapshot, and mount it to an Amazon EC2 instance.</choice>
-    <choice correct="True">Launch an AWS Storage Gateway virtual iSCSI device at the branch office, and restore from a gateway snapshot.</choice>
+  <choiceresponse>
+    <checkboxgroup>
+      <choice correct="True">An Alias record can map one DNS name to another Amazon Route 53 DNS name.</choice>
+      <choice correct="False">A CNAME record can be created for your zone apex.</choice>
+      <choice correct="True">An Amazon Route 53 CNAME record can point to any DNS record hosted anywhere.</choice>
+      <choice correct="False">TTL can be set for an Alias record in Amazon Route 53.</choice>
+      <choice correct="False">An Amazon Route 53 Alias record can point to any DNS record hosted anywhere.</choice>
+    </checkboxgroup>
   </choiceresponse>
 </problem>
 <problem>
   <p>Your company has HQ in Tokyo and branch offices all over the world and is using a logistics software with a multi-regional deployment on AWS in Japan, Europe and US</p>
-  <choiceresponse shuffle="True">
-    <checkboxgroup/>
-    <choice correct="False"></choice>
-    <choice correct="True">The logistic software has a 3-tier architecture and currently uses MySQL 5.6 for data persistence. Each region has deployed its own database In the HQ region you run an hourly batch process reading data from every region to compute cross-regional reports that are sent by email to all offices this batch process must be completed as fast as possible to quickly optimize logistics how do you build the database architecture in order to meet the requirements’?  For each regional deployment, use RDS MySQL with a master in the region and a read replica in the HQ region</choice>
-    <choice correct="True">The logistic software has a 3-tier architecture and currently uses MySQL 5.6 for data persistence. Each region has deployed its own database In the HQ region you run an hourly batch process reading data from every region to compute cross-regional reports that are sent by email to all offices this batch process must be completed as fast as possible to quickly optimize logistics how do you build the database architecture in order to meet the requirements’?  For each regional deployment, use RDS MySQL with a master in the region and a read replica in the HQ region</choice>
-    <choice correct="False">For each regional deployment, use MySQL on EC2 with a master in the region and send hourly EBS snapshots to the HQ region</choice>
-    <choice correct="False">For each regional deployment, use RDS MySQL with a master in the region and send hourly RDS snapshots to the HQ region</choice>
-    <choice correct="False">For each regional deployment, use MySQL on EC2 with a master in the region and use S3 to copy data files hourly to the HQ region</choice>
-    <choice correct="False">Use Direct Connect to connect all regional MySQL deployments to the HQ region and reduce network latency for the batch process</choice>
+  <choiceresponse>
+    <checkboxgroup>
+      <choice correct="True">The logistic software has a 3-tier architecture and currently uses MySQL 5.6 for data persistence. Each region has deployed its own database In the HQ region you run an hourly batch process reading data from every region to compute cross-regional reports that are sent by email to all offices this batch process must be completed as fast as possible to quickly optimize logistics how do you build the database architecture in order to meet the requirements’?  For each regional deployment, use RDS MySQL with a master in the region and a read replica in the HQ region</choice>
+      <choice correct="True">The logistic software has a 3-tier architecture and currently uses MySQL 5.6 for data persistence. Each region has deployed its own database In the HQ region you run an hourly batch process reading data from every region to compute cross-regional reports that are sent by email to all offices this batch process must be completed as fast as possible to quickly optimize logistics how do you build the database architecture in order to meet the requirements’?  For each regional deployment, use RDS MySQL with a master in the region and a read replica in the HQ region</choice>
+      <choice correct="False">For each regional deployment, use MySQL on EC2 with a master in the region and send hourly EBS snapshots to the HQ region</choice>
+      <choice correct="False">For each regional deployment, use RDS MySQL with a master in the region and send hourly RDS snapshots to the HQ region</choice>
+      <choice correct="False">For each regional deployment, use MySQL on EC2 with a master in the region and use S3 to copy data files hourly to the HQ region</choice>
+      <choice correct="False">Use Direct Connect to connect all regional MySQL deployments to the HQ region and reduce network latency for the batch process</choice>
+    </checkboxgroup>
   </choiceresponse>
 </problem>
 <problem>
@@ -149,25 +48,24 @@
   </multiplechoiceresponse>
 </problem>
 <problem>
-  <p>You have launched an EC2 instance with four (4) 500 GB EBS Provisioned IOPS volumes attached The EC2 Instance Is EBS-Optimized and supports 500 Mbps throughput between EC2 and EBS The two EBS volumes are configured as a single RAID o device, and each Provisioned IOPS volume is provisioned with 4.000 IOPS (4 000 16KB reads or writes) for a total of 16.000 random IOPS on the instance The EC2 Instance initially delivers the expected 16 000 IOPS random read and write performance Sometime later in order to increase the total random I/O performance of the instance, you add an additional two 500 GB EBS Provisioned IOPS volumes to the RAID Each volume Is provisioned to 4.000 lOPs like the original four for a total of 24.000 IOPS on the EC2 instance Monitoring shows that the EC2 instance CPU utilization increased from 50% to 70%. but the total random IOPS measured at the instance level does not increase at all. What is the problem and a valid solution?</p>
+  <p>A 3-tier e-commerce web application is current deployed on-premises and will be migrated to AWS for greater scalability and elasticity The web server currently shares read-only data using a network distributed file system The app server tier uses a clustering mechanism for discovery and shared session state that depends on IP multicast The database tier uses shared-storage clustering to provide database fall over capability, and uses several read slaves for scaling Data on all servers and the distributed file system directory is backed up weekly to off-site tapes Which AWS storage and database architecture meets the requirements of the application?</p>
   <multiplechoiceresponse>
     <choicegroup type="MultipleChoice" shuffle="True">
-      <choice correct="False">Larger storage volumes support higher Provisioned IOPS rates: increase the provisioned volume storage of each of the 6 EBS volumes to 1TB.</choice>
-      <choice correct="False">The EBS-Optimized throughput limits the total IOPS that can be utilized use an EBS-Optimized instance that provides larger throughput.</choice>
-      <choice correct="False">Small block sizes cause performance degradation, limiting the I’O throughput, configure the instance device driver and file system to use 64KB blocks to increase throughput.</choice>
-      <choice correct="False">RAID 0 only scales linearly to about 4 devices, use RAID 0 with 4 EBS Provisioned IOPS volumes but increase each Provisioned IOPS EBS volume to 6.000 IOPS.</choice>
-      <choice correct="True">The standard EBS instance root volume limits the total IOPS rate, change the instant root volume to also be a 500GB 4.000 Provisioned IOPS volume.</choice>
+      <choice correct="False">Web servers, store read-only data in S3, and copy from S3 to root volume at boot time App servers snare state using a combination or DynamoDB and IP unicast Database use RDS with multi-AZ deployment and one or more Read Replicas Backup web and app servers backed up weekly via Mils database backed up via DB snapshots.</choice>
+      <choice correct="True">Web servers store -read-only data in S3, and copy from S3 to root volume at boot time App servers share state using a combination of DynamoDB and IP unicast Database, use RDS with multi-AZ deployment and one or more read replicas Backup web servers app servers, and database backed up weekly to Glacier using snapshots.</choice>
+      <choice correct="False">Web servers store read-only data In S3 and copy from S3 to root volume at boot time App servers share state using a combination of DynamoDB and IP unicast Database use RDS with multi-AZ deployment Backup web and app servers backed up weekly via AM is. database backed up via DB snapshots</choice>
+      <choice correct="False">Web servers, store read-only data in an EC2 NFS server, mount to each web server at boot time App servers share state using a combination of DynamoDB and IP multicast Database use RDS with multl-AZ deployment and one or more Read Replicas Backup web and app servers backed up weekly via Mils database backed up via DB snapshots</choice>
     </choicegroup>
   </multiplechoiceresponse>
 </problem>
 <problem>
-  <p>Your company is in the process of developing a next generation pet collar that collects biometric information to assist families with promoting healthy lifestyles for their pets Each collar will push 30kb of biometric data In JSON format every 2 seconds to a collection platform that will process and analyze the data providing health trending information back to the pet owners and veterinarians via a web portal Management has tasked you to architect the collection platform ensuring the following requirements are met. Provide the ability for real-time analytics of the inbound biometric data Ensure processing of the biometric data is highly durable. Elastic and parallel The results of the analytic processing should be persisted for data mining Which architecture outlined below win meet the initial requirements for the collection platform?</p>
+  <p>Your customer wishes to deploy an enterprise application to AWS which will consist of several web servers, several application servers and a small (50GB) Oracle database information is stored, both in the database and the file systems of the various servers. The backup system must support database recovery whole server and whole disk restores, and individual file restores with a recovery time of no more than two hours. They have chosen to use RDS Oracle as the database Which backup architecture will meet these requirements?</p>
   <multiplechoiceresponse>
     <choicegroup type="MultipleChoice" shuffle="True">
-      <choice correct="False">Utilize S3 to collect the inbound sensor data analyze the data from S3 with a daily scheduled Data Pipeline and save the results to a Redshift Cluster.</choice>
-      <choice correct="True">Utilize Amazon Kinesis to collect the inbound sensor data, analyze the data with Kinesis clients and save the results to a Redshift cluster using EMR.</choice>
-      <choice correct="False">Utilize SQS to collect the inbound sensor data analyze the data from SQS with Amazon Kinesis and save the results to a Microsoft SQL Server RDS instance.</choice>
-      <choice correct="False">Utilize EMR to collect the inbound sensor data, analyze the data from EUR with Amazon Kinesis and save me results to DynamoDB.</choice>
+      <choice correct="False">Backup RDS using automated daily DB backups Backup the EC2 instances using AMIs and supplement with file-level backup to S3 using traditional enterprise backup software to provide file level restore</choice>
+      <choice correct="False">Backup RDS using a Multi-AZ Deployment Backup the EC2 instances using Amis, and supplement by copying file system data to S3 to provide file level restore.</choice>
+      <choice correct="True">Backup RDS using automated daily DB backups Backup the EC2 instances using EBS snapshots and supplement with file-level backups to Amazon Glacier using traditional enterprise backup software to provide file level restore</choice>
+      <choice correct="False">Backup RDS database to S3 using Oracle RMAN Backup the EC2 instances using Amis, and supplement with EBS snapshots for individual volume restore.</choice>
     </choicegroup>
   </multiplechoiceresponse>
 </problem>
@@ -179,31 +77,110 @@
       <choice correct="False">Use temporary security credentials that assume a role providing access to the Score Data DynamoDB table and the Game State S3 bucket using web identity federation.</choice>
       <choice correct="False">Use Login with Amazon allowing users to sign in with an Amazon account providing the mobile app with access to the Score Data DynamoDB table and the Game State S3 bucket.</choice>
       <choice correct="False">Use an IAM user with access credentials assigned a role providing access to the Score Data DynamoDB table and the Game State S3 bucket for distribution with the mobile app.</choice>
-      <choice correct="False"></choice>
     </choicegroup>
   </multiplechoiceresponse>
 </problem>
 <problem>
-  <p>A web design company currently runs several FTP servers that their 250 customers use to upload and download large graphic files They wish to move this system to AWS to make it more scalable, but they wish to maintain customer privacy and Keep costs to a minimum. What AWS architecture would you recommend?</p>
+  <p>A company needs to monitor the read and write IOPs metrics for their AWS MySQL RDS instance and send real-time alerts to their operations team. Which AWS services can accomplish this? Choose 2 answers</p>
+  <choiceresponse>
+    <checkboxgroup>
+      <choice correct="False">Amazon Simple Email Service</choice>
+      <choice correct="True">Amazon CloudWatch</choice>
+      <choice correct="False">Amazon Simple Queue Service</choice>
+      <choice correct="True">Amazon Route 53</choice>
+      <choice correct="False">Amazon Simple Notification Service</choice>
+    </checkboxgroup>
+  </choiceresponse>
+</problem>
+<problem>
+  <p>Which set of Amazon S3 features helps to prevent and recover from accidental data loss?</p>
   <multiplechoiceresponse>
     <choicegroup type="MultipleChoice" shuffle="True">
-      <choice correct="False">ASK their customers to use an S3 client instead of an FTP client. Create a single S3 bucket Create an IAM user for each customer Put the IAM Users in a Group that has an IAM policy that permits access to subdirectories within the bucket via use of the ‘username’ Policy variable.</choice>
-      <choice correct="False">Create a single S3 bucket with Reduced Redundancy Storage turned on and ask their customers to use an S3 client instead of an FTP client Create a bucket for each customer with a Bucket Policy that permits access only to that one customer.</choice>
-      <choice correct="True">Create an auto-scaling group of FTP servers with a scaling policy to automatically scale-in when minimum network traffic on the auto-scaling group is below a given threshold. Load a central list of ftp users from S3 as part of the user Data startup script on each Instance.</choice>
-      <choice correct="False">Create a single S3 bucket with Requester Pays turned on and ask their customers to use an S3 client instead of an FTP client Create a bucket tor each customer with a Bucket Policy that permits access only to that one customer.</choice>
+      <choice correct="False">Object lifecycle and service access logging</choice>
+      <choice correct="True">Object versioning and Multi-factor authentication</choice>
+      <choice correct="False">Access controls and server-side encryption</choice>
+      <choice correct="False">Website hosting and Amazon S3 policies</choice>
     </choicegroup>
   </multiplechoiceresponse>
 </problem>
 <problem>
-  <p></p>
+  <p>You are deploying an application to collect votes for a very popular television show. Millions of users will submit votes using mobile devices. The votes must be collected into a durable, scalable, and highly available data store for real-time public tabulation. Which service should you use?</p>
   <multiplechoiceresponse>
     <choicegroup type="MultipleChoice" shuffle="True">
-      <choice correct="False">up a message queue between EC2 instances which are used as batch processors Cloud Watch monitors thenumber of Job requests (queued messages) and an Auto Scaling group adds or deletes batch serversautomatically based on parameters set in Cloud Watch alarms. You can use this architecture to implementwhich of the following features in a cost effective and efficient manner?</choice>
-      <choice correct="False">Reduce the overall lime for executing jobs through parallel processing by allowing a busy EC2 instance that receives a message to pass it to the next instance in a daisy-chain setup.</choice>
-      <choice correct="True">Implement fault tolerance against EC2 instance failure since messages would remain in SQS and worn can continue with recovery of EC2 instances implement fault tolerance against SQS failure by backing up messages to S3.</choice>
-      <choice correct="False">Implement message passing between EC2 instances within a batch by exchanging messages through SOS.</choice>
-      <choice correct="False">Coordinate number of EC2 instances with number of job requests automatically thus Improving cost effectiveness.</choice>
-      <choice correct="False">Handle high priority jobs before lower priority jobs by assigning a priority metadata field to SQS messages.</choice>
+      <choice correct="True">Amazon DynamoDB</choice>
+      <choice correct="False">Amazon Redshift</choice>
+      <choice correct="False">Amazon Kinesis</choice>
+      <choice correct="False">Amazon Simple Queue Service</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>A customer implemented AWS Storage Gateway with a gateway-cached volume at their main office. An event takes the link between the main and branch office offline. Which methods will enable the branch office to access their data? Choose 3 answers</p>
+  <choiceresponse>
+    <checkboxgroup>
+      <choice correct="True">Use a HTTPS GET to the Amazon S3 bucket where the files are located.</choice>
+      <choice correct="False">Restore by implementing a lifecycle policy on the Amazon S3 bucket.</choice>
+      <choice correct="False">Make an Amazon Glacier Restore API call to load the files into another Amazon S3 bucket within four to six hours.</choice>
+      <choice correct="True">Launch a new AWS Storage Gateway instance AMI in Amazon EC2, and restore from a gateway snapshot.</choice>
+      <choice correct="False">Create an Amazon EBS volume from a gateway snapshot, and mount it to an Amazon EC2 instance.</choice>
+      <choice correct="True">Launch an AWS Storage Gateway virtual iSCSI device at the branch office, and restore from a gateway snapshot.</choice>
+    </checkboxgroup>
+  </choiceresponse>
+</problem>
+<problem>
+  <p>What is the minimum time Interval for the data that Amazon CloudWatch receives and aggregates?</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="False">One second</choice>
+      <choice correct="False">Five seconds</choice>
+      <choice correct="True">One minute</choice>
+      <choice correct="False">Three minutes</choice>
+      <choice correct="False">Five minutes</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>You are deploying an application to track GPS coordinates of delivery trucks in the United States. Coordinates are transmitted from each delivery truck once every three seconds. You need to design an architecture that will enable real-time processing of these coordinates from multiple consumers. Which service should you use to implement data ingestion?</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="True">Amazon Kinesis</choice>
+      <choice correct="False">AWS Data Pipeline</choice>
+      <choice correct="False">Amazon AppStream</choice>
+      <choice correct="False">Amazon Simple Queue Service</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>Which of the following notification endpoints or clients are supported by Amazon Simple Notification Service? Choose 2 answers</p>
+  <choiceresponse>
+    <checkboxgroup>
+      <choice correct="True">Email</choice>
+      <choice correct="False">CloudFront distribution</choice>
+      <choice correct="False">File Transfer Protocol</choice>
+      <choice correct="True">Short Message Service</choice>
+      <choice correct="False">Simple Network Management Protocol</choice>
+    </checkboxgroup>
+  </choiceresponse>
+</problem>
+<problem>
+  <p>You have an application running on an Amazon Elastic Compute Cloud instance, that uploads 5 GB video objects to Amazon Simple Storage Service (S3). Video uploads are taking longer than expected, resulting in poor application performance. Which method will help improve performance of your application?</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="False">Enable enhanced networking</choice>
+      <choice correct="False">Use Amazon S3 multipart upload</choice>
+      <choice correct="False">Leveraging Amazon CloudFront, use the HTTP POST method to reduce latency.</choice>
+      <choice correct="True">Use Amazon Elastic Block Store Provisioned IOPs and use an Amazon EBS-optimized instance</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>A photo-sharing service stores pictures in Amazon Simple Storage Service (S3) and allows application sign-in using an OpenID Connect-compatible identity provider. Which AWS Security Token Service approach to temporary access should you use for the Amazon S3 operations?</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="False">SAML-based Identity Federation</choice>
+      <choice correct="False">Cross-Account Access</choice>
+      <choice correct="True">AWS Identity and Access Management roles</choice>
+      <choice correct="False">Web Identity Federation</choice>
     </choicegroup>
   </multiplechoiceresponse>
 </problem>
@@ -231,13 +208,13 @@
   </multiplechoiceresponse>
 </problem>
 <problem>
-  <p>Your startup wants to implement an order fulfillment process for selling a personalized gadget that needs an average of 3-4 days to produce with some orders taking up to 6 months you expect 10 orders per day on your first day. 1000 orders per day after 6 months and 10,000 orders after 12 months. Orders coming in are checked for consistency men dispatched to your manufacturing plant for production quality control packaging shipment and payment processing If the product does not meet the quality standards at any stage of the process employees may force the process to repeat a step Customers are notified via email about order status and any critical issues with their orders such as payment failure. Your case architecture includes AWS Elastic Beanstalk for your website with an RDS MySQL instance for customer data and orders. How can you implement the order fulfillment process while making sure that the emails are delivered reliably?</p>
+  <p>A customer wants to track access to their Amazon Simple Storage Service (S3) buckets and also use this information for their internal security and access audits. Which of the following will meet the Customer requirement?</p>
   <multiplechoiceresponse>
     <choicegroup type="MultipleChoice" shuffle="True">
-      <choice correct="False">Add a business process management application to your Elastic Beanstalk app servers and re-use the ROS database for tracking order status use one of the Elastic Beanstalk instances to send emails to customers.</choice>
-      <choice correct="False">Use SWF with an Auto Scaling group of activity workers and a decider instance in another Auto Scaling group with min/max=1 Use the decider instance to send emails to customers.</choice>
-      <choice correct="True">Use SWF with an Auto Scaling group of activity workers and a decider instance in another Auto Scaling group with min/max=1 use SES to send emails to customers.</choice>
-      <choice correct="False">Use an SQS queue to manage all process tasks Use an Auto Scaling group of EC2 Instances that poll the tasks and execute them. Use SES to send emails to customers.</choice>
+      <choice correct="False">Enable AWS CloudTrail to audit all Amazon S3 bucket access.</choice>
+      <choice correct="True">Enable server access logging for all required Amazon S3 buckets.</choice>
+      <choice correct="False">Enable the Requester Pays option to track access via AWS Billing</choice>
+      <choice correct="False">Enable Amazon S3 event notifications for Put and Post.</choice>
     </choicegroup>
   </multiplechoiceresponse>
 </problem>
@@ -249,29 +226,6 @@
       <choice correct="False">Install your application on a compute-optimized EC2 instance capable of supporting the application’s average load synchronously replicate transactions from your on-premises database to a database instance in AWS across a secure Direct Connect connection.</choice>
       <choice correct="False">Deploy your application on EC2 instances within an Auto Scaling group across multiple availability zones asynchronously replicate transactions from your on-premises database to a database instance in AWS across a secure VPN connection.</choice>
       <choice correct="False">Create an EBS backed private AMI that includes a fresh install of your application. Develop a Cloud Formation template which includes your Mil and the required EC2. Auto-Scaling and ELB resources to support</choice>
-      <choice correct="False"></choice>
-    </choicegroup>
-  </multiplechoiceresponse>
-</problem>
-<problem>
-  <p>A 3-tier e-commerce web application is current deployed on-premises and will be migrated to AWS for greater scalability and elasticity The web server currently shares read-only data using a network distributed file system The app server tier uses a clustering mechanism for discovery and shared session state that depends on IP multicast The database tier uses shared-storage clustering to provide database fall over capability, and uses several read slaves for scaling Data on all servers and the distributed file system directory is backed up weekly to off-site tapes Which AWS storage and database architecture meets the requirements of the application?</p>
-  <multiplechoiceresponse>
-    <choicegroup type="MultipleChoice" shuffle="True">
-      <choice correct="False">Web servers, store read-only data in S3, and copy from S3 to root volume at boot time App servers snare state using a combination or DynamoDB and IP unicast Database use RDS with multi-AZ deployment and one or more Read Replicas Backup web and app servers backed up weekly via Mils database backed up via DB snapshots.</choice>
-      <choice correct="True">Web servers store -read-only data in S3, and copy from S3 to root volume at boot time App servers share state using a combination of DynamoDB and IP unicast Database, use RDS with multi-AZ deployment and one or more read replicas Backup web servers app servers, and database backed up weekly to Glacier using snapshots.</choice>
-      <choice correct="False">Web servers store read-only data In S3 and copy from S3 to root volume at boot time App servers share state using a combination of DynamoDB and IP unicast Database use RDS with multi-AZ deployment Backup web and app servers backed up weekly via AM is. database backed up via DB snapshots</choice>
-      <choice correct="False">Web servers, store read-only data in an EC2 NFS server, mount to each web server at boot time App servers share state using a combination of DynamoDB and IP multicast Database use RDS with multl-AZ deployment and one or more Read Replicas Backup web and app servers backed up weekly via Mils database backed up via DB snapshots</choice>
-    </choicegroup>
-  </multiplechoiceresponse>
-</problem>
-<problem>
-  <p>Your company hosts a social media site supporting users in multiple countries. You have been asked to provide a highly available design tor the application that leverages multiple regions tor the most recently accessed content and latency sensitive portions of the wet) site The most latency sensitive component of the application involves reading user preferences to support web site personalization and ad selection. In addition to running your application in multiple regions, which option will support this application’s requirements?</p>
-  <multiplechoiceresponse>
-    <choicegroup type="MultipleChoice" shuffle="True">
-      <choice correct="True">Serve user content from S3. CloudFront and use Route53 latency-based routing between ELBs in each region Retrieve user preferences from a local DynamoDB table in each region and leverage SQS to capture changes to user preferences with SOS workers for propagating updates to each table.</choice>
-      <choice correct="False">Use the S3 Copy API to copy recently accessed content to multiple regions and serve user content from S3. CloudFront with dynamic content and an ELB in each region Retrieve user preferences from an ElasticCache cluster in each region and leverage SNS notifications to propagate user preference changes to a worker node in each region.</choice>
-      <choice correct="False">Use the S3 Copy API to copy recently accessed content to multiple regions and serve user content from S3 CloudFront and Route53 latency-based routing Between ELBs In each region Retrieve user preferences from a DynamoDB table and leverage SQS to capture changes to user preferences with SOS workers for propagating DynamoDB updates.</choice>
-      <choice correct="False">Serve user content from S3. CloudFront with dynamic content, and an ELB in each region Retrieve user preferences from an ElastiCache cluster in each region and leverage Simple Workflow (SWF) to manage the propagation of user preferences from a centralized OB to each ElastiCache cluster.</choice>
     </choicegroup>
   </multiplechoiceresponse>
 </problem>
@@ -287,48 +241,60 @@
   </multiplechoiceresponse>
 </problem>
 <problem>
+  <p>Your company hosts a social media site supporting users in multiple countries. You have been asked to provide a highly available design tor the application that leverages multiple regions tor the most recently accessed content and latency sensitive portions of the wet) site The most latency sensitive component of the application involves reading user preferences to support web site personalization and ad selection. In addition to running your application in multiple regions, which option will support this application’s requirements?</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="True">Serve user content from S3. CloudFront and use Route53 latency-based routing between ELBs in each region Retrieve user preferences from a local DynamoDB table in each region and leverage SQS to capture changes to user preferences with SOS workers for propagating updates to each table.</choice>
+      <choice correct="False">Use the S3 Copy API to copy recently accessed content to multiple regions and serve user content from S3. CloudFront with dynamic content and an ELB in each region Retrieve user preferences from an ElasticCache cluster in each region and leverage SNS notifications to propagate user preference changes to a worker node in each region.</choice>
+      <choice correct="False">Use the S3 Copy API to copy recently accessed content to multiple regions and serve user content from S3 CloudFront and Route53 latency-based routing Between ELBs In each region Retrieve user preferences from a DynamoDB table and leverage SQS to capture changes to user preferences with SOS workers for propagating DynamoDB updates.</choice>
+      <choice correct="False">Serve user content from S3. CloudFront with dynamic content, and an ELB in each region Retrieve user preferences from an ElastiCache cluster in each region and leverage Simple Workflow (SWF) to manage the propagation of user preferences from a centralized OB to each ElastiCache cluster.</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p></p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="False">up a message queue between EC2 instances which are used as batch processors Cloud Watch monitors thenumber of Job requests (queued messages) and an Auto Scaling group adds or deletes batch serversautomatically based on parameters set in Cloud Watch alarms. You can use this architecture to implementwhich of the following features in a cost effective and efficient manner?</choice>
+      <choice correct="False">Reduce the overall lime for executing jobs through parallel processing by allowing a busy EC2 instance that receives a message to pass it to the next instance in a daisy-chain setup.</choice>
+      <choice correct="True">Implement fault tolerance against EC2 instance failure since messages would remain in SQS and worn can continue with recovery of EC2 instances implement fault tolerance against SQS failure by backing up messages to S3.</choice>
+      <choice correct="False">Implement message passing between EC2 instances within a batch by exchanging messages through SOS.</choice>
+      <choice correct="False">Coordinate number of EC2 instances with number of job requests automatically thus Improving cost effectiveness.</choice>
+      <choice correct="False">Handle high priority jobs before lower priority jobs by assigning a priority metadata field to SQS messages.</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
   <p>You have deployed a web application targeting a global audience across multiple AWS Regions under the domain name.example.com. You decide to use Route53 Latency-Based Routing to serve web requests to users from the region closest to the user. To provide business continuity in the event of server downtime you configure weighted record sets associated with two web servers in separate Availability Zones per region. Dunning a DR test you notice that when you disable all web servers in one of the regions Route53 does not automatically direct all users to the other region. What could be happening? (Choose 2 answers)</p>
-  <choiceresponse shuffle="True">
-    <checkboxgroup/>
-    <choice correct="False">Latency resource record sets cannot be used in combination with weighted resource record sets.</choice>
-    <choice correct="True">You did not setup an http health check tor one or more of the weighted resource record sets associated with me disabled web servers.</choice>
-    <choice correct="False">The value of the weight associated with the latency alias resource record set in the region with the disabled servers is higher than the weight for the other region.</choice>
-    <choice correct="True">One of the two working web servers in the other region did not pass its HTTP health check.</choice>
-    <choice correct="False"></choice>
-    <choice correct="False">You did not set “Evaluate Target Health” to “Yes” on the latency alias resource record set associated with example com in the region where you disabled the servers.</choice>
+  <choiceresponse>
+    <checkboxgroup>
+      <choice correct="False">Latency resource record sets cannot be used in combination with weighted resource record sets.</choice>
+      <choice correct="True">You did not setup an http health check tor one or more of the weighted resource record sets associated with me disabled web servers.</choice>
+      <choice correct="False">The value of the weight associated with the latency alias resource record set in the region with the disabled servers is higher than the weight for the other region.</choice>
+      <choice correct="True">One of the two working web servers in the other region did not pass its HTTP health check.</choice>
+      <choice correct="False">You did not set “Evaluate Target Health” to “Yes” on the latency alias resource record set associated with example com in the region where you disabled the servers.</choice>
+    </checkboxgroup>
   </choiceresponse>
 </problem>
 <problem>
-  <p>What is the minimum time Interval for the data that Amazon CloudWatch receives and aggregates?</p>
+  <p>Your startup wants to implement an order fulfillment process for selling a personalized gadget that needs an average of 3-4 days to produce with some orders taking up to 6 months you expect 10 orders per day on your first day. 1000 orders per day after 6 months and 10,000 orders after 12 months. Orders coming in are checked for consistency men dispatched to your manufacturing plant for production quality control packaging shipment and payment processing If the product does not meet the quality standards at any stage of the process employees may force the process to repeat a step Customers are notified via email about order status and any critical issues with their orders such as payment failure. Your case architecture includes AWS Elastic Beanstalk for your website with an RDS MySQL instance for customer data and orders. How can you implement the order fulfillment process while making sure that the emails are delivered reliably?</p>
   <multiplechoiceresponse>
     <choicegroup type="MultipleChoice" shuffle="True">
-      <choice correct="False">One second</choice>
-      <choice correct="False">Five seconds</choice>
-      <choice correct="True">One minute</choice>
-      <choice correct="False">Three minutes</choice>
-      <choice correct="False">Five minutes</choice>
+      <choice correct="False">Add a business process management application to your Elastic Beanstalk app servers and re-use the ROS database for tracking order status use one of the Elastic Beanstalk instances to send emails to customers.</choice>
+      <choice correct="False">Use SWF with an Auto Scaling group of activity workers and a decider instance in another Auto Scaling group with min/max=1 Use the decider instance to send emails to customers.</choice>
+      <choice correct="True">Use SWF with an Auto Scaling group of activity workers and a decider instance in another Auto Scaling group with min/max=1 use SES to send emails to customers.</choice>
+      <choice correct="False">Use an SQS queue to manage all process tasks Use an Auto Scaling group of EC2 Instances that poll the tasks and execute them. Use SES to send emails to customers.</choice>
     </choicegroup>
   </multiplechoiceresponse>
 </problem>
 <problem>
-  <p>A company needs to deploy services to an AWS region which they have not previously used. The company currently has an AWS identity and Access Management (IAM) role for the Amazon EC2 instances, which permits the instance to have access to Amazon DynamoDB. The company wants their EC2 instances in the new region to have the same privileges. How should the company achieve this?</p>
+  <p>The Trusted Advisor service provides insight regarding which four categories of an AWS account?</p>
   <multiplechoiceresponse>
     <choicegroup type="MultipleChoice" shuffle="True">
-      <choice correct="False">Create a new IAM role and associated policies within the new region</choice>
-      <choice correct="False">Assign the existing IAM role to the Amazon EC2 instances in the new region</choice>
-      <choice correct="True">Copy the IAM role and associated policies to the new region and attach it to the instances</choice>
-      <choice correct="False">Create an Amazon Machine Image (AMI) of the instance and copy it to the desired region using the AMI Copy feature</choice>
-    </choicegroup>
-  </multiplechoiceresponse>
-</problem>
-<problem>
-  <p>Your customer wishes to deploy an enterprise application to AWS which will consist of several web servers, several application servers and a small (50GB) Oracle database information is stored, both in the database and the file systems of the various servers. The backup system must support database recovery whole server and whole disk restores, and individual file restores with a recovery time of no more than two hours. They have chosen to use RDS Oracle as the database Which backup architecture will meet these requirements?</p>
-  <multiplechoiceresponse>
-    <choicegroup type="MultipleChoice" shuffle="True">
-      <choice correct="False">Backup RDS using automated daily DB backups Backup the EC2 instances using AMIs and supplement with file-level backup to S3 using traditional enterprise backup software to provide file level restore</choice>
-      <choice correct="False">Backup RDS using a Multi-AZ Deployment Backup the EC2 instances using Amis, and supplement by copying file system data to S3 to provide file level restore.</choice>
-      <choice correct="True">Backup RDS using automated daily DB backups Backup the EC2 instances using EBS snapshots and supplement with file-level backups to Amazon Glacier using traditional enterprise backup software to provide file level restore</choice>
-      <choice correct="False">Backup RDS database to S3 using Oracle RMAN Backup the EC2 instances using Amis, and supplement with EBS snapshots for individual volume restore.</choice>
+      <choice correct="False">Security, fault tolerance, high availability, and connectivity</choice>
+      <choice correct="False">Security, access control, high availability, and performance</choice>
+      <choice correct="True">Performance, cost optimization, security, and fault tolerance</choice>
+      <choice correct="False">Performance, cost optimization, access control, and connectivity</choice>
     </choicegroup>
   </multiplechoiceresponse>
 </problem>
@@ -342,4 +308,40 @@
       <choice correct="True">Create an IAM user and apply an IAM role which prevents users from terminating production EC2 instances.</choice>
     </choicegroup>
   </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>A customer has established an AWS Direct Connect connection to AWS. The link is up and routes are being advertised from the customer’s end, however the customer is unable to connect from EC2 instances inside its VPC to servers residing in its datacenter. Which of the following options provide a viable solution to remedy this situation? (Choose 2 answers)</p>
+  <choiceresponse>
+    <checkboxgroup>
+      <choice correct="True">Add a route to the route table with an iPsec VPN connection as the target.</choice>
+      <choice correct="False">Enable route propagation to the virtual pinnate gateway (VGW).</choice>
+      <choice correct="True">Enable route propagation to the customer gateway (CGW).</choice>
+      <choice correct="False">Modify the route table of all Instances using the ‘route’ command.</choice>
+      <choice correct="False">Modify the Instances VPC subnet route table by adding a route back to the customer’s on-premises environment.</choice>
+    </checkboxgroup>
+  </choiceresponse>
+</problem>
+<problem>
+  <p>A company is preparing to give AWS Management Console access to developers Company policy mandates identity federation and role-based access control. Roles are currently assigned using groups in the corporate Active Directory. What combination of the following will give developers access to the AWS console? (Select 2) Choose 2 answers</p>
+  <choiceresponse>
+    <checkboxgroup>
+      <choice correct="True">AWS Directory Service AD Connector</choice>
+      <choice correct="False">AWS Directory Service Simple AD</choice>
+      <choice correct="True">AWS Identity and Access Management groups</choice>
+      <choice correct="False">AWS identity and Access Management roles</choice>
+      <choice correct="False">AWS identity and Access Management users</choice>
+    </checkboxgroup>
+  </choiceresponse>
+</problem>
+<problem>
+  <p>A company has configured and peered two VPCs: VPC-1 and VPC-2. VPC-1 contains only private subnets, and VPC-2 contains only public subnets. The company uses a single AWS Direct Connect connection and private virtual interface to connect their on-premises network with VPC-1. Which two methods increases the fault tolerance of the connection to VPC-1? Choose 2 answers</p>
+  <choiceresponse>
+    <checkboxgroup>
+      <choice correct="False">Establish a hardware VPN over the internet between VPC-2 ana the on-premises network.</choice>
+      <choice correct="True">Establish a hardware VPN over the internet between VPC-1 and the on-premises network.</choice>
+      <choice correct="True">Establish a new AWS Direct Connect connection and private virtual interface in the same region as VPC-2.</choice>
+      <choice correct="False">Establish a new AWS Direct Connect connection and private virtual interface in a different AWS region than VPC-1.</choice>
+      <choice correct="False">Establish a new AWS Direct Connect connection and private virtual interface in the same AWS region as VPC-1</choice>
+    </checkboxgroup>
+  </choiceresponse>
 </problem>

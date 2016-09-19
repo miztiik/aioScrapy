@@ -1,286 +1,11 @@
 <problem>
-  <p>What is the maximum key length of a tag?</p>
+  <p>What is the Reduced Redundancy option in Amazon S3?</p>
   <multiplechoiceresponse>
     <choicegroup type="MultipleChoice" shuffle="True">
-      <choice correct="False">512 Unicode characters</choice>
-      <choice correct="False">64 Unicode characters</choice>
-      <choice correct="False">256 Unicode characters</choice>
-      <choice correct="True">128 Unicode characters</choice>
-      <choice correct="False"></choice>
-    </choicegroup>
-  </multiplechoiceresponse>
-</problem>
-<problem>
-  <p>What are the two permission types used by AWS?</p>
-  <multiplechoiceresponse>
-    <choicegroup type="MultipleChoice" shuffle="True">
-      <choice correct="False">Resource-based and Product-based</choice>
-      <choice correct="False">Product-based and Service-based</choice>
-      <choice correct="False">Service-based</choice>
-      <choice correct="True">User-based and Resource-based</choice>
-    </choicegroup>
-  </multiplechoiceresponse>
-</problem>
-<problem>
-  <p>What are the Amazon EC2 API tools?</p>
-  <multiplechoiceresponse>
-    <choicegroup type="MultipleChoice" shuffle="True">
-      <choice correct="False">They don’t exist. The Amazon EC2 AMI tools, instead, are used to manage permissions.</choice>
-      <choice correct="True">Command-line tools to the Amazon EC2 web service.</choice>
-      <choice correct="False">They are a set of graphical tools to manage EC2 instances.</choice>
-      <choice correct="False">They don’t exist. The Amazon API tools are a client interface to Amazon Web Services.</choice>
-    </choicegroup>
-  </multiplechoiceresponse>
-</problem>
-<problem>
-  <p>Amazon RDS DB snapshots and automated backups are stored in</p>
-  <multiplechoiceresponse>
-    <choicegroup type="MultipleChoice" shuffle="True">
-      <choice correct="True">Amazon S3</choice>
-      <choice correct="False">Amazon ECS Volume</choice>
-      <choice correct="False">Amazon RDS</choice>
-      <choice correct="False">Amazon EMR</choice>
-    </choicegroup>
-  </multiplechoiceresponse>
-</problem>
-<problem>
-  <p>Which is the default region in AWS?</p>
-  <multiplechoiceresponse>
-    <choicegroup type="MultipleChoice" shuffle="True">
-      <choice correct="False">eu-west-1</choice>
-      <choice correct="True">us-east-1</choice>
-      <choice correct="False">us-east-2</choice>
-      <choice correct="False">ap-southeast-1</choice>
-      <choice correct="False"></choice>
-    </choicegroup>
-  </multiplechoiceresponse>
-</problem>
-<problem>
-  <p>What are the two types of licensing options available for using Amazon RDS for Oracle?</p>
-  <multiplechoiceresponse>
-    <choicegroup type="MultipleChoice" shuffle="True">
-      <choice correct="False">BYOL and Enterprise License</choice>
-      <choice correct="True">BYOL and License Included</choice>
-      <choice correct="False">Enterprise License and License Included</choice>
-      <choice correct="False">Role based License and License Included</choice>
-    </choicegroup>
-  </multiplechoiceresponse>
-</problem>
-<problem>
-  <p>What does a “Domain” refer to in Amazon SWF?</p>
-  <multiplechoiceresponse>
-    <choicegroup type="MultipleChoice" shuffle="True">
-      <choice correct="False">A security group in which only tasks inside can communicate with each other</choice>
-      <choice correct="False">A special type of worker</choice>
-      <choice correct="True">A collection of related Workflows</choice>
-      <choice correct="False">The DNS record for the Amazon SWF service</choice>
-    </choicegroup>
-  </multiplechoiceresponse>
-</problem>
-<problem>
-  <p>Disabling automated backups ______ disable the point-in-time recovery.</p>
-  <multiplechoiceresponse>
-    <choicegroup type="MultipleChoice" shuffle="True">
-      <choice correct="False">if configured to can</choice>
-      <choice correct="False">will never</choice>
-      <choice correct="True">will</choice>
-    </choicegroup>
-  </multiplechoiceresponse>
-</problem>
-<problem>
-  <p>Changes to the backup window take effect ______.</p>
-  <multiplechoiceresponse>
-    <choicegroup type="MultipleChoice" shuffle="True">
-      <choice correct="False">from the next billing cycle</choice>
-      <choice correct="False">after 30 minutes</choice>
-      <choice correct="True">immediately</choice>
-      <choice correct="False">after 24 hours</choice>
-    </choicegroup>
-  </multiplechoiceresponse>
-</problem>
-<problem>
-  <p>Groups can’t _____.</p>
-  <multiplechoiceresponse>
-    <choicegroup type="MultipleChoice" shuffle="True">
-      <choice correct="False">be nested more than 3 levels</choice>
-      <choice correct="True">be nested at all</choice>
-      <choice correct="False">be nested more than 4 levels</choice>
-      <choice correct="False">be nested more than 2 levels</choice>
-    </choicegroup>
-  </multiplechoiceresponse>
-</problem>
-<problem>
-  <p>In the Amazon cloudwatch, which metric should I be checking to ensure that your DB Instance has enough free storage space?</p>
-  <multiplechoiceresponse>
-    <choicegroup type="MultipleChoice" shuffle="True">
-      <choice correct="False">FreeStorage</choice>
-      <choice correct="True">FreeStorageSpace</choice>
-      <choice correct="False">FreeStorageVolume</choice>
-      <choice correct="False">FreeDBStorageSpace</choice>
-    </choicegroup>
-  </multiplechoiceresponse>
-</problem>
-<problem>
-  <p>You must increase storage size in increments of at least _____ %</p>
-  <multiplechoiceresponse>
-    <choicegroup type="MultipleChoice" shuffle="True">
-      <choice correct="False">40</choice>
-      <choice correct="False">20</choice>
-      <choice correct="False">50</choice>
-      <choice correct="True">10</choice>
-    </choicegroup>
-  </multiplechoiceresponse>
-</problem>
-<problem>
-  <p>Which of the following cannot be used in Amazon EC2 to control who has access to specific Amazon EC2 instances?</p>
-  <multiplechoiceresponse>
-    <choicegroup type="MultipleChoice" shuffle="True">
-      <choice correct="False">Security Groups</choice>
-      <choice correct="True">IAM System</choice>
-      <choice correct="False">SSH keys</choice>
-      <choice correct="False">Windows passwords</choice>
-      <choice correct="False"></choice>
-    </choicegroup>
-  </multiplechoiceresponse>
-</problem>
-<problem>
-  <p>Typically, you want your application to check whether a request generated an error before you spend any time processing results. The easiest way to find out if an error occurred is to look for an _____________ node in the response from the Amazon RDS API.</p>
-  <multiplechoiceresponse>
-    <choicegroup type="MultipleChoice" shuffle="True">
-      <choice correct="False">Incorrect</choice>
-      <choice correct="True">Error</choice>
-      <choice correct="False">FALSE</choice>
-    </choicegroup>
-  </multiplechoiceresponse>
-</problem>
-<problem>
-  <p>Fill in the blanks: _________ let you categorize your EC2 resources in different ways, for example, by purpose, owner, or environment.</p>
-  <multiplechoiceresponse>
-    <choicegroup type="MultipleChoice" shuffle="True">
-      <choice correct="False">wildcards</choice>
-      <choice correct="False">pointers</choice>
-      <choice correct="True">Tags</choice>
-      <choice correct="False">special filters</choice>
-    </choicegroup>
-  </multiplechoiceresponse>
-</problem>
-<problem>
-  <p>Is creating a Read Replica of another Read Replica supported?</p>
-  <multiplechoiceresponse>
-    <choicegroup type="MultipleChoice" shuffle="True">
-      <choice correct="False">Only in certain regions</choice>
-      <choice correct="False">Only with MSSQL based RDS</choice>
-      <choice correct="False">Only for Oracle RDS types</choice>
-      <choice correct="True">No</choice>
-    </choicegroup>
-  </multiplechoiceresponse>
-</problem>
-<problem>
-  <p>How can I change the security group membership for interfaces owned by other AWS, such as Elastic Load Balancing?</p>
-  <multiplechoiceresponse>
-    <choicegroup type="MultipleChoice" shuffle="True">
-      <choice correct="True">By using the service specific console or API\CLI commands</choice>
-      <choice correct="False">None of these</choice>
-      <choice correct="False">Using Amazon EC2 API/CLI</choice>
-      <choice correct="False">using all these methods</choice>
-    </choicegroup>
-  </multiplechoiceresponse>
-</problem>
-<problem>
-  <p>What does RRS stand for when talking about S3?</p>
-  <multiplechoiceresponse>
-    <choicegroup type="MultipleChoice" shuffle="True">
-      <choice correct="False">Redundancy Removal System</choice>
-      <choice correct="False">Relational Rights Storage</choice>
-      <choice correct="False">Regional Rights Standard</choice>
-      <choice correct="True">Reduced Redundancy Storage</choice>
-    </choicegroup>
-  </multiplechoiceresponse>
-</problem>
-<problem>
-  <p>Can Amazon S3 uploads resume on failure or do they need to restart?</p>
-  <multiplechoiceresponse>
-    <choicegroup type="MultipleChoice" shuffle="True">
-      <choice correct="False">Restart from beginning</choice>
-      <choice correct="False">You can resume them, if you flag the “resume on failure” option before uploading.</choice>
-      <choice correct="True">Resume on failure</choice>
-      <choice correct="False">Depends on the file size</choice>
-    </choicegroup>
-  </multiplechoiceresponse>
-</problem>
-<problem>
-  <p>Using Amazon CloudWatch’s Free Tier, what is the frequency of metric updates which you receive?</p>
-  <multiplechoiceresponse>
-    <choicegroup type="MultipleChoice" shuffle="True">
-      <choice correct="True">5 minutes</choice>
-      <choice correct="False">500 milliseconds.</choice>
-      <choice correct="False">30 seconds</choice>
-      <choice correct="False">1 minute</choice>
-    </choicegroup>
-  </multiplechoiceresponse>
-</problem>
-<problem>
-  <p>All Amazon EC2 instances are assigned two IP addresses at launch, out of which one can only be reached from within the Amazon EC2 network?</p>
-  <multiplechoiceresponse>
-    <choicegroup type="MultipleChoice" shuffle="True">
-      <choice correct="False">Multiple IP address</choice>
-      <choice correct="False">Public IP address</choice>
-      <choice correct="True">Private IP address</choice>
-      <choice correct="False">Elastic IP Address</choice>
-    </choicegroup>
-  </multiplechoiceresponse>
-</problem>
-<problem>
-  <p>If I write the below command, what does it do? ec2-run ami-e3a5408a -n 20 -g appserver</p>
-  <multiplechoiceresponse>
-    <choicegroup type="MultipleChoice" shuffle="True">
-      <choice correct="True">Start twenty instances as members of appserver group.</choice>
-      <choice correct="False">Creates 20 rules in the security group named appserver</choice>
-      <choice correct="False">Terminate twenty instances as members of appserver group.</choice>
-      <choice correct="False">Start 20 security groups</choice>
-    </choicegroup>
-  </multiplechoiceresponse>
-</problem>
-<problem>
-  <p>EBS Snapshots occur _____</p>
-  <multiplechoiceresponse>
-    <choicegroup type="MultipleChoice" shuffle="True">
-      <choice correct="True">Asynchronously</choice>
-      <choice correct="False">Synchronously</choice>
-      <choice correct="False">Weekly</choice>
-    </choicegroup>
-  </multiplechoiceresponse>
-</problem>
-<problem>
-  <p>Out of the stripping options available for the EBS volumes, which one has the following disadvantage : ‘Doubles the amount of I/O required from the instance to EBS compared to RAID 0, because you’re mirroring all writes to a pair of volumes, limiting how much you can stripe.’ ?</p>
-  <multiplechoiceresponse>
-    <choicegroup type="MultipleChoice" shuffle="True">
-      <choice correct="False">Raid 0</choice>
-      <choice correct="True">RAID 1+0 (RAID 10)</choice>
-      <choice correct="False">Raid 1</choice>
-      <choice correct="False">Raid</choice>
-    </choicegroup>
-  </multiplechoiceresponse>
-</problem>
-<problem>
-  <p>Every user you create in the IAM system starts with _________.</p>
-  <multiplechoiceresponse>
-    <choicegroup type="MultipleChoice" shuffle="True">
-      <choice correct="False">Partial permissions</choice>
-      <choice correct="False">Full permissions</choice>
-      <choice correct="True">No permissions</choice>
-    </choicegroup>
-  </multiplechoiceresponse>
-</problem>
-<problem>
-  <p>When you run a DB Instance as a Multi-AZ deployment, the “_____” serves database writes and reads</p>
-  <multiplechoiceresponse>
-    <choicegroup type="MultipleChoice" shuffle="True">
-      <choice correct="False">secondary</choice>
-      <choice correct="False"></choice>
-      <choice correct="False">backup</choice>
-      <choice correct="False">stand by</choice>
-      <choice correct="True">primary</choice>
+      <choice correct="True">Less redundancy for a lower cost.</choice>
+      <choice correct="False">It doesn’t exist in Amazon S3, but in Amazon EBS.</choice>
+      <choice correct="False">It allows you to destroy any copy of your files outside a specific jurisdiction.</choice>
+      <choice correct="False">It doesn’t exist at all</choice>
     </choicegroup>
   </multiplechoiceresponse>
 </problem>
@@ -296,13 +21,144 @@
   </multiplechoiceresponse>
 </problem>
 <problem>
-  <p>What is the Reduced Redundancy option in Amazon S3?</p>
+  <p>All Amazon EC2 instances are assigned two IP addresses at launch, out of which one can only be reached from within the Amazon EC2 network?</p>
   <multiplechoiceresponse>
     <choicegroup type="MultipleChoice" shuffle="True">
-      <choice correct="True">Less redundancy for a lower cost.</choice>
-      <choice correct="False">It doesn’t exist in Amazon S3, but in Amazon EBS.</choice>
-      <choice correct="False">It allows you to destroy any copy of your files outside a specific jurisdiction.</choice>
-      <choice correct="False">It doesn’t exist at all</choice>
+      <choice correct="False">Multiple IP address</choice>
+      <choice correct="False">Public IP address</choice>
+      <choice correct="True">Private IP address</choice>
+      <choice correct="False">Elastic IP Address</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>Every user you create in the IAM system starts with _________.</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="False">Partial permissions</choice>
+      <choice correct="False">Full permissions</choice>
+      <choice correct="True">No permissions</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>What does RRS stand for when talking about S3?</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="False">Redundancy Removal System</choice>
+      <choice correct="False">Relational Rights Storage</choice>
+      <choice correct="False">Regional Rights Standard</choice>
+      <choice correct="True">Reduced Redundancy Storage</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>Amazon RDS DB snapshots and automated backups are stored in</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="True">Amazon S3</choice>
+      <choice correct="False">Amazon ECS Volume</choice>
+      <choice correct="False">Amazon RDS</choice>
+      <choice correct="False">Amazon EMR</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>In the Amazon cloudwatch, which metric should I be checking to ensure that your DB Instance has enough free storage space?</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="False">FreeStorage</choice>
+      <choice correct="True">FreeStorageSpace</choice>
+      <choice correct="False">FreeStorageVolume</choice>
+      <choice correct="False">FreeDBStorageSpace</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>Can you create IAM security credentials for existing users?</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="True">Yes, existing users can have security credentials associated with their account.</choice>
+      <choice correct="False">No, IAM requires that all users who have credentials set up are not existing users</choice>
+      <choice correct="False">No, security credentials are created within GROUPS, and then users are associated to GROUPS at a later time.</choice>
+      <choice correct="False">Yes, but only IAM credentials, not ordinary security credentials.</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>You must increase storage size in increments of at least _____ %</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="False">40</choice>
+      <choice correct="False">20</choice>
+      <choice correct="False">50</choice>
+      <choice correct="True">10</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>What is the maximum key length of a tag?</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="False">512 Unicode characters</choice>
+      <choice correct="False">64 Unicode characters</choice>
+      <choice correct="False">256 Unicode characters</choice>
+      <choice correct="True">128 Unicode characters</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>Groups can’t _____.</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="False">be nested more than 3 levels</choice>
+      <choice correct="True">be nested at all</choice>
+      <choice correct="False">be nested more than 4 levels</choice>
+      <choice correct="False">be nested more than 2 levels</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>Changes to the backup window take effect ______.</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="False">from the next billing cycle</choice>
+      <choice correct="False">after 30 minutes</choice>
+      <choice correct="True">immediately</choice>
+      <choice correct="False">after 24 hours</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>What does Amazon SWF stand for?</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="False">Simple Web Flow</choice>
+      <choice correct="True">Simple Work Flow</choice>
+      <choice correct="False">Simple Wireless Forms</choice>
+      <choice correct="False">Simple Web Form</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>Using Amazon CloudWatch’s Free Tier, what is the frequency of metric updates which you receive?</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="True">5 minutes</choice>
+      <choice correct="False">500 milliseconds.</choice>
+      <choice correct="False">30 seconds</choice>
+      <choice correct="False">1 minute</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>If I write the below command, what does it do? ec2-run ami-e3a5408a -n 20 -g appserver</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="True">Start twenty instances as members of appserver group.</choice>
+      <choice correct="False">Creates 20 rules in the security group named appserver</choice>
+      <choice correct="False">Terminate twenty instances as members of appserver group.</choice>
+      <choice correct="False">Start 20 security groups</choice>
     </choicegroup>
   </multiplechoiceresponse>
 </problem>
@@ -318,14 +174,151 @@
   </multiplechoiceresponse>
 </problem>
 <problem>
-  <p>What does Amazon SWF stand for?</p>
+  <p>Which is the default region in AWS?</p>
   <multiplechoiceresponse>
     <choicegroup type="MultipleChoice" shuffle="True">
-      <choice correct="False">Simple Web Flow</choice>
-      <choice correct="True">Simple Work Flow</choice>
-      <choice correct="False"></choice>
-      <choice correct="False">Simple Wireless Forms</choice>
-      <choice correct="False">Simple Web Form</choice>
+      <choice correct="False">eu-west-1</choice>
+      <choice correct="True">us-east-1</choice>
+      <choice correct="False">us-east-2</choice>
+      <choice correct="False">ap-southeast-1</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>What are the two types of licensing options available for using Amazon RDS for Oracle?</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="False">BYOL and Enterprise License</choice>
+      <choice correct="True">BYOL and License Included</choice>
+      <choice correct="False">Enterprise License and License Included</choice>
+      <choice correct="False">Role based License and License Included</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>When you view the block device mapping for your instance, you can see only the EBS volumes, not the instance store volumes.</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="False">Depends on the instance type</choice>
+      <choice correct="False">FALSE</choice>
+      <choice correct="False">Depends on whether you use API call</choice>
+      <choice correct="True">TRUE</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>Can I control if and when MySQL based RDS Instance is upgraded to new supported versions?</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="False">No</choice>
+      <choice correct="False">Only in VPC</choice>
+      <choice correct="True">Yes</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>What does Amazon EC2 provide?</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="True">Virtual servers in the Cloud.</choice>
+      <choice correct="False">A platform to run code (Java, PHP, Python), paying on an hourly basis.</choice>
+      <choice correct="False">Computer Clusters in the Cloud.</choice>
+      <choice correct="False">Physical servers, remotely managed by the customer.</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>If I modify a DB Instance or the DB parameter group associated with the instance, should I reboot the instance for the changes to take effect?</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="False">No</choice>
+      <choice correct="True">Yes</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>Amazon SWF is designed to help users…</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="False">… Design graphical user interface interactions</choice>
+      <choice correct="False">… Manage user identification and authorization</choice>
+      <choice correct="False">… Store Web content</choice>
+      <choice correct="True">… Coordinate synchronous and asynchronous tasks which are distributed and fault tolerant.</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>What are the Amazon EC2 API tools?</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="False">They don’t exist. The Amazon EC2 AMI tools, instead, are used to manage permissions.</choice>
+      <choice correct="True">Command-line tools to the Amazon EC2 web service.</choice>
+      <choice correct="False">They are a set of graphical tools to manage EC2 instances.</choice>
+      <choice correct="False">They don’t exist. The Amazon API tools are a client interface to Amazon Web Services.</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>By default, EBS volumes that are created and attached to an instance at launch are deleted when that instance is terminated. You can modify this behavior by changing the value of the flag_____ to false when you launch the instance</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="True">DeleteOnTermination</choice>
+      <choice correct="False">RemoveOnDeletion</choice>
+      <choice correct="False">RemoveOnTermination</choice>
+      <choice correct="False">TerminateOnDeletion</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>True or False: When using IAM to control access to your RDS resources, the key names that can be used are case sensitive. For example, aws:CurrentTime is NOT equivalent to AWS:currenttime.</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="True">TRUE</choice>
+      <choice correct="False">FALSE</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>Will my standby RDS instance be in the same Region as my primary?</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="False">Only for Oracle RDS types</choice>
+      <choice correct="True">Yes</choice>
+      <choice correct="False">Only if configured at launch</choice>
+      <choice correct="False">No</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>What are the initial settings of an user created security group?</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="False">Allow all inbound traffic and Allow no outbound traffic</choice>
+      <choice correct="False">Allow no inbound traffic and Allow no outbound traffic</choice>
+      <choice correct="True">Allow no inbound traffic and Allow all outbound traffic</choice>
+      <choice correct="False">Allow all inbound traffic and Allow all outbound traffic</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>What does Amazon Elastic Beanstalk provide?</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="False">A scalable storage appliance on top of Amazon Web Services.</choice>
+      <choice correct="True">An application container on top of Amazon Web Services.</choice>
+      <choice correct="False">A service by this name doesn’t exist.</choice>
+      <choice correct="False">A scalable cluster of EC2 instances.</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>When you run a DB Instance as a Multi-AZ deployment, the “_____” serves database writes and reads</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="False">secondary</choice>
+      <choice correct="False">backup</choice>
+      <choice correct="False">stand by</choice>
+      <choice correct="True">primary</choice>
     </choicegroup>
   </multiplechoiceresponse>
 </problem>

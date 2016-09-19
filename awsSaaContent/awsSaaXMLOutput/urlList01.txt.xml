@@ -1,22 +1,46 @@
 <problem>
-  <p>Which Amazon Elastic Compute Cloud feature can you query from within the instance to access instance properties?</p>
+  <p>Which of the following are valid statements about Amazon S3? Choose 2 answers</p>
+  <choiceresponse>
+    <checkboxgroup>
+      <choice correct="False">S3 provides read-after-write consistency for any type of PUT or DELETE.</choice>
+      <choice correct="False">Consistency is not guaranteed for any type of PUT or DELETE.</choice>
+      <choice correct="True">A successful response to a PUT request only occurs when a complete object is saved.</choice>
+      <choice correct="False">Partially saved objects are immediately readable with a GET after an overwrite PUT.</choice>
+      <choice correct="True">S3 provides eventual consistency for overwrite PUTS and DELETES.</choice>
+    </checkboxgroup>
+  </choiceresponse>
+</problem>
+<problem>
+  <p>You have a distributed application that periodically processes large volumes of data across multiple Amazon EC2 Instances. The application is designed to recover gracefully from Amazon EC2 instance failures. You are required to accomplish this task in the most cost-effective way. Which of the following will meet your requirements?</p>
   <multiplechoiceresponse>
     <choicegroup type="MultipleChoice" shuffle="True">
-      <choice correct="False">Instance user data</choice>
-      <choice correct="False">Resource tags</choice>
-      <choice correct="True">Instance metadata</choice>
-      <choice correct="False">Amazon Machine Image</choice>
+      <choice correct="False">Spot Instances</choice>
+      <choice correct="False">Reserved instances</choice>
+      <choice correct="False">Dedicated instances</choice>
+      <choice correct="True">On-Demand instances</choice>
     </choicegroup>
   </multiplechoiceresponse>
 </problem>
 <problem>
-  <p>A US-based company is expanding their web presence into Europe. The company wants to extend their AWS infrastructure from Northern Virginia (us-east-1) into the Dublin (eu-west-1) region. Which of the following options would enable an equivalent experience for users on both continents?</p>
+  <p>In order to optimize performance for a compute cluster that requires low inter-node latency, which of the following feature should you use?</p>
   <multiplechoiceresponse>
     <choicegroup type="MultipleChoice" shuffle="True">
-      <choice correct="False">Use a public-facing load balancer per region to load-balance web traffic, and enable HTTP health checks.</choice>
-      <choice correct="False">Use a public-facing load balancer per region to load-balance web traffic, and enable sticky sessions.</choice>
-      <choice correct="False">Use Amazon Route 53, and apply a geolocation routing policy to distribute traffic across both regions.</choice>
-      <choice correct="True">Use Amazon Route 53, and apply a weighted routing policy to distribute traffic across both regions.</choice>
+      <choice correct="True">Multiple Availability Zones</choice>
+      <choice correct="False">AWS Direct Connect</choice>
+      <choice correct="False">EC2 Dedicated Instances</choice>
+      <choice correct="False">Placement Groups</choice>
+      <choice correct="False">VPC private subnets</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>You are working with a customer who is using Chef configuration management in their data center. Which service is designed to let the customer leverage existing Chef recipes in AWS?</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="False">Amazon Simple Workflow Service</choice>
+      <choice correct="False">AWS Elastic Beanstalk</choice>
+      <choice correct="False">AWS CloudFormation</choice>
+      <choice correct="True">AWS OpsWorks</choice>
     </choicegroup>
   </multiplechoiceresponse>
 </problem>
@@ -32,35 +56,62 @@
   </multiplechoiceresponse>
 </problem>
 <problem>
-  <p>Which of the following are valid statements about Amazon S3? Choose 2 answers</p>
-  <choiceresponse shuffle="True">
-    <checkboxgroup/>
-    <choice correct="False">S3 provides read-after-write consistency for any type of PUT or DELETE.</choice>
-    <choice correct="False">Consistency is not guaranteed for any type of PUT or DELETE.</choice>
-    <choice correct="True">A successful response to a PUT request only occurs when a complete object is saved.</choice>
-    <choice correct="False">Partially saved objects are immediately readable with a GET after an overwrite PUT.</choice>
-    <choice correct="True">S3 provides eventual consistency for overwrite PUTS and DELETES.</choice>
+  <p>Which of the following are characteristics of a reserved instance? Choose 3 answers</p>
+  <choiceresponse>
+    <checkboxgroup>
+      <choice correct="True">It can be migrated across Availability Zones</choice>
+      <choice correct="False">It is specific to an Amazon Machine Image (AMI)</choice>
+      <choice correct="False">It can be applied to instances launched by Auto Scaling</choice>
+      <choice correct="True">It is specific to an instance Type</choice>
+      <choice correct="True">It can be used to lower Total Cost of Ownership (TCO) of a system</choice>
+    </checkboxgroup>
   </choiceresponse>
 </problem>
 <problem>
   <p>Which features can be used to restrict access to data in S3? Choose 2 answers</p>
-  <choiceresponse shuffle="True">
-    <checkboxgroup/>
-    <choice correct="True">Set an S3 ACL on the bucket or the object.</choice>
-    <choice correct="False">Create a CloudFront distribution for the bucket.</choice>
-    <choice correct="True">Set an S3 bucket policy.</choice>
-    <choice correct="False">Enable IAM Identity Federation</choice>
-    <choice correct="False">Use S3 Virtual Hosting</choice>
+  <choiceresponse>
+    <checkboxgroup>
+      <choice correct="True">Set an S3 ACL on the bucket or the object.</choice>
+      <choice correct="False">Create a CloudFront distribution for the bucket.</choice>
+      <choice correct="True">Set an S3 bucket policy.</choice>
+      <choice correct="False">Enable IAM Identity Federation</choice>
+      <choice correct="False">Use S3 Virtual Hosting</choice>
+    </checkboxgroup>
   </choiceresponse>
 </problem>
 <problem>
-  <p>You are tasked with setting up a Linux bastion host for access to Amazon EC2 instances running in your VPC. Only clients connecting from the corporate external public IP address 72.34.51.100 should have SSH access to the host. Which option will meet the customer requirement?</p>
+  <p>Which of the following are true regarding AWS CloudTrail? Choose 3 answers</p>
+  <choiceresponse>
+    <checkboxgroup>
+      <choice correct="True">CloudTrail is enabled globally</choice>
+      <choice correct="False">CloudTrail is enabled by default</choice>
+      <choice correct="True">CloudTrail is enabled on a per-region basis</choice>
+      <choice correct="False">CloudTrail is enabled on a per-service basis.</choice>
+      <choice correct="True">Logs can be delivered to a single Amazon S3 bucket for aggregation.</choice>
+      <choice correct="False">CloudTrail is enabled for all available services within a region.</choice>
+      <choice correct="False">Logs can only be processed and delivered to the region in which they are generated.</choice>
+    </checkboxgroup>
+  </choiceresponse>
+</problem>
+<problem>
+  <p>You have a content management system running on an Amazon EC2 instance that is approaching 100% CPU utilization. Which option will reduce load on the Amazon EC2 instance?</p>
   <multiplechoiceresponse>
     <choicegroup type="MultipleChoice" shuffle="True">
-      <choice correct="True">Security Group Inbound Rule: Protocol – TCP. Port Range – 22, Source 72.34.51.100/32</choice>
-      <choice correct="False">Security Group Inbound Rule: Protocol – UDP, Port Range – 22, Source 72.34.51.100/32</choice>
-      <choice correct="False">Network ACL Inbound Rule: Protocol – UDP, Port Range – 22, Source 72.34.51.100/32</choice>
-      <choice correct="False">Network ACL Inbound Rule: Protocol – TCP, Port Range-22, Source 72.34.51.100/0</choice>
+      <choice correct="False">Create a load balancer, and register the Amazon EC2 instance with it</choice>
+      <choice correct="False">Create a CloudFront distribution, and configure the Amazon EC2 instance as the origin</choice>
+      <choice correct="True">Create an Auto Scaling group from the instance using the CreateAutoScalingGroup action</choice>
+      <choice correct="False">Create a launch configuration from the instance using the CreateLaunchConfiguration action</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>Which Amazon Elastic Compute Cloud feature can you query from within the instance to access instance properties?</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="False">Instance user data</choice>
+      <choice correct="False">Resource tags</choice>
+      <choice correct="True">Instance metadata</choice>
+      <choice correct="False">Amazon Machine Image</choice>
     </choicegroup>
   </multiplechoiceresponse>
 </problem>
@@ -72,9 +123,20 @@
       <choice correct="False">CPU Utilization of an EC2 instance</choice>
       <choice correct="False">Disk usage activity of an EC2 instance</choice>
       <choice correct="False">Data transfer of an EC2 instance</choice>
-      <choice correct="False"></choice>
     </choicegroup>
   </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>A customer needs corporate IT governance and cost oversight of all AWS resources consumed by its divisions. The divisions want to maintain administrative control of the discrete AWS resources they consume and keep those resources separate from the resources of other divisions. Which of the following options, when used together will support the autonomy/control of divisions while enabling corporate IT to maintain governance and cost oversight? Choose 2 answers</p>
+  <choiceresponse>
+    <checkboxgroup>
+      <choice correct="False">Use AWS Consolidated Billing and disable AWS root account access for the child accounts.</choice>
+      <choice correct="False">Enable IAM cross-account access for all corporate IT administrators in each child account.</choice>
+      <choice correct="False">Create separate VPCs for each division within the corporate IT AWS account.</choice>
+      <choice correct="True">Use AWS Consolidated Billing to link the divisions’ accounts to a parent corporate account.</choice>
+      <choice correct="True">Write all child AWS CloudTrail and Amazon CloudWatch logs to each child account’s Amazon S3 ‘Log’ bucket.</choice>
+    </checkboxgroup>
+  </choiceresponse>
 </problem>
 <problem>
   <p>You run an ad-supported photo sharing website using S3 to serve photos to visitors of your site. At some point you find out that other sites have been linking to the photos on your site, causing loss to your business. What is an effective method to mitigate this?</p>
@@ -88,203 +150,13 @@
   </multiplechoiceresponse>
 </problem>
 <problem>
-  <p>You are designing a web application that stores static assets in an Amazon Simple Storage Service (S3) bucket. You expect this bucket to immediately receive over 150 PUT requests per second. What should you do to ensure optimal performance?</p>
+  <p>You are configuring your company’s application to use Auto Scaling and need to move user state information. Which of the following AWS services provides a shared data store with durability and low latency?</p>
   <multiplechoiceresponse>
     <choicegroup type="MultipleChoice" shuffle="True">
-      <choice correct="False">Use multi-part upload.</choice>
-      <choice correct="True">Add a random prefix to the key names.</choice>
-      <choice correct="False">Amazon S3 will automatically manage performance at this scale.</choice>
-      <choice correct="False">Use a predictable naming scheme, such as sequential numbers or date time sequences, in the key names</choice>
-    </choicegroup>
-  </multiplechoiceresponse>
-</problem>
-<problem>
-  <p>A customer needs corporate IT governance and cost oversight of all AWS resources consumed by its divisions. The divisions want to maintain administrative control of the discrete AWS resources they consume and keep those resources separate from the resources of other divisions. Which of the following options, when used together will support the autonomy/control of divisions while enabling corporate IT to maintain governance and cost oversight? Choose 2 answers</p>
-  <choiceresponse shuffle="True">
-    <checkboxgroup/>
-    <choice correct="False">Use AWS Consolidated Billing and disable AWS root account access for the child accounts.</choice>
-    <choice correct="False">Enable IAM cross-account access for all corporate IT administrators in each child account.</choice>
-    <choice correct="False">Create separate VPCs for each division within the corporate IT AWS account.</choice>
-    <choice correct="True">Use AWS Consolidated Billing to link the divisions’ accounts to a parent corporate account.</choice>
-    <choice correct="True">Write all child AWS CloudTrail and Amazon CloudWatch logs to each child account’s Amazon S3 ‘Log’ bucket.</choice>
-  </choiceresponse>
-</problem>
-<problem>
-  <p>When will you incur costs with an Elastic IP address (EIP)?</p>
-  <multiplechoiceresponse>
-    <choicegroup type="MultipleChoice" shuffle="True">
-      <choice correct="True">When an EIP is allocated.</choice>
-      <choice correct="False">When it is allocated and associated with a running instance.</choice>
-      <choice correct="False">When it is allocated and associated with a stopped instance.</choice>
-      <choice correct="False">Costs are incurred regardless of whether the EIP is associated with a running instance.</choice>
-    </choicegroup>
-  </multiplechoiceresponse>
-</problem>
-<problem>
-  <p>A customer is hosting their company website on a cluster of web servers that are behind a public-facing load balancer. The customer also uses Amazon Route 53 to manage their public DNS. How should the customer configure the DNS zone apex record to point to the load balancer?</p>
-  <multiplechoiceresponse>
-    <choicegroup type="MultipleChoice" shuffle="True">
-      <choice correct="False">Create an A record pointing to the IP address of the load balancer</choice>
-      <choice correct="False">Create a CNAME record pointing to the load balancer DNS name.</choice>
-      <choice correct="True">Create a CNAME record aliased to the load balancer DNS name.</choice>
-      <choice correct="False">Create an A record aliased to the load balancer DNS name</choice>
-    </choicegroup>
-  </multiplechoiceresponse>
-</problem>
-<problem>
-  <p>A customer is running a multi-tier web application farm in a virtual private cloud (VPC) that is not connected to their corporate network. They are connecting to the VPC over the Internet to manage all of their Amazon EC2 instances running in both the public and private subnets. They have only authorized the bastion-security-group with Microsoft Remote Desktop Protocol (RDP) access to the application instance security groups, but the company wants to further limit administrative access to all of the instances in the VPC. Which of the following Bastion deployment scenarios will meet this requirement?</p>
-  <multiplechoiceresponse>
-    <choicegroup type="MultipleChoice" shuffle="True">
-      <choice correct="False">Deploy a Windows Bastion host on the corporate network that has RDP access to all instances in the VPC.</choice>
-      <choice correct="False">Deploy a Windows Bastion host with an Elastic IP address in the public subnet and allow SSH access to the bastion from anywhere.</choice>
-      <choice correct="False">Deploy a Windows Bastion host with an Elastic IP address in the private subnet, and restrict RDP access to the bastion from only the corporate public IP addresses.</choice>
-      <choice correct="True">Deploy a Windows Bastion host with an auto-assigned Public IP address in the public subnet, and allow RDP access to the bastion from only the corporate public IP addresses.</choice>
-    </choicegroup>
-  </multiplechoiceresponse>
-</problem>
-<problem>
-  <p>A company is deploying a two-tier, highly available web application to AWS. Which service provides durable storage for static content while utilizing lower Overall CPU resources for the web tier?</p>
-  <multiplechoiceresponse>
-    <choicegroup type="MultipleChoice" shuffle="True">
-      <choice correct="False">Amazon EBS volume</choice>
-      <choice correct="True">Amazon S3</choice>
-      <choice correct="False">Amazon EC2 instance store</choice>
-      <choice correct="False">Amazon RDS instance</choice>
-    </choicegroup>
-  </multiplechoiceresponse>
-</problem>
-<problem>
-  <p>A customer has a single 3-TB volume on-premises that is used to hold a large repository of images and print layout files. This repository is growing at 500 GB a year and must be presented as a single logical volume. The customer is becoming increasingly constrained with their local storage capacity and wants an off-site backup of this data, while maintaining low-latency access to their frequently accessed dat a. Which AWS Storage Gateway configuration meets the customer requirements?</p>
-  <multiplechoiceresponse>
-    <choicegroup type="MultipleChoice" shuffle="True">
-      <choice correct="False">Gateway-Cached volumes with snapshots scheduled to Amazon S3</choice>
-      <choice correct="False">Gateway-Stored volumes with snapshots scheduled to Amazon S3</choice>
-      <choice correct="False">Gateway-Virtual Tape Library with snapshots to Amazon S3</choice>
-      <choice correct="True">Gateway-Virtual Tape Library with snapshots to Amazon Glacier</choice>
-    </choicegroup>
-  </multiplechoiceresponse>
-</problem>
-<problem>
-  <p>You are building an automated transcription service in which Amazon EC2 worker instances process an uploaded audio file and generate a text file. You must store both of these files in the same durable storage</p>
-  <multiplechoiceresponse>
-    <choicegroup type="MultipleChoice" shuffle="True">
-      <choice correct="False">option is both cost-efficient and scalable?</choice>
-      <choice correct="False">Multiple Amazon EBS volume with snapshots</choice>
-      <choice correct="False">A single Amazon Glacier vault</choice>
-      <choice correct="True">A single Amazon S3 bucket</choice>
-      <choice correct="False">Multiple instance stores</choice>
-    </choicegroup>
-  </multiplechoiceresponse>
-</problem>
-<problem>
-  <p>An Auto-Scaling group spans 3 AZs and currently has 4 running EC2 instances. When Auto Scaling needs to terminate an EC2 instance by default, AutoScaling will: Choose 2 answers</p>
-  <choiceresponse shuffle="True">
-    <checkboxgroup/>
-    <choice correct="False">Allow at least five minutes for Windows/Linux shutdown scripts to complete, before terminating the instance.</choice>
-    <choice correct="True">Terminate the instance with the least active network connections. If multiple instances meet this criterion, one will be randomly selected.</choice>
-    <choice correct="True">Send an SNS notification, if configured to do so.</choice>
-    <choice correct="False">Terminate an instance in the AZ which currently has 2 running EC2 instances.</choice>
-    <choice correct="False">Randomly select one of the 3 AZs, and then terminate an instance in that AZ.</choice>
-  </choiceresponse>
-</problem>
-<problem>
-  <p>Which of the following instance types are available as Amazon EBS-backed only? Choose 2 answers</p>
-  <choiceresponse shuffle="True">
-    <checkboxgroup/>
-    <choice correct="True">General purpose T2</choice>
-    <choice correct="False">General purpose M3</choice>
-    <choice correct="False">Compute-optimized C4</choice>
-    <choice correct="True">Compute-optimized C3</choice>
-    <choice correct="False">Storage-optimized 12</choice>
-  </choiceresponse>
-</problem>
-<problem>
-  <p>In order to optimize performance for a compute cluster that requires low inter-node latency, which of the following feature should you use?</p>
-  <multiplechoiceresponse>
-    <choicegroup type="MultipleChoice" shuffle="True">
-      <choice correct="True">Multiple Availability Zones</choice>
-      <choice correct="False">AWS Direct Connect</choice>
-      <choice correct="False">EC2 Dedicated Instances</choice>
-      <choice correct="False">Placement Groups</choice>
-      <choice correct="False">VPC private subnets</choice>
-    </choicegroup>
-  </multiplechoiceresponse>
-</problem>
-<problem>
-  <p>You have a distributed application that periodically processes large volumes of data across multiple Amazon EC2 Instances. The application is designed to recover gracefully from Amazon EC2 instance failures. You are required to accomplish this task in the most cost-effective way. Which of the following will meet your requirements?</p>
-  <multiplechoiceresponse>
-    <choicegroup type="MultipleChoice" shuffle="True">
-      <choice correct="False">Spot Instances</choice>
-      <choice correct="False">Reserved instances</choice>
-      <choice correct="False">Dedicated instances</choice>
-      <choice correct="True">On-Demand instances</choice>
-    </choicegroup>
-  </multiplechoiceresponse>
-</problem>
-<problem>
-  <p>When an EC2 instance that is backed by an S3-based AMI is terminated, what happens to the data on the root volume?</p>
-  <multiplechoiceresponse>
-    <choicegroup type="MultipleChoice" shuffle="True">
-      <choice correct="False">Data is automatically saved as an EBS snapshot.</choice>
-      <choice correct="False">Data is automatically saved as an EBS volume.</choice>
-      <choice correct="False">Data is unavailable until the instance is restarted.</choice>
-      <choice correct="True">Data is automatically deleted.</choice>
-    </choicegroup>
-  </multiplechoiceresponse>
-</problem>
-<problem>
-  <p>A company has an AWS account that contains three VPCs (Dev, Test, and Prod) in the same region. Test is peered to both Prod and Dev. All VPCs have non-overlapping CIDR blocks. The company wants to push minor code releases from Dev to Prod to speed up time to market. Which of the following options helps the company accomplish this?</p>
-  <multiplechoiceresponse>
-    <choicegroup type="MultipleChoice" shuffle="True">
-      <choice correct="False">Create a new peering connection Between Prod and Dev along with appropriate routes.</choice>
-      <choice correct="False">Create a new entry to Prod in the Dev route table using the peering connection as the target.</choice>
-      <choice correct="False">Attach a second gateway to Dev. Add a new entry in the Prod route table identifying the gateway as the target.</choice>
-      <choice correct="True">The VPCs have non-overlapping CIDR blocks in the same account. The route tables contain local routes for all VPCs.</choice>
-    </choicegroup>
-  </multiplechoiceresponse>
-</problem>
-<problem>
-  <p>You try to connect via SSH to a newly created Amazon EC2 instance and get one of the following error messages: “Network error: Connection timed out” or “Error connecting to [instance], reason: -&gt; Connection timed out: connect,” You have confirmed that the network and security group rules are configured correctly and the instance is passing status checks. What steps should you take to identify the source of the behavior? Choose 2 answers</p>
-  <choiceresponse shuffle="True">
-    <checkboxgroup/>
-    <choice correct="True">Verify that the private key file corresponds to the Amazon EC2 key pair assigned at launch.</choice>
-    <choice correct="False">Verify that your IAM user policy has permission to launch Amazon EC2 instances.</choice>
-    <choice correct="True">Verify that you are connecting with the appropriate user name for your AMI.</choice>
-    <choice correct="False">Verify that the Amazon EC2 Instance was launched with the proper IAM role.</choice>
-    <choice correct="False">Verify that your federation trust to AWS has been established.</choice>
-  </choiceresponse>
-</problem>
-<problem>
-  <p>You have a load balancer configured for VPC, and all back-end Amazon EC2 instances are in service. However, your web browser times out when connecting to the load balancer’s DNS name. Which options are probable causes of this behavior? Choose 2 answers</p>
-  <choiceresponse shuffle="True">
-    <checkboxgroup/>
-    <choice correct="True">The load balancer was not configured to use a public subnet with an Internet gateway configured</choice>
-    <choice correct="True">The Amazon EC2 instances do not have a dynamically allocated private IP address</choice>
-    <choice correct="False">The security groups or network ACLs are not property configured for web traffic.</choice>
-    <choice correct="False">The load balancer is not configured in a private subnet with a NAT instance.</choice>
-    <choice correct="False">The VPC does not have a VGW configured.</choice>
-  </choiceresponse>
-</problem>
-<problem>
-  <p>You are working with a customer who is using Chef configuration management in their data center. Which service is designed to let the customer leverage existing Chef recipes in AWS?</p>
-  <multiplechoiceresponse>
-    <choicegroup type="MultipleChoice" shuffle="True">
-      <choice correct="False">Amazon Simple Workflow Service</choice>
-      <choice correct="False">AWS Elastic Beanstalk</choice>
-      <choice correct="False">AWS CloudFormation</choice>
-      <choice correct="False"></choice>
-      <choice correct="True">AWS OpsWorks</choice>
-    </choicegroup>
-  </multiplechoiceresponse>
-</problem>
-<problem>
-  <p>You have a content management system running on an Amazon EC2 instance that is approaching 100% CPU utilization. Which option will reduce load on the Amazon EC2 instance?</p>
-  <multiplechoiceresponse>
-    <choicegroup type="MultipleChoice" shuffle="True">
-      <choice correct="False">Create a load balancer, and register the Amazon EC2 instance with it</choice>
-      <choice correct="False">Create a CloudFront distribution, and configure the Amazon EC2 instance as the origin</choice>
-      <choice correct="True">Create an Auto Scaling group from the instance using the CreateAutoScalingGroup action</choice>
-      <choice correct="False">Create a launch configuration from the instance using the CreateLaunchConfiguration action</choice>
+      <choice correct="False">AWS ElastiCache Memcached</choice>
+      <choice correct="True">Amazon Simple Storage Service</choice>
+      <choice correct="False">Amazon EC2 instance storage</choice>
+      <choice correct="False">Amazon DynamoDB</choice>
     </choicegroup>
   </multiplechoiceresponse>
 </problem>
@@ -301,38 +173,172 @@
   </multiplechoiceresponse>
 </problem>
 <problem>
-  <p>Which of the following are true regarding AWS CloudTrail? Choose 3 answers</p>
-  <choiceresponse shuffle="True">
-    <checkboxgroup/>
-    <choice correct="True">CloudTrail is enabled globally</choice>
-    <choice correct="False">CloudTrail is enabled by default</choice>
-    <choice correct="True">CloudTrail is enabled on a per-region basis</choice>
-    <choice correct="False">CloudTrail is enabled on a per-service basis.</choice>
-    <choice correct="True">Logs can be delivered to a single Amazon S3 bucket for aggregation.</choice>
-    <choice correct="False">CloudTrail is enabled for all available services within a region.</choice>
-    <choice correct="False">Logs can only be processed and delivered to the region in which they are generated.</choice>
+  <p>An Auto-Scaling group spans 3 AZs and currently has 4 running EC2 instances. When Auto Scaling needs to terminate an EC2 instance by default, AutoScaling will: Choose 2 answers</p>
+  <choiceresponse>
+    <checkboxgroup>
+      <choice correct="False">Allow at least five minutes for Windows/Linux shutdown scripts to complete, before terminating the instance.</choice>
+      <choice correct="True">Terminate the instance with the least active network connections. If multiple instances meet this criterion, one will be randomly selected.</choice>
+      <choice correct="True">Send an SNS notification, if configured to do so.</choice>
+      <choice correct="False">Terminate an instance in the AZ which currently has 2 running EC2 instances.</choice>
+      <choice correct="False">Randomly select one of the 3 AZs, and then terminate an instance in that AZ.</choice>
+    </checkboxgroup>
   </choiceresponse>
 </problem>
 <problem>
-  <p>Which of the following are characteristics of a reserved instance? Choose 3 answers</p>
-  <choiceresponse shuffle="True">
-    <checkboxgroup/>
-    <choice correct="True">It can be migrated across Availability Zones</choice>
-    <choice correct="False">It is specific to an Amazon Machine Image (AMI)</choice>
-    <choice correct="False">It can be applied to instances launched by Auto Scaling</choice>
-    <choice correct="True">It is specific to an instance Type</choice>
-    <choice correct="True">It can be used to lower Total Cost of Ownership (TCO) of a system</choice>
-  </choiceresponse>
-</problem>
-<problem>
-  <p>You are configuring your company’s application to use Auto Scaling and need to move user state information. Which of the following AWS services provides a shared data store with durability and low latency?</p>
+  <p>You are tasked with setting up a Linux bastion host for access to Amazon EC2 instances running in your VPC. Only clients connecting from the corporate external public IP address 72.34.51.100 should have SSH access to the host. Which option will meet the customer requirement?</p>
   <multiplechoiceresponse>
     <choicegroup type="MultipleChoice" shuffle="True">
-      <choice correct="False">AWS ElastiCache Memcached</choice>
-      <choice correct="True">Amazon Simple Storage Service</choice>
-      <choice correct="False">Amazon EC2 instance storage</choice>
+      <choice correct="True">Security Group Inbound Rule: Protocol – TCP. Port Range – 22, Source 72.34.51.100/32</choice>
+      <choice correct="False">Security Group Inbound Rule: Protocol – UDP, Port Range – 22, Source 72.34.51.100/32</choice>
+      <choice correct="False">Network ACL Inbound Rule: Protocol – UDP, Port Range – 22, Source 72.34.51.100/32</choice>
+      <choice correct="False">Network ACL Inbound Rule: Protocol – TCP, Port Range-22, Source 72.34.51.100/0</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>Which of the following services natively encrypts data at rest within an AWS region? Choose 2 answers</p>
+  <choiceresponse>
+    <checkboxgroup>
+      <choice correct="True">AWS Storage Gateway</choice>
       <choice correct="False">Amazon DynamoDB</choice>
-      <choice correct="False"></choice>
+      <choice correct="False">Amazon CloudFront</choice>
+      <choice correct="True">Amazon Glacier</choice>
+      <choice correct="False">Amazon Simple Queue Service</choice>
+    </checkboxgroup>
+  </choiceresponse>
+</problem>
+<problem>
+  <p>A company is building software on AWS that requires access to various AWS services. Which configuration should be used to ensure mat AWS credentials (i.e., Access Key ID/Secret Access Key combination) are not compromised?</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="True">Enable Multi-Factor Authentication for your AWS root account.</choice>
+      <choice correct="False">Assign an IAM role to the Amazon EC2 instance.</choice>
+      <choice correct="False">Store the AWS Access Key ID/Secret Access Key combination in software comments.</choice>
+      <choice correct="False">Assign an IAM user to the Amazon EC2 Instance.</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>You need to pass a custom script to new Amazon Linux instances created in your Auto Scaling group. Which feature allows you to accomplish this?</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="False">User data</choice>
+      <choice correct="True">EC2Config service</choice>
+      <choice correct="False">IAM roles</choice>
+      <choice correct="False">AWS Config</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>When an EC2 instance that is backed by an S3-based AMI is terminated, what happens to the data on the root volume?</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="False">Data is automatically saved as an EBS snapshot.</choice>
+      <choice correct="False">Data is automatically saved as an EBS volume.</choice>
+      <choice correct="False">Data is unavailable until the instance is restarted.</choice>
+      <choice correct="True">Data is automatically deleted.</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>A t2.medium EC2 instance type must be launched with what type of Amazon Machine Image (AMI)?</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="True">An Instance store Hardware Virtual Machine AMI</choice>
+      <choice correct="False">An Instance store Paravirtual AMI</choice>
+      <choice correct="False">An Amazon EBS-backed Hardware Virtual Machine AMI</choice>
+      <choice correct="False">An Amazon EBS-backed Paravirtual AMI</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>A company needs to deploy services to an AWS region which they have not previously used. The company currently has an AWS identity and Access Management (IAM) role for the Amazon EC2 instances, which permits the instance to have access to Amazon DynamoDB. The company wants their EC2 instances in the new region to have the same privileges. How should the company achieve this?</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="False">Create a new IAM role and associated policies within the new region</choice>
+      <choice correct="False">Assign the existing IAM role to the Amazon EC2 instances in the new region</choice>
+      <choice correct="True">Copy the IAM role and associated policies to the new region and attach it to the instances</choice>
+      <choice correct="False">Create an Amazon Machine Image (AMI) of the instance and copy it to the desired region using the AMI Copy feature</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>An existing application stores sensitive information on a non-boot Amazon EBS data volume attached to an Amazon Elastic Compute Cloud instance. Which of the following approaches would protect the sensitive data on an Amazon EBS volume?</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="False">Upload your customer keys to AWS CloudHSM. Associate the Amazon EBS volume with AWS CloudHSM. Remount the Amazon EBS volume.</choice>
+      <choice correct="False">Create and mount a new, encrypted Amazon EBS volume. Move the data to the new volume. Delete the old Amazon EBS volume.</choice>
+      <choice correct="False">Unmount the EBS volume. Toggle the encryption attribute to True. Re-mount the Amazon EBS volume.</choice>
+      <choice correct="True">Snapshot the current Amazon EBS volume. Restore the snapshot to a new, encrypted Amazon EBS volume. Mount the Amazon EBS volume</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>A company is deploying a new two-tier web application in AWS. The company has limited staff and requires high availability, and the application requires complex queries and table joins. Which configuration provides the solution for the company’s requirements?</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="False">MySQL Installed on two Amazon EC2 Instances in a single Availability Zone</choice>
+      <choice correct="False">Amazon RDS for MySQL with Multi-AZ</choice>
+      <choice correct="False">Amazon ElastiCache</choice>
+      <choice correct="True">Amazon DynamoDB</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>You have a load balancer configured for VPC, and all back-end Amazon EC2 instances are in service. However, your web browser times out when connecting to the load balancer’s DNS name. Which options are probable causes of this behavior? Choose 2 answers</p>
+  <choiceresponse>
+    <checkboxgroup>
+      <choice correct="True">The load balancer was not configured to use a public subnet with an Internet gateway configured</choice>
+      <choice correct="True">The Amazon EC2 instances do not have a dynamically allocated private IP address</choice>
+      <choice correct="False">The security groups or network ACLs are not property configured for web traffic.</choice>
+      <choice correct="False">The load balancer is not configured in a private subnet with a NAT instance.</choice>
+      <choice correct="False">The VPC does not have a VGW configured.</choice>
+    </checkboxgroup>
+  </choiceresponse>
+</problem>
+<problem>
+  <p>Which of the following are true regarding encrypted Amazon Elastic Block Store (EBS) volumes? Choose 2 answers</p>
+  <choiceresponse>
+    <checkboxgroup>
+      <choice correct="True">Supported on all Amazon EBS volume types</choice>
+      <choice correct="True">Snapshots are automatically encrypted</choice>
+      <choice correct="False">Available to all instance types</choice>
+      <choice correct="False">Existing volumes can be encrypted</choice>
+      <choice correct="False">shared volumes can be encrypted</choice>
+    </checkboxgroup>
+  </choiceresponse>
+</problem>
+<problem>
+  <p>A US-based company is expanding their web presence into Europe. The company wants to extend their AWS infrastructure from Northern Virginia (us-east-1) into the Dublin (eu-west-1) region. Which of the following options would enable an equivalent experience for users on both continents?</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="False">Use a public-facing load balancer per region to load-balance web traffic, and enable HTTP health checks.</choice>
+      <choice correct="False">Use a public-facing load balancer per region to load-balance web traffic, and enable sticky sessions.</choice>
+      <choice correct="False">Use Amazon Route 53, and apply a geolocation routing policy to distribute traffic across both regions.</choice>
+      <choice correct="True">Use Amazon Route 53, and apply a weighted routing policy to distribute traffic across both regions.</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>You manually launch a NAT AMI in a public subnet. The network is properly configured. Security groups and network access control lists are property configured. Instances in a private subnet can access the NAT. The</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="False">required to allow access from the private instances?</choice>
+      <choice correct="False">Enable Source/Destination Check on the private Instances.</choice>
+      <choice correct="True">Enable Source/Destination Check on the NAT instance.</choice>
+      <choice correct="False">Disable Source/Destination Check on the private instances.</choice>
+      <choice correct="False">Disable Source/Destination Check on the NAT instance.</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>Which of the following approaches provides the lowest cost for Amazon Elastic Block Store snapshots while giving you the ability to fully restore data?</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="True">Maintain two snapshots: the original snapshot and the latest incremental snapshot.</choice>
+      <choice correct="False">Maintain a volume snapshot; subsequent snapshots will overwrite one another</choice>
+      <choice correct="False">Maintain a single snapshot the latest snapshot is both Incremental and complete.</choice>
+      <choice correct="False">Maintain the most current snapshot, archive the original and incremental to Amazon Glacier.</choice>
     </choicegroup>
   </multiplechoiceresponse>
 </problem>

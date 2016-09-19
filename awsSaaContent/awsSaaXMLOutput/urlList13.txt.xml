@@ -1,88 +1,44 @@
 <problem>
-  <p>By default what are ENIs that are automatically created and attached to instances using the EC2 console set to do when the attached instance terminates?</p>
+  <p>You have launched an Amazon Elastic Compute Cloud (EC2) instance into a public subnet with a primary private IP address assigned, an internet gateway is attached to the VPC, and the public route table is configured to send all Internet-based traffic to the Internet gateway. The instance security group is set to allow all outbound traffic but cannot access the internet. Why is the Internet unreachable from this instance?</p>
   <multiplechoiceresponse>
     <choicegroup type="MultipleChoice" shuffle="True">
-      <choice correct="False">Remain as is</choice>
-      <choice correct="True">Terminate</choice>
-      <choice correct="False">Hibernate</choice>
-      <choice correct="False">Pause</choice>
+      <choice correct="True">The instance does not have a public IP address.</choice>
+      <choice correct="False">The internet gateway security group must allow all outbound traffic.</choice>
+      <choice correct="False">The instance security group must allow all inbound traffic.</choice>
+      <choice correct="False">The instance “Source/Destination check” property must be enabled.</choice>
     </choicegroup>
   </multiplechoiceresponse>
 </problem>
 <problem>
-  <p>You can use _____ and _____ to help secure the instances in your VPC.</p>
+  <p>How can the domain’s zone apex, for example, “myzoneapexdomain.com”, be pointed towards an Elastic Load Balancer?</p>
   <multiplechoiceresponse>
     <choicegroup type="MultipleChoice" shuffle="True">
-      <choice correct="False">security groups and multi-factor authentication</choice>
-      <choice correct="False">security groups and 2-Factor authentication</choice>
-      <choice correct="False">security groups and biometric authentication</choice>
-      <choice correct="True">security groups and network ACLs</choice>
+      <choice correct="False">By using an Amazon Route 53 Alias record</choice>
+      <choice correct="True">By using an AAAA record</choice>
+      <choice correct="False">By using an Amazon Route 53 CNAME record</choice>
+      <choice correct="False">By using an A record</choice>
     </choicegroup>
   </multiplechoiceresponse>
 </problem>
 <problem>
-  <p>It is advised that you watch the Amazon CloudWatch “_____” metric (available via the AWS Management Console or Amazon Cloud Watch APIs) carefully and recreate the Read Replica should it fall behind due to replication errors.</p>
+  <p>A company wants to implement their website in a virtual private cloud (VPC). The web tier will use an Auto Scaling group across multiple Availability Zones (AZs). The database will use Multi-AZ RDS MySQL and should not be publicly accessible. What is the minimum number of subnets that need to be configured in the VPC?</p>
   <multiplechoiceresponse>
     <choicegroup type="MultipleChoice" shuffle="True">
-      <choice correct="False">Write Lag</choice>
-      <choice correct="False">Read Replica</choice>
-      <choice correct="True">Replica Lag</choice>
-      <choice correct="False">Single Replica</choice>
+      <choice correct="False">1</choice>
+      <choice correct="True">2</choice>
+      <choice correct="False">3</choice>
+      <choice correct="False">4</choice>
     </choicegroup>
   </multiplechoiceresponse>
 </problem>
 <problem>
-  <p>Is decreasing the storage size of a DB Instance permitted?</p>
+  <p>You launch an Amazon EC2 instance without an assigned AVVS identity and Access Management (IAM) role. Later, you decide that the instance should be running with an IAM role. Which action must you take in order to have a running Amazon EC2 instance with an IAM role assigned to it?</p>
   <multiplechoiceresponse>
     <choicegroup type="MultipleChoice" shuffle="True">
-      <choice correct="False">Depends on the RDMS used</choice>
-      <choice correct="True">Yes</choice>
-      <choice correct="False"></choice>
-      <choice correct="False">No</choice>
-    </choicegroup>
-  </multiplechoiceresponse>
-</problem>
-<problem>
-  <p>If I want my instance to run on a single-tenant hardware, which value do I have to set the instance’s tenancy attribute to?</p>
-  <multiplechoiceresponse>
-    <choicegroup type="MultipleChoice" shuffle="True">
-      <choice correct="True">dedicated</choice>
-      <choice correct="False">isolated</choice>
-      <choice correct="False">one</choice>
-      <choice correct="False">reserved</choice>
-    </choicegroup>
-  </multiplechoiceresponse>
-</problem>
-<problem>
-  <p>What does Amazon RDS stand for?</p>
-  <multiplechoiceresponse>
-    <choicegroup type="MultipleChoice" shuffle="True">
-      <choice correct="False">Regional Data Server.</choice>
-      <choice correct="True">Relational Database Service.</choice>
-      <choice correct="False">Nothing.</choice>
-      <choice correct="False">Regional Database Service.</choice>
-    </choicegroup>
-  </multiplechoiceresponse>
-</problem>
-<problem>
-  <p>In the context of MySQL, version numbers are organized as MySQL version = X.Y.Z. What does X denote here?</p>
-  <multiplechoiceresponse>
-    <choicegroup type="MultipleChoice" shuffle="True">
-      <choice correct="False">release level</choice>
-      <choice correct="False">minor version</choice>
-      <choice correct="False">version number</choice>
-      <choice correct="True">major version</choice>
-    </choicegroup>
-  </multiplechoiceresponse>
-</problem>
-<problem>
-  <p>When creation of an EBS snapshot is initiated, but not completed, the EBS volume:</p>
-  <multiplechoiceresponse>
-    <choicegroup type="MultipleChoice" shuffle="True">
-      <choice correct="False">Can be used while the snapshot is in progress.</choice>
-      <choice correct="False">Cannot be detached or attached to an EC2 instance until the snapshot completes</choice>
-      <choice correct="True">Can be used in read-only mode while the snapshot is in progress.</choice>
-      <choice correct="False">Cannot be used until the snapshot completes.</choice>
+      <choice correct="False">Create an image of the instance, and register the image with an IAM role assigned and an Amazon EBS volume mapping.</choice>
+      <choice correct="False">Create a new IAM role with the same permissions as an existing IAM role, and assign it to the running instance.</choice>
+      <choice correct="False">Create an image of the instance, add a new IAM role with the same permissions as the desired IAM role, and deregister the image with the new role assigned.</choice>
+      <choice correct="True">Create an image of the instance, and use this image to launch a new instance with the desired IAM role assigned.</choice>
     </choicegroup>
   </multiplechoiceresponse>
 </problem>
@@ -98,36 +54,69 @@
   </multiplechoiceresponse>
 </problem>
 <problem>
-  <p>Fill in the blanks: _____ is a durable, block-level storage volume that you can attach to a single, running Amazon EC2 instance.</p>
+  <p>For which of the following use cases are Simple Workflow Service (SWF) and Amazon EC2 an appropriate solution? Choose 2 answers</p>
+  <choiceresponse>
+    <checkboxgroup>
+      <choice correct="True">Using as an endpoint to collect thousands of data points per hour from a distributed fleet of sensors</choice>
+      <choice correct="True">Managing a multi-step and multi-decision checkout process of an e-commerce website</choice>
+      <choice correct="False">Orchestrating the execution of distributed and auditable business processes</choice>
+      <choice correct="False">Using as an SNS (Simple Notification Service) endpoint to trigger execution of video transcoding jobs</choice>
+      <choice correct="False">Using as a distributed session store for your web application</choice>
+    </checkboxgroup>
+  </choiceresponse>
+</problem>
+<problem>
+  <p>When creation of an EBS snapshot is initiated, but not completed, the EBS volume:</p>
   <multiplechoiceresponse>
     <choicegroup type="MultipleChoice" shuffle="True">
-      <choice correct="False">Amazon S3</choice>
-      <choice correct="True">Amazon EBS</choice>
-      <choice correct="False">None of these</choice>
-      <choice correct="False">All of these</choice>
+      <choice correct="False">Can be used while the snapshot is in progress.</choice>
+      <choice correct="False">Cannot be detached or attached to an EC2 instance until the snapshot completes</choice>
+      <choice correct="True">Can be used in read-only mode while the snapshot is in progress.</choice>
+      <choice correct="False">Cannot be used until the snapshot completes.</choice>
     </choicegroup>
   </multiplechoiceresponse>
 </problem>
 <problem>
-  <p>Select the correct set of steps for exposing the snapshot only to specific AWS accounts</p>
+  <p>What is a placement group?</p>
   <multiplechoiceresponse>
     <choicegroup type="MultipleChoice" shuffle="True">
-      <choice correct="False">Select public for all the accounts and check mark those accounts with whom you want to expose the snapshots and click save.</choice>
-      <choice correct="False">SelectPrivate, enter the IDs of those AWS accounts, and clickSave.</choice>
-      <choice correct="True">SelectPublic, enter the IDs of those AWS accounts, and clickSave.</choice>
-      <choice correct="False">SelectPublic, mark the IDs of those AWS accounts as private, and clickSave.</choice>
+      <choice correct="False">A collection of Auto Scaling groups in the same region</choice>
+      <choice correct="False">A feature that enables EC2 instances to interact with each other via high bandwidth, low latency connections</choice>
+      <choice correct="False">A collection of authorized CloudFront edge locations for a distribution</choice>
+      <choice correct="True">A collection of Elastic Load Balancers in the same Region or Availability Zone</choice>
     </choicegroup>
   </multiplechoiceresponse>
 </problem>
 <problem>
-  <p>Can the string value of ‘Key’ be prefixed with laws?</p>
+  <p>A client application requires operating system privileges on a relational database server. What is an appropriate configuration for a highly available database architecture?</p>
   <multiplechoiceresponse>
     <choicegroup type="MultipleChoice" shuffle="True">
-      <choice correct="True">No</choice>
-      <choice correct="False">Only for EC2 not S3</choice>
-      <choice correct="False"></choice>
-      <choice correct="False">Yes</choice>
-      <choice correct="False">Only for S3 not EC</choice>
+      <choice correct="False">A standalone Amazon EC2 instance</choice>
+      <choice correct="False">Amazon RDS in a Multi-AZ configuration</choice>
+      <choice correct="False">Amazon EC2 instances in a replication configuration utilizing a single Availability Zone</choice>
+      <choice correct="True">Amazon EC2 instances in a replication configuration utilizing two different Availability Zones</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>A customer wants to leverage Amazon Simple Storage Service (S3) and Amazon Glacier as part of their backup and archive infrastructure. The customer plans to use third-party software to support this integration. Which approach will limit the access of the third party software to only the Amazon S3 bucket named “companybackup”?</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="False">A custom bucket policy limited to the Amazon S3 API in thee Amazon Glacier archive “company-backup”</choice>
+      <choice correct="False">A custom bucket policy limited to the Amazon S3 API in “company-backup”</choice>
+      <choice correct="False">A custom IAM user policy limited to the Amazon S3 API for the Amazon Glacier archive “company-backup”.</choice>
+      <choice correct="True">A custom IAM user policy limited to the Amazon S3 API in “company-backup”.</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>An instance is launched into a VPC subnet with the network ACL configured to allow all inbound traffic and deny all outbound traffic. The instance’s security group is configured to allow SSH from any IP address and deny all outbound traffic. What changes need to be made to allow SSH access to the instance?</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="False">The outbound security group needs to be modified to allow outbound traffic.</choice>
+      <choice correct="False">The outbound network ACL needs to be modified to allow outbound traffic.</choice>
+      <choice correct="False">Nothing, it can be accessed from any IP address using SSH.</choice>
+      <choice correct="True">Both the outbound security group and outbound network ACL need to be modified to allow outbound traffic.</choice>
     </choicegroup>
   </multiplechoiceresponse>
 </problem>

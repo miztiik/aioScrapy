@@ -1,22 +1,11 @@
 <problem>
-  <p>If I want an instance to have a public IP address, which IP address should I use?</p>
+  <p>Fill in the blanks : _____ let you categorize your EC2 resources in different ways, for example, by purpose, owner, or environment.</p>
   <multiplechoiceresponse>
     <choicegroup type="MultipleChoice" shuffle="True">
-      <choice correct="True">Elastic IP Address</choice>
-      <choice correct="False">Class B IP Address</choice>
-      <choice correct="False">Class A IP Address</choice>
-      <choice correct="False">Dynamic IP Address</choice>
-    </choicegroup>
-  </multiplechoiceresponse>
-</problem>
-<problem>
-  <p>Which Amazon service can I use to define a virtual network that closely resembles a traditional data center?</p>
-  <multiplechoiceresponse>
-    <choicegroup type="MultipleChoice" shuffle="True">
-      <choice correct="True">Amazon VPC</choice>
-      <choice correct="False">Amazon ServiceBus</choice>
-      <choice correct="False">Amazon EMR</choice>
-      <choice correct="False">Amazon RDS</choice>
+      <choice correct="True">Tags</choice>
+      <choice correct="False">special filters</choice>
+      <choice correct="False">pointers</choice>
+      <choice correct="False">functions</choice>
     </choicegroup>
   </multiplechoiceresponse>
 </problem>
@@ -26,224 +15,6 @@
     <choicegroup type="MultipleChoice" shuffle="True">
       <choice correct="False">MyISAM</choice>
       <choice correct="True">InnoDB</choice>
-    </choicegroup>
-  </multiplechoiceresponse>
-</problem>
-<problem>
-  <p>Which service enables AWS customers to manage users and permissions in AWS?</p>
-  <multiplechoiceresponse>
-    <choicegroup type="MultipleChoice" shuffle="True">
-      <choice correct="False">AWS Access Control Service (ACS)</choice>
-      <choice correct="True">AWS Identity and Access Management (IAM)</choice>
-      <choice correct="False">AWS Identity Manager (AIM)</choice>
-    </choicegroup>
-  </multiplechoiceresponse>
-</problem>
-<problem>
-  <p>In regards to IAM you can edit user properties later, but you cannot use the console to change the ___________.</p>
-  <multiplechoiceresponse>
-    <choicegroup type="MultipleChoice" shuffle="True">
-      <choice correct="True">user name</choice>
-      <choice correct="False">password</choice>
-      <choice correct="False">default group</choice>
-    </choicegroup>
-  </multiplechoiceresponse>
-</problem>
-<problem>
-  <p>What is the maximum response time for a Business level Premium Support case?</p>
-  <multiplechoiceresponse>
-    <choicegroup type="MultipleChoice" shuffle="True">
-      <choice correct="False">120 seconds</choice>
-      <choice correct="True">1 hour</choice>
-      <choice correct="False">10 minutes</choice>
-      <choice correct="False">12 hours</choice>
-    </choicegroup>
-  </multiplechoiceresponse>
-</problem>
-<problem>
-  <p>True or False: Without IAM, you cannot control the tasks a particular user or system can do and what AWS resources they might use.</p>
-  <multiplechoiceresponse>
-    <choicegroup type="MultipleChoice" shuffle="True">
-      <choice correct="True">FALSE</choice>
-      <choice correct="False">TRUE</choice>
-    </choicegroup>
-  </multiplechoiceresponse>
-</problem>
-<problem>
-  <p>The _____ service is targeted at organizations with multiple users or systems that use AWS products such as Amazon EC2, Amazon SimpleDB, and the AWS Management Console.</p>
-  <multiplechoiceresponse>
-    <choicegroup type="MultipleChoice" shuffle="True">
-      <choice correct="False">Amazon RDS</choice>
-      <choice correct="False">AWS Integrity Management</choice>
-      <choice correct="True">AWS Identity and Access Management</choice>
-      <choice correct="False">Amazon EMR</choice>
-    </choicegroup>
-  </multiplechoiceresponse>
-</problem>
-<problem>
-  <p>What is the command line instruction for running the remote desktop client in Windows?</p>
-  <multiplechoiceresponse>
-    <choicegroup type="MultipleChoice" shuffle="True">
-      <choice correct="False">desk.cpl</choice>
-      <choice correct="True">mstsc</choice>
-    </choicegroup>
-  </multiplechoiceresponse>
-</problem>
-<problem>
-  <p>If I want to run a database in an Amazon instance, which is the most recommended Amazon storage option?</p>
-  <multiplechoiceresponse>
-    <choicegroup type="MultipleChoice" shuffle="True">
-      <choice correct="False">Amazon Instance Storage</choice>
-      <choice correct="True">Amazon EBS</choice>
-      <choice correct="False">You can’t run a database inside an Amazon instance.</choice>
-      <choice correct="False">Amazon S3</choice>
-    </choicegroup>
-  </multiplechoiceresponse>
-</problem>
-<problem>
-  <p>When you use the AWS Management Console to delete an IAM user, IAM also deletes any signing certificates and any access keys belonging to the user.</p>
-  <multiplechoiceresponse>
-    <choicegroup type="MultipleChoice" shuffle="True">
-      <choice correct="False">FALSE</choice>
-      <choice correct="False">This is configurable</choice>
-      <choice correct="True">TRUE</choice>
-    </choicegroup>
-  </multiplechoiceresponse>
-</problem>
-<problem>
-  <p>Do the Amazon EBS volumes persist independently from the running life of an Amazon EC2 instance?</p>
-  <multiplechoiceresponse>
-    <choicegroup type="MultipleChoice" shuffle="True">
-      <choice correct="False">Only if instructed to when created</choice>
-      <choice correct="True">Yes</choice>
-      <choice correct="False">No</choice>
-    </choicegroup>
-  </multiplechoiceresponse>
-</problem>
-<problem>
-  <p>What is the default maximum number of MFA devices in use per AWS account (at the root account level)?</p>
-  <multiplechoiceresponse>
-    <choicegroup type="MultipleChoice" shuffle="True">
-      <choice correct="True">1</choice>
-      <choice correct="False">5</choice>
-      <choice correct="False">15</choice>
-      <choice correct="False">10</choice>
-    </choicegroup>
-  </multiplechoiceresponse>
-</problem>
-<problem>
-  <p>Can we attach an EBS volume to more than one EC2 instance at the same time?</p>
-  <multiplechoiceresponse>
-    <choicegroup type="MultipleChoice" shuffle="True">
-      <choice correct="True">Yes.</choice>
-      <choice correct="False">No</choice>
-      <choice correct="False">Only EC2-optimized EBS volumes.</choice>
-      <choice correct="False">Only in read mode.</choice>
-    </choicegroup>
-  </multiplechoiceresponse>
-</problem>
-<problem>
-  <p>Select the correct set of options. These are the initial settings for the default security group:</p>
-  <multiplechoiceresponse>
-    <choicegroup type="MultipleChoice" shuffle="True">
-      <choice correct="True">Allow no inbound traffic, Allow all outbound traffic and Allow instances associated with this security group to talk to each other</choice>
-      <choice correct="False">Allow all inbound traffic, Allow no outbound traffic and Allow instances associated with this security group to talk to each other</choice>
-      <choice correct="False">Allow no inbound traffic, Allow all outbound traffic and Does NOT allow instances associated with this security group to talk to each other</choice>
-      <choice correct="False">Allow all inbound traffic, Allow all outbound traffic and Does NOT allow instances associated with this security group to talk to each other</choice>
-    </choicegroup>
-  </multiplechoiceresponse>
-</problem>
-<problem>
-  <p>What does Amazon Route53 provide?</p>
-  <multiplechoiceresponse>
-    <choicegroup type="MultipleChoice" shuffle="True">
-      <choice correct="False">A global Content Delivery Network.</choice>
-      <choice correct="False">None of these.</choice>
-      <choice correct="True">A scalable Domain Name System.</choice>
-      <choice correct="False">An SSH endpoint for Amazon EC2.</choice>
-    </choicegroup>
-  </multiplechoiceresponse>
-</problem>
-<problem>
-  <p>Is the SQL Server Audit feature supported in the Amazon RDS SQL Server engine?</p>
-  <multiplechoiceresponse>
-    <choicegroup type="MultipleChoice" shuffle="True">
-      <choice correct="True">No</choice>
-      <choice correct="False">Yes</choice>
-    </choicegroup>
-  </multiplechoiceresponse>
-</problem>
-<problem>
-  <p>Are you able to integrate a multi-factor token service with the AWS Platform?</p>
-  <multiplechoiceresponse>
-    <choicegroup type="MultipleChoice" shuffle="True">
-      <choice correct="True">Yes, using the AWS multi-factor token devices to authenticate users on the AWS platform.</choice>
-      <choice correct="False">No, you cannot integrate multi-factor token devices with the AWS platform.</choice>
-      <choice correct="False">Yes, you can integrate private multi-factor token devices to authenticate users to the AWS platform.</choice>
-    </choicegroup>
-  </multiplechoiceresponse>
-</problem>
-<problem>
-  <p>When automatic failover occurs, Amazon RDS will emit a DB Instance event to inform you that automatic failover occurred. You can use the _____ to return information about events related to your DB Instance</p>
-  <multiplechoiceresponse>
-    <choicegroup type="MultipleChoice" shuffle="True">
-      <choice correct="False">FetchFailure</choice>
-      <choice correct="False">DescriveFailure</choice>
-      <choice correct="True">DescribeEvents</choice>
-      <choice correct="False">FetchEvents</choice>
-    </choicegroup>
-  </multiplechoiceresponse>
-</problem>
-<problem>
-  <p>Which DNS name can only be resolved within Amazon EC2?</p>
-  <multiplechoiceresponse>
-    <choicegroup type="MultipleChoice" shuffle="True">
-      <choice correct="True">Internal DNS name</choice>
-      <choice correct="False">External DNS name</choice>
-      <choice correct="False">Global DNS name</choice>
-      <choice correct="False">Private DNS name</choice>
-    </choicegroup>
-  </multiplechoiceresponse>
-</problem>
-<problem>
-  <p>If you have chosen Multi-AZ deployment, in the event of a planned or unplanned outage of your primary DB Instance, Amazon RDS automatically switches to the standby replic a. The automatic failover mechanism simply changes the ______ record of the main DB Instance to point to the standby DB Instance.</p>
-  <multiplechoiceresponse>
-    <choicegroup type="MultipleChoice" shuffle="True">
-      <choice correct="False">DNAME</choice>
-      <choice correct="True">CNAME</choice>
-      <choice correct="False">TXT</choice>
-      <choice correct="False">MX</choice>
-    </choicegroup>
-  </multiplechoiceresponse>
-</problem>
-<problem>
-  <p>Does Amazon RDS for SQL Server currently support importing data into the msdb database?</p>
-  <multiplechoiceresponse>
-    <choicegroup type="MultipleChoice" shuffle="True">
-      <choice correct="True">No</choice>
-      <choice correct="False">Yes</choice>
-    </choicegroup>
-  </multiplechoiceresponse>
-</problem>
-<problem>
-  <p>MySQL installations default to port _____.</p>
-  <multiplechoiceresponse>
-    <choicegroup type="MultipleChoice" shuffle="True">
-      <choice correct="True">3306</choice>
-      <choice correct="False">443</choice>
-      <choice correct="False">80</choice>
-      <choice correct="False">1158</choice>
-    </choicegroup>
-  </multiplechoiceresponse>
-</problem>
-<problem>
-  <p>My Read Replica appears “stuck” after a Multi-AZ failover and is unable to obtain or apply updates from the source DB Instance. What do I do?</p>
-  <multiplechoiceresponse>
-    <choicegroup type="MultipleChoice" shuffle="True">
-      <choice correct="True">You will need to delete the Read Replica and create a new one to replace it.</choice>
-      <choice correct="False">You will need to disassociate the DB Engine and re associate it.</choice>
-      <choice correct="False">The instance should be deployed to Single AZ and then moved to Multi- AZ once again</choice>
-      <choice correct="False">You will need to delete the DB Instance and create a new one to replace it.</choice>
     </choicegroup>
   </multiplechoiceresponse>
 </problem>
@@ -259,58 +30,286 @@
   </multiplechoiceresponse>
 </problem>
 <problem>
-  <p>Does Route 53 support MX Records?</p>
+  <p>If I want to run a database in an Amazon instance, which is the most recommended Amazon storage option?</p>
   <multiplechoiceresponse>
     <choicegroup type="MultipleChoice" shuffle="True">
-      <choice correct="True">Yes.</choice>
-      <choice correct="False">It supports CNAME records, but not MX records.</choice>
+      <choice correct="False">Amazon Instance Storage</choice>
+      <choice correct="True">Amazon EBS</choice>
+      <choice correct="False">You can’t run a database inside an Amazon instance.</choice>
+      <choice correct="False">Amazon S3</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>Which Amazon service can I use to define a virtual network that closely resembles a traditional data center?</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="True">Amazon VPC</choice>
+      <choice correct="False">Amazon ServiceBus</choice>
+      <choice correct="False">Amazon EMR</choice>
+      <choice correct="False">Amazon RDS</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>Can I test my DB Instance against a new version before upgrading?</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
       <choice correct="False">No</choice>
-      <choice correct="False">Only Primary MX records. Secondary MX records are not supported.</choice>
+      <choice correct="True">Yes</choice>
+      <choice correct="False">Only in VPC</choice>
     </choicegroup>
   </multiplechoiceresponse>
 </problem>
 <problem>
-  <p>What does Amazon Elastic Beanstalk provide?</p>
+  <p>Can I use Provisioned IOPS with VPC?</p>
   <multiplechoiceresponse>
     <choicegroup type="MultipleChoice" shuffle="True">
-      <choice correct="False">An application container on top of Amazon Web Services.</choice>
-      <choice correct="False">A scalable storage appliance on top of Amazon Web Services.</choice>
-      <choice correct="True">A scalable cluster of EC2 instances.</choice>
-      <choice correct="False">A service by this name doesn’t exist.</choice>
+      <choice correct="False">Only Oracle based RDS</choice>
+      <choice correct="False">No</choice>
+      <choice correct="False">Only with MSSQL based RDS</choice>
+      <choice correct="True">Yes for all RDS instances</choice>
     </choicegroup>
   </multiplechoiceresponse>
 </problem>
 <problem>
-  <p>If your DB instance runs out of storage space or file system resources, its status will change to_____ and your DB Instance will no longer be available.</p>
+  <p>Making your snapshot public shares all snapshot data with everyone. Can the snapshots with AWS Marketplace product codes be made public?</p>
   <multiplechoiceresponse>
     <choicegroup type="MultipleChoice" shuffle="True">
-      <choice correct="False"></choice>
-      <choice correct="False">storage-overflow</choice>
-      <choice correct="True">storage-full</choice>
-      <choice correct="False">storage-exceed</choice>
-      <choice correct="False">storage-overage</choice>
+      <choice correct="False">No</choice>
+      <choice correct="True">Yes</choice>
     </choicegroup>
   </multiplechoiceresponse>
 </problem>
 <problem>
-  <p>Is it possible to access your EBS snapshots?</p>
+  <p>In regards to IAM you can edit user properties later, but you cannot use the console to change the ___________.</p>
   <multiplechoiceresponse>
     <choicegroup type="MultipleChoice" shuffle="True">
-      <choice correct="False">Yes, through the Amazon S3 APIs.</choice>
-      <choice correct="True">Yes, through the Amazon EC2 APIs.</choice>
-      <choice correct="False">No, EBS snapshots cannot be accessed; they can only be used to create a new EBS volume.</choice>
-      <choice correct="False">EBS doesn’t provide snapshots.</choice>
+      <choice correct="True">user name</choice>
+      <choice correct="False">password</choice>
+      <choice correct="False">default group</choice>
     </choicegroup>
   </multiplechoiceresponse>
 </problem>
 <problem>
-  <p>Fill in the blanks : _____ let you categorize your EC2 resources in different ways, for example, by purpose, owner, or environment.</p>
+  <p>Fill in the blanks: “To ensure failover capabilities, consider using a _____ for incoming traffic on a network interface”.</p>
   <multiplechoiceresponse>
     <choicegroup type="MultipleChoice" shuffle="True">
-      <choice correct="True">Tags</choice>
-      <choice correct="False">special filters</choice>
-      <choice correct="False">pointers</choice>
-      <choice correct="False">functions</choice>
+      <choice correct="False">primary public IP</choice>
+      <choice correct="True">secondary private IP</choice>
+      <choice correct="False">secondary public IP</choice>
+      <choice correct="False">add on secondary IP</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>If I have multiple Read Replicas for my master DB Instance and I promote one of them, what happens to the rest of the Read Replicas?</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="True">The remaining Read Replicas will still replicate from the older master DB Instance</choice>
+      <choice correct="False">The remaining Read Replicas will be deleted</choice>
+      <choice correct="False">The remaining Read Replicas will be combined to one read replica</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>What does Amazon CloudFormation provide?</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="False">The ability to setup Autoscaling for Amazon EC2 instances.</choice>
+      <choice correct="False">None of these.</choice>
+      <choice correct="False">A templated resource creation for Amazon Web Services.</choice>
+      <choice correct="True">A template to map network resources for Amazon Web Services.</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>If you have chosen Multi-AZ deployment, in the event of a planned or unplanned outage of your primary DB Instance, Amazon RDS automatically switches to the standby replic a. The automatic failover mechanism simply changes the ______ record of the main DB Instance to point to the standby DB Instance.</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="False">DNAME</choice>
+      <choice correct="True">CNAME</choice>
+      <choice correct="False">TXT</choice>
+      <choice correct="False">MX</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>Can I encrypt connections between my application and my DB Instance using SSL?</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="False">No</choice>
+      <choice correct="True">Yes</choice>
+      <choice correct="False">Only in VPC</choice>
+      <choice correct="False">Only in certain regions</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>Please select the Amazon EC2 resource which cannot be tagged.</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="False">images (AMIs, kernels, RAM disks)</choice>
+      <choice correct="False">Amazon EBS volumes</choice>
+      <choice correct="True">Elastic IP addresses</choice>
+      <choice correct="False">VPCs</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>What can I access by visiting the URL: http://status.aws.amazon.com/?</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="False">Amazon Cloud Watch</choice>
+      <choice correct="False">Status of the Amazon RDS DB</choice>
+      <choice correct="True">AWS Service Health Dashboard</choice>
+      <choice correct="False">AWS Cloud Monitor</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>True or False: If you add a tag that has the same key as an existing tag on a DB Instance, the new value overwrites the old value.</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="False">FALSE</choice>
+      <choice correct="True">TRUE</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>Because of the extensibility limitations of striped storage attached to Windows Server, Amazon RDS does not currently support increasing storage on a _____ DB Instance.</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="True">SQL Server</choice>
+      <choice correct="False">MySQL</choice>
+      <choice correct="False">Oracle</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>What are the four levels of AWS Premium Support?</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="True">Basic, Developer, Business, Enterprise</choice>
+      <choice correct="False">Basic, Startup, Business, Enterprise</choice>
+      <choice correct="False">Free, Bronze, Silver, Gold</choice>
+      <choice correct="False">All support is free</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>Can the string value of ‘Key’ be prefixed with :aws:”?</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="False">Only in GovCloud</choice>
+      <choice correct="False">Only for S3 not EC2</choice>
+      <choice correct="False">Yes</choice>
+      <choice correct="True">No</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>Select the incorrect statement</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="False">In Amazon EC2, the private IP addresses only returned to Amazon EC2 when the instance is stopped or terminated</choice>
+      <choice correct="False">In Amazon VPC, an instance retains its private IP addresses when the instance is stopped.</choice>
+      <choice correct="True">In Amazon VPC, an instance does NOT retain its private IP addresses when the instance is stopped.</choice>
+      <choice correct="False">In Amazon EC2, the private IP address is associated exclusively with the instance for its lifetime</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>How are the EBS snapshots saved on Amazon S3?</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="False">Exponentially</choice>
+      <choice correct="True">Incrementally</choice>
+      <choice correct="False">EBS snapshots are not stored in the Amazon S3</choice>
+      <choice correct="False">Decrementally</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>Through which of the following interfaces is AWS Identity and Access Management available? A) AWS Management Console B) Command line interface (CLI) C) IAM Query API D) Existing libraries</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="False">Only through Command line interface (CLI)</choice>
+      <choice correct="False">A, B and C</choice>
+      <choice correct="False">A and C</choice>
+      <choice correct="True">All of the above</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>What happens when you create a topic on Amazon SNS?</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="False">The topic is created, and it has the name you specified for it.</choice>
+      <choice correct="True">An ARN (Amazon Resource Name) is created.</choice>
+      <choice correct="False">You can create a topic on Amazon SQS, not on Amazon SNS.</choice>
+      <choice correct="False">This question doesn’t make sense.</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>MySQL installations default to port _____.</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="True">3306</choice>
+      <choice correct="False">443</choice>
+      <choice correct="False">80</choice>
+      <choice correct="False">1158</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>What is the type of monitoring data (for Amazon EBS volumes) which is available automatically in 5-minute periods at no charge called?</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="True">Basic</choice>
+      <choice correct="False">Primary</choice>
+      <choice correct="False">Detailed</choice>
+      <choice correct="False">Local</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>The new DB Instance that is created when you promote a Read Replica retains the backup window period.</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="True">TRUE</choice>
+      <choice correct="False">FALSE</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>Which service enables AWS customers to manage users and permissions in AWS?</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="False">AWS Access Control Service (ACS)</choice>
+      <choice correct="True">AWS Identity and Access Management (IAM)</choice>
+      <choice correct="False">AWS Identity Manager (AIM)</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>What is the command line instruction for running the remote desktop client in Windows?</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="False">desk.cpl</choice>
+      <choice correct="True">mstsc</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>Can I delete a snapshot of the root device of an EBS volume used by a registered AMI?</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="False">Only via API</choice>
+      <choice correct="False">Only via Console</choice>
+      <choice correct="True">Yes</choice>
+      <choice correct="False">No</choice>
     </choicegroup>
   </multiplechoiceresponse>
 </problem>

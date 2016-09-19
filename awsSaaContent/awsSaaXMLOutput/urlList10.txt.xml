@@ -1,332 +1,325 @@
 <problem>
-  <p>Within the IAM service a GROUP is regarded as a:</p>
+  <p>What does Amazon ElastiCache provide?</p>
   <multiplechoiceresponse>
     <choicegroup type="MultipleChoice" shuffle="True">
-      <choice correct="False">A collection of AWS accounts</choice>
-      <choice correct="False">It’s the group of EC2 machines that gain the permissions specified in the GROUP.</choice>
-      <choice correct="False">There’s no GROUP in IAM, but only USERS and RESOURCES.</choice>
-      <choice correct="True">A collection of users.</choice>
+      <choice correct="False">A service by this name doesn’t exist. Perhaps you mean Amazon CloudCache.</choice>
+      <choice correct="False">A virtual server with a huge amount of memory.</choice>
+      <choice correct="True">A managed In-memory cache service.</choice>
+      <choice correct="False">An Amazon EC2 instance with the Memcached software already pre-installed.</choice>
     </choicegroup>
   </multiplechoiceresponse>
 </problem>
 <problem>
-  <p>A __________ is the concept of allowing (or disallowing) an entity such as a user, group, or role some type of access to one or more resources.</p>
+  <p>Please select the Amazon EC2 resource which can be tagged.</p>
   <multiplechoiceresponse>
     <choicegroup type="MultipleChoice" shuffle="True">
-      <choice correct="False">user</choice>
-      <choice correct="True">AWS Account</choice>
-      <choice correct="False">resource</choice>
-      <choice correct="False">permission</choice>
+      <choice correct="False">key pairs</choice>
+      <choice correct="False">Elastic IP addresses</choice>
+      <choice correct="True">placement groups</choice>
+      <choice correct="False">Amazon EBS snapshots</choice>
     </choicegroup>
   </multiplechoiceresponse>
 </problem>
 <problem>
-  <p>True or False: When you add a rule to a DB security group, you do not need to specify port number or protocol.</p>
+  <p>If an Amazon EBS volume is the root device of an instance, can I detach it without stopping the instance?</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="False">Yes but only if Windows instance</choice>
+      <choice correct="True">No</choice>
+      <choice correct="False">Yes</choice>
+      <choice correct="False">Yes but only if a Linux instance</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>After an Amazon VPC instance is launched, can I change the VPC security groups it belongs to?</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="False">Only if the tag “VPC_Change_Group” is true</choice>
+      <choice correct="True">Yes. You can.</choice>
+      <choice correct="False">No. You cannot.</choice>
+      <choice correct="False">Only if the tag “VPC Change Group” is true</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>Select the correct set of steps for exposing the snapshot only to specific AWS accounts</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="False">Select public for all the accounts and check mark those accounts with whom you want to expose the snapshots and click save.</choice>
+      <choice correct="False">SelectPrivate, enter the IDs of those AWS accounts, and clickSave.</choice>
+      <choice correct="True">SelectPublic, enter the IDs of those AWS accounts, and clickSave.</choice>
+      <choice correct="False">SelectPublic, mark the IDs of those AWS accounts as private, and clickSave.</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>A____________ is an individual, system, or application that interacts with AWS programmatically.</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="True">user</choice>
+      <choice correct="False">AWS Account</choice>
+      <choice correct="False">Group</choice>
+      <choice correct="False">Role</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>The one-time payment for Reserved Instances is __________ refundable if the reservation is cancelled.</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="False">always</choice>
+      <choice correct="False">in some circumstances</choice>
+      <choice correct="True">never</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>Is decreasing the storage size of a DB Instance permitted?</p>
   <multiplechoiceresponse>
     <choicegroup type="MultipleChoice" shuffle="True">
       <choice correct="False">Depends on the RDMS used</choice>
-      <choice correct="True">TRUE</choice>
-      <choice correct="False">FALSE</choice>
+      <choice correct="True">Yes</choice>
+      <choice correct="False">No</choice>
     </choicegroup>
   </multiplechoiceresponse>
 </problem>
 <problem>
-  <p>In the Amazon RDS Oracle DB engine, the Database Diagnostic Pack and the Database Tuning Pack are only available with ______________</p>
+  <p>In the context of MySQL, version numbers are organized as MySQL version = X.Y.Z. What does X denote here?</p>
   <multiplechoiceresponse>
     <choicegroup type="MultipleChoice" shuffle="True">
-      <choice correct="False">Oracle Standard Edition</choice>
-      <choice correct="False">Oracle Express Edition</choice>
-      <choice correct="True">Oracle Enterprise Edition</choice>
+      <choice correct="False">release level</choice>
+      <choice correct="False">minor version</choice>
+      <choice correct="False">version number</choice>
+      <choice correct="True">major version</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>It is advised that you watch the Amazon CloudWatch “_____” metric (available via the AWS Management Console or Amazon Cloud Watch APIs) carefully and recreate the Read Replica should it fall behind due to replication errors.</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="False">Write Lag</choice>
+      <choice correct="False">Read Replica</choice>
+      <choice correct="True">Replica Lag</choice>
+      <choice correct="False">Single Replica</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>Can the string value of ‘Key’ be prefixed with laws?</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="True">No</choice>
+      <choice correct="False">Only for EC2 not S3</choice>
+      <choice correct="False">Yes</choice>
+      <choice correct="False">Only for S3 not EC</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>By default what are ENIs that are automatically created and attached to instances using the EC2 console set to do when the attached instance terminates?</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="False">Remain as is</choice>
+      <choice correct="True">Terminate</choice>
+      <choice correct="False">Hibernate</choice>
+      <choice correct="False">Pause</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>If I want my instance to run on a single-tenant hardware, which value do I have to set the instance’s tenancy attribute to?</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="True">dedicated</choice>
+      <choice correct="False">isolated</choice>
+      <choice correct="False">one</choice>
+      <choice correct="False">reserved</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>Every user you create in the IAM system starts with ___________.</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="False">full permissions</choice>
+      <choice correct="True">no permissions</choice>
+      <choice correct="False">partial permissions</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>If you are using Amazon RDS Provisioned IOPS storage with MySQL and Oracle database engines, you can scale the throughput of your database Instance by specifying the IOPS rate from __________ .</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="False">1,000 to 1, 00, 000</choice>
+      <choice correct="False">100 to 1, 000</choice>
+      <choice correct="False">10, 000 to 1, 00, 000</choice>
+      <choice correct="True">1, 000 to 10, 000</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>Fill in the blanks: _____ is a durable, block-level storage volume that you can attach to a single, running Amazon EC2 instance.</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="False">Amazon S3</choice>
+      <choice correct="True">Amazon EBS</choice>
       <choice correct="False">None of these</choice>
-      <choice correct="False"></choice>
+      <choice correct="False">All of these</choice>
     </choicegroup>
   </multiplechoiceresponse>
 </problem>
 <problem>
-  <p>The Amazon EC2 web service can be accessed using the _____ web services messaging protocol. This interface is described by a Web Services Description Language (WSDL) document.</p>
+  <p>Is there a limit to the number of groups you can have?</p>
   <multiplechoiceresponse>
     <choicegroup type="MultipleChoice" shuffle="True">
-      <choice correct="True">SOAP</choice>
-      <choice correct="False">DCOM</choice>
-      <choice correct="False">CORBA</choice>
-      <choice correct="False">XML-RPC</choice>
-    </choicegroup>
-  </multiplechoiceresponse>
-</problem>
-<problem>
-  <p>Without _____, you must either create multiple AWS accounts-each with its own billing and subscriptions to AWS products-or your employees must share the security credentials of a single AWS account.</p>
-  <multiplechoiceresponse>
-    <choicegroup type="MultipleChoice" shuffle="True">
-      <choice correct="False">Amazon RDS</choice>
-      <choice correct="False">Amazon Glacier</choice>
-      <choice correct="False">Amazon EMR</choice>
-      <choice correct="True">Amazon IAM</choice>
-    </choicegroup>
-  </multiplechoiceresponse>
-</problem>
-<problem>
-  <p>HTTP Query-based requests are HTTP requests that use the HTTP verb GET or POST and a Query parameter named_____________.</p>
-  <multiplechoiceresponse>
-    <choicegroup type="MultipleChoice" shuffle="True">
-      <choice correct="True">Action</choice>
-      <choice correct="False">Value</choice>
-      <choice correct="False">Reset</choice>
-      <choice correct="False">Retrieve</choice>
-    </choicegroup>
-  </multiplechoiceresponse>
-</problem>
-<problem>
-  <p>Amazon RDS creates an SSL certificate and installs the certificate on the DB Instance when Amazon RDS provisions the instance. These certificates are signed by a certificate authority. The _____ is stored athttps://rds.amazonaws.com/doc/rds-ssl-ca-cert.pem.</p>
-  <multiplechoiceresponse>
-    <choicegroup type="MultipleChoice" shuffle="True">
-      <choice correct="True">private key</choice>
-      <choice correct="False">foreign key</choice>
-      <choice correct="False">public key</choice>
-      <choice correct="False">protected key</choice>
-    </choicegroup>
-  </multiplechoiceresponse>
-</problem>
-<problem>
-  <p>Do the system resources on the Micro instance meet the recommended configuration for Oracle?</p>
-  <multiplechoiceresponse>
-    <choicegroup type="MultipleChoice" shuffle="True">
-      <choice correct="False">Yes completely</choice>
-      <choice correct="True">Yes but only for certain situations</choice>
-      <choice correct="False">Not in any circumstance</choice>
-      <choice correct="False"></choice>
-    </choicegroup>
-  </multiplechoiceresponse>
-</problem>
-<problem>
-  <p>What is the name of licensing model in which I can use your existing Oracle Database licenses to run Oracle deployments on Amazon RDS?</p>
-  <multiplechoiceresponse>
-    <choicegroup type="MultipleChoice" shuffle="True">
-      <choice correct="True">Bring Your Own License</choice>
-      <choice correct="False">Role Bases License</choice>
-      <choice correct="False">Enterprise License</choice>
-      <choice correct="False">License Included</choice>
-    </choicegroup>
-  </multiplechoiceresponse>
-</problem>
-<problem>
-  <p>When you resize the Amazon RDS DB instance, Amazon RDS will perform the upgrade during the next maintenance window. If you want the upgrade to be performed now, rather than waiting for the maintenance window, specify the _____ option.</p>
-  <multiplechoiceresponse>
-    <choicegroup type="MultipleChoice" shuffle="True">
-      <choice correct="False">ApplyNow</choice>
-      <choice correct="False">ApplySoon</choice>
-      <choice correct="False">ApplyThis</choice>
-      <choice correct="True">ApplyImmediately</choice>
-    </choicegroup>
-  </multiplechoiceresponse>
-</problem>
-<problem>
-  <p>Does Amazon Route 53 support NS Records?</p>
-  <multiplechoiceresponse>
-    <choicegroup type="MultipleChoice" shuffle="True">
-      <choice correct="False">Yes, it supports Name Service records.</choice>
+      <choice correct="False">Yes for all users except root</choice>
       <choice correct="False">No</choice>
-      <choice correct="False">It supports only MX records.</choice>
-      <choice correct="True">Yes, it supports Name Server records.</choice>
+      <choice correct="False">Yes unless special permission granted</choice>
+      <choice correct="True">Yes for all users</choice>
     </choicegroup>
   </multiplechoiceresponse>
 </problem>
 <problem>
-  <p>____________ embodies the “share-nothing” architecture and essentially involves breaking a large database into several smaller databases. Common ways to split a database include 1) splitting tables that are not joined in the same query onto different hosts or 2) duplicating a table across multiple hosts and then using a hashing algorithm to determine which host receives a given update.</p>
+  <p>You can use _____ and _____ to help secure the instances in your VPC.</p>
   <multiplechoiceresponse>
     <choicegroup type="MultipleChoice" shuffle="True">
-      <choice correct="True">Sharding</choice>
-      <choice correct="False">Failure recovery</choice>
-      <choice correct="False">Federation</choice>
-      <choice correct="False">DDL operations</choice>
+      <choice correct="False">security groups and multi-factor authentication</choice>
+      <choice correct="False">security groups and 2-Factor authentication</choice>
+      <choice correct="False">security groups and biometric authentication</choice>
+      <choice correct="True">security groups and network ACLs</choice>
     </choicegroup>
   </multiplechoiceresponse>
 </problem>
 <problem>
-  <p>When using consolidated billing there are two account types. What are they?</p>
+  <p>How many Elastic IP by default in Amazon Account?</p>
   <multiplechoiceresponse>
     <choicegroup type="MultipleChoice" shuffle="True">
-      <choice correct="True">Paying account and Linked account</choice>
-      <choice correct="False">Parent account and Child account</choice>
-      <choice correct="False">Main account and Sub account.</choice>
-      <choice correct="False">Main account and Secondary account.</choice>
+      <choice correct="False">1 Elastic IP</choice>
+      <choice correct="False">3 Elastic IP</choice>
+      <choice correct="False">5 Elastic IP</choice>
+      <choice correct="True">0 Elastic IP</choice>
     </choicegroup>
   </multiplechoiceresponse>
 </problem>
 <problem>
-  <p>A __________ is a document that provides a formal statement of one or more permissions.</p>
+  <p>Location of Instances are ____________</p>
   <multiplechoiceresponse>
     <choicegroup type="MultipleChoice" shuffle="True">
-      <choice correct="True">policy</choice>
-      <choice correct="False">permission</choice>
-      <choice correct="False">Role</choice>
-      <choice correct="False">resource</choice>
+      <choice correct="False">Regional</choice>
+      <choice correct="True">based on Availability Zone</choice>
+      <choice correct="False">Global</choice>
     </choicegroup>
   </multiplechoiceresponse>
 </problem>
 <problem>
-  <p>The SQL Server _____ feature is an efficient means of copying data from a source database to your DB Instance. It writes the data that you specify to a data file, such as an ASCII file.</p>
+  <p>Does Dynamic DB support in-place atomic updates?</p>
   <multiplechoiceresponse>
     <choicegroup type="MultipleChoice" shuffle="True">
-      <choice correct="True">bulk copy</choice>
-      <choice correct="False">group copy</choice>
-      <choice correct="False">dual copy</choice>
-      <choice correct="False">mass copy</choice>
-    </choicegroup>
-  </multiplechoiceresponse>
-</problem>
-<problem>
-  <p>Can I initiate a “forced failover” for my Oracle Multi-AZ DB Instance deployment?</p>
-  <multiplechoiceresponse>
-    <choicegroup type="MultipleChoice" shuffle="True">
-      <choice correct="True">Yes</choice>
-      <choice correct="False">Only in certain regions</choice>
-      <choice correct="False">Only in VPC</choice>
-      <choice correct="False">No</choice>
-    </choicegroup>
-  </multiplechoiceresponse>
-</problem>
-<problem>
-  <p>Regarding the attaching of ENI to an instance, what does ‘warm attach’ refer to?</p>
-  <multiplechoiceresponse>
-    <choicegroup type="MultipleChoice" shuffle="True">
-      <choice correct="True">Attaching an ENI to an instance when it is stopped.</choice>
-      <choice correct="False">This question doesn’t make sense.</choice>
-      <choice correct="False">Attaching an ENI to an instance when it is running</choice>
-      <choice correct="False">Attaching an ENI to an instance during the launch process</choice>
-    </choicegroup>
-  </multiplechoiceresponse>
-</problem>
-<problem>
-  <p>Amazon RDS supports SOAP only through __________.</p>
-  <multiplechoiceresponse>
-    <choicegroup type="MultipleChoice" shuffle="True">
-      <choice correct="False">HTTP or HTTPS</choice>
-      <choice correct="False">TCP/IP</choice>
-      <choice correct="False">HTTP</choice>
-      <choice correct="True">HTTPS</choice>
-    </choicegroup>
-  </multiplechoiceresponse>
-</problem>
-<problem>
-  <p>You can modify the backup retention period; valid values are 0 (for no backup retention) to a maximum of ___________ days.</p>
-  <multiplechoiceresponse>
-    <choicegroup type="MultipleChoice" shuffle="True">
-      <choice correct="False">45</choice>
-      <choice correct="True">35</choice>
-      <choice correct="False">15</choice>
-      <choice correct="False">5</choice>
-    </choicegroup>
-  </multiplechoiceresponse>
-</problem>
-<problem>
-  <p>If I scale the storage capacity provisioned to my DB Instance by mid of a billing month, how will I be charged?</p>
-  <multiplechoiceresponse>
-    <choicegroup type="MultipleChoice" shuffle="True">
-      <choice correct="False">You will be charged for the highest storage capacity you have used</choice>
-      <choice correct="True">On a proration basis</choice>
-      <choice correct="False">You will be charged for the lowest storage capacity you have used</choice>
-      <choice correct="False"></choice>
-    </choicegroup>
-  </multiplechoiceresponse>
-</problem>
-<problem>
-  <p>Please select the Amazon EC2 resource which cannot be tagged.</p>
-  <multiplechoiceresponse>
-    <choicegroup type="MultipleChoice" shuffle="True">
-      <choice correct="False">images (AMIs, kernels, RAM disks)</choice>
-      <choice correct="False">Amazon EBS volumes</choice>
-      <choice correct="True">Elastic IP addresses</choice>
-      <choice correct="False">VPCs</choice>
-    </choicegroup>
-  </multiplechoiceresponse>
-</problem>
-<problem>
-  <p>Will I be alerted when automatic failover occurs?</p>
-  <multiplechoiceresponse>
-    <choicegroup type="MultipleChoice" shuffle="True">
-      <choice correct="False">Only if SNS configured</choice>
+      <choice correct="False">It is not defined</choice>
       <choice correct="False">No</choice>
       <choice correct="True">Yes</choice>
-      <choice correct="False">Only if Cloudwatch configured</choice>
+      <choice correct="False">It does support in-place non-atomic updates</choice>
     </choicegroup>
   </multiplechoiceresponse>
 </problem>
 <problem>
-  <p>If you’re unable to connect via SSH to your EC2 instance, which of the following should you check and possibly correct to restore connectivity?</p>
+  <p>What does Amazon ELB stand for?</p>
   <multiplechoiceresponse>
     <choicegroup type="MultipleChoice" shuffle="True">
-      <choice correct="False">Adjust Security Group to permit egress traffic over TCP port 443 from your IP.</choice>
-      <choice correct="False">Configure the IAM role to permit changes to security group settings.</choice>
-      <choice correct="False">Modify the instance security group to allow ingress of ICMP packets from your IP.</choice>
-      <choice correct="False"></choice>
-      <choice correct="True">Adjust the instance’s Security Group to permit ingress traffic over port 22 from your IP.</choice>
-      <choice correct="False">Apply the most recently released Operating System security patches.</choice>
+      <choice correct="False">Elastic Linux Box.</choice>
+      <choice correct="False">Encrypted Linux Box.</choice>
+      <choice correct="False">Encrypted Load Balancing.</choice>
+      <choice correct="True">Elastic Load Balancing.</choice>
     </choicegroup>
   </multiplechoiceresponse>
 </problem>
 <problem>
-  <p>In the Amazon RDS which uses the SQL Server engine, what is the maximum size for a Microsoft SQL Server DB Instance with SQL Server Express edition?</p>
+  <p>Is there any way to own a direct connection to Amazon Web Services?</p>
   <multiplechoiceresponse>
     <choicegroup type="MultipleChoice" shuffle="True">
-      <choice correct="True">10 GB per DB</choice>
-      <choice correct="False">100 GB per DB</choice>
-      <choice correct="False">2 TB per DB</choice>
-      <choice correct="False">1TB per DB</choice>
+      <choice correct="False">You can create an encrypted tunnel to VPC, but you don’t own the connection.</choice>
+      <choice correct="False">Yes, it’s called Amazon Dedicated Connection.</choice>
+      <choice correct="False">No, AWS only allows access from the public Internet.</choice>
+      <choice correct="True">Yes, it’s called Direct Connect.</choice>
     </choicegroup>
   </multiplechoiceresponse>
 </problem>
 <problem>
-  <p>Will I be charged if the DB instance is idle?</p>
+  <p>What does Amazon RDS stand for?</p>
   <multiplechoiceresponse>
     <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="False">Regional Data Server.</choice>
+      <choice correct="True">Relational Database Service.</choice>
+      <choice correct="False">Nothing.</choice>
+      <choice correct="False">Regional Database Service.</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>Can I attach more than one policy to a particular entity?</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="True">Yes always</choice>
+      <choice correct="False">Only if within GovCloud</choice>
       <choice correct="False">No</choice>
-      <choice correct="True">Yes</choice>
-      <choice correct="False">Only is running in GovCloud</choice>
-      <choice correct="False">Only if running in VPC</choice>
+      <choice correct="False">Only if within VPC</choice>
     </choicegroup>
   </multiplechoiceresponse>
 </problem>
 <problem>
-  <p>How can an EBS volume that is currently attached to an EC2 instance be migrated from one Availability Zone to another?</p>
+  <p>What does Amazon SES stand for?</p>
   <multiplechoiceresponse>
     <choicegroup type="MultipleChoice" shuffle="True">
-      <choice correct="True">Detach the volume and attach it to another EC2 instance in the other AZ.</choice>
-      <choice correct="False">Simply create a new volume in the other AZ and specify the original volume as the source.</choice>
-      <choice correct="False">Create a snapshot of the volume, and create a new volume from the snapshot in the other AZ.</choice>
-      <choice correct="False">Detach the volume, then use the ec2-migrate-voiume command to move it to another AZ.</choice>
+      <choice correct="False">Simple Elastic Server</choice>
+      <choice correct="True">Simple Email Service</choice>
+      <choice correct="False">Software Email Solution</choice>
+      <choice correct="False">Software Enabled Server</choice>
     </choicegroup>
   </multiplechoiceresponse>
 </problem>
 <problem>
-  <p>A Provisioned IOPS volume must be at least __________ GB in size</p>
+  <p>Amazon S3 doesn’t automatically give a user who creates _____ permission to perform other actions on that bucket or object.</p>
   <multiplechoiceresponse>
     <choicegroup type="MultipleChoice" shuffle="True">
-      <choice correct="False">1</choice>
-      <choice correct="False">50</choice>
-      <choice correct="False">20</choice>
-      <choice correct="True">10</choice>
+      <choice correct="False">a file</choice>
+      <choice correct="True">a bucket or object</choice>
+      <choice correct="False">a bucket or file</choice>
+      <choice correct="False">a object or file</choice>
     </choicegroup>
   </multiplechoiceresponse>
 </problem>
 <problem>
-  <p>Amazon EC2 provides a repository of public data sets that can be seamlessly integrated into AWS cloud-based applications.What is the monthly charge for using the public data sets?</p>
+  <p>You must assign each server to at least _____________ security group</p>
   <multiplechoiceresponse>
     <choicegroup type="MultipleChoice" shuffle="True">
-      <choice correct="False">A 1 time charge of 10$ for all the datasets.</choice>
-      <choice correct="False">1$ per dataset per month</choice>
-      <choice correct="False">10$ per month for all the datasets</choice>
-      <choice correct="True">There is no charge for using the public data sets</choice>
+      <choice correct="False">4</choice>
+      <choice correct="False">3</choice>
+      <choice correct="True">1</choice>
+      <choice correct="False">2</choice>
     </choicegroup>
   </multiplechoiceresponse>
 </problem>
 <problem>
-  <p>To help you manage your Amazon EC2 instances, images, and other Amazon EC2 resources, you can assign your own metadata to each resource in the form of____________</p>
+  <p>Is there a method in the IAM system to allow or deny access to a specific instance?</p>
   <multiplechoiceresponse>
     <choicegroup type="MultipleChoice" shuffle="True">
-      <choice correct="False">special filters</choice>
-      <choice correct="False">functions</choice>
-      <choice correct="True">tags</choice>
-      <choice correct="False">wildcards</choice>
+      <choice correct="False">Only for VPC based instances</choice>
+      <choice correct="False">Yes</choice>
+      <choice correct="True">No</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
+<problem>
+  <p>What is a Security Group?</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice" shuffle="True">
+      <choice correct="False">None of these.</choice>
+      <choice correct="False">A list of users that can access Amazon EC2 instances.</choice>
+      <choice correct="False">An Access Control List (ACL) for AWS resources.</choice>
+      <choice correct="True">A firewall for inbound traffic, built-in around every Amazon EC2 instance.</choice>
     </choicegroup>
   </multiplechoiceresponse>
 </problem>
