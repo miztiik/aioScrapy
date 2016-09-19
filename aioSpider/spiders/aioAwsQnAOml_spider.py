@@ -35,7 +35,10 @@ class aioAwsQnAOmlSpider (scrapy.Spider):
             # Check if this is wrong choice
             if not chkAns:
                 chkAns = qaData[i].css("::text").extract()
-                tmpList.append([False,''.join(chkAns[1:]).strip()])
+                # Assign value only if there is some content and from the second element onwards, the first has the choice identifier
+                # Conintue if there is more than just empty space
+                if len(chkAns) > 1:
+                    tmpList.append([False,''.join(chkAns[1:]).strip()])
             elif chkAns:
                 chkAns = qaData[i].css("::text").extract()
                 tmpList.append([True,''.join(chkAns[1:]).strip()])
@@ -54,16 +57,15 @@ class aioAwsQnAOmlSpider (scrapy.Spider):
         if qaDataDict['questionType'] == "choiceresponse":
             choiceresponse = etree.SubElement(problem, "choiceresponse")
             checkboxgroup = etree.SubElement(choiceresponse, "checkboxgroup")
-            choiceresponse.set("shuffle", "True")
 
             # Lets build the choices with answer text
             for item in qaDataDict['choice']:
                 if item[0]==True:
-                    choice =  etree.SubElement(choiceresponse, "choice")
+                    choice =  etree.SubElement(checkboxgroup, "choice")
                     choice.set("correct", "True")
                     choice.text = item[1]
                 if item[0]==False:
-                    choice =  etree.SubElement(choiceresponse, "choice")
+                    choice =  etree.SubElement(checkboxgroup, "choice")
                     choice.set("correct", "False")
                     choice.text = item[1]
 
