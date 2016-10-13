@@ -23,6 +23,10 @@ pip install lxml
 pip install scrapy
 ```
 
+## Create a Scrapy Project
+```sh
+scrapy startproject aioScrapy
+```
 
 ## Collect the URLs to scrape
 ```sh
@@ -30,8 +34,10 @@ scrapy crawl aioAwsLinkExtractor -t csv -o allAwsSaaUrlCollections.csv
 ```
 
 ## Create the directories for Input & Outputs
+```sh
 mkdir -p ./awsSaaContent/awsSaaUrlInput
 mkdir -p ./awsSaaContent/awsSaaXMLOutput
+```
 
 ## Split the URLs file
 Before splitting the file, we need to the first line; since we saved our output as csv, Scrapy adds the item name as the Column Header. In our case it is `urlsToScrape`.
